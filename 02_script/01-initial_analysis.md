@@ -128,3 +128,38 @@ So the demographics of people convicted in Scotland are changing quite a
 lot. Implications: all else equal, more people being convicted will be
 parents (as they are more likely to be of parenting age)? Could check
 the overall parity statistics by age to assess this.
+
+## Something simpler
+
+Maybe the easiest way to do this is just look at the proportion of
+people overall convicted by age.
+
+``` r
+agg_dat <- 
+tmp |> 
+  filter(gender != "All",
+         age != "All") |> 
+  group_by(year, gender, age) |> 
+  summarise(n = sum(number_of_offenders)) |> 
+  group_by(gender, year) |> 
+  mutate(prop = n / sum(n)) |> 
+  ungroup() |> 
+   mutate(age = factor(age,
+                      levels = c("under 21",
+                                 "21 to 25",
+                                 "26 to 30",
+                                 "31 to 40",
+                                 "over 40")))
+```
+
+    `summarise()` has grouped output by 'year', 'gender'. You can override using
+    the `.groups` argument.
+
+``` r
+agg_dat |> 
+  ggplot(aes(x = year, y = prop, fill = fct_rev(age), colour = fct_rev(age))) +
+  geom_bar(stat = "identity") +
+  facet_grid(~ gender) 
+```
+
+![](01-initial_analysis_files/figure-commonmark/unnamed-chunk-5-1.png)
