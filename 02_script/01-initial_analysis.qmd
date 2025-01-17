@@ -1,7 +1,7 @@
 ---
 title: "Exploratory analysis of reconvictions data"
 author: "Ben Matthews"
-format: html
+format: gfm
 editor: visual
 ---
 
@@ -38,7 +38,7 @@ tmp |>
 
 Filter out the aggregated rows and then just plot the raw numbers of people convicted across LAs in each year by age and gender
 
-```{r}
+```{r, fig.width=12,fig.height=10}
 reconv <- 
 tmp |> 
   filter(age != "All",
@@ -55,7 +55,7 @@ reconv |>
 
 So it looks like the trend is generally downwards for young people but less clear for older people, regardless of gender. We can test whether the linear trend for each age is downwards pretty simply. I'm not sure if we need the _quasi_ poisson bit here but feels like it should help with the confidence intervals and stuff.
 
-```{r}
+```{r, fig.width=12,fig.height=10}
 reconv <- 
 reconv |> 
   mutate(year = as.numeric(str_sub(year, 1, 4)))
