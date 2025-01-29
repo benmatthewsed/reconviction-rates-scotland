@@ -4,14 +4,14 @@
     "href": "02_script/reconviction-standardization-decomposition.html#introduction",
     "title": "Understanding change in reconviction rates",
     "section": "Introduction",
-    "text": "Introduction\n\nThe crime drop has changed the demographics of people being convicted (cite: me; the one from EW; Farrell)\nThis has downstream impacts on how we understand aggregate indicators of ‘performance’ in the criminal justice system"
+    "text": "Introduction\n\nThe crime drop has changed the demographics of people being convicted (cite: ; (Matthews and Minton 2018); (Tuttle 2024); (Farrell, Laycock, and Tilley 2015))\nThis has downstream impacts on how we understand aggregate indicators of ‘performance’ in the criminal justice system"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#people-want-to-use-reconviction-rates-as-a-performance-metric",
     "href": "02_script/reconviction-standardization-decomposition.html#people-want-to-use-reconviction-rates-as-a-performance-metric",
     "title": "Understanding change in reconviction rates",
     "section": "People want to use reconviction rates as a performance metric",
-    "text": "People want to use reconviction rates as a performance metric\n“The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government” (NI stats) - see equivalent from SG\n\nThe logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders\nBut, as NI statistics said: “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.”\n\nWhat is your estimand?\n\nBasically, what theoretical thing are you trying to measure?\nA ‘unit-specific quantity’: at the individual level, what is the probability that a given person will be reconvicted?\nA ‘target population’: “over whom or what do we aggregate that unit-specific quantity”\nThe annual reconviction rate aggregates over the population who could have been reconvicted in each year.\nBecause of changes in the characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.\nThis is known.\nPrevious approaches used an individual-level logistic regression approach to calculate ‘predicted’ reconviction rates.\nAn alternative approach from demography is standardization and decomposition. This lets us separate out the contributions of changing demographics as well as changes in the sub-group reconviction rates to the overall rate.\nWe use the methods proposed by Das Gupta (1993) as implemented in the {dasguptr} R package."
+    "text": "People want to use reconviction rates as a performance metric\n“The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government” (NI stats) - see equivalent from SG\n\nThe logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders\nBut, as NI statistics said: “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.”"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#data",
@@ -46,6 +46,27 @@
     "href": "02_script/reconviction-standardization-decomposition.html#more-results",
     "title": "Understanding change in reconviction rates",
     "section": "More results",
-    "text": "More results"
+    "text": "More results\n\n\n\n\n\n\n\n\n\nFarrell, Graham, Gloria Laycock, and Nick Tilley. 2015. “Debuts and Legacies: The Crime Drop and the Role of Adolescence-Limited and Persistent Offending.” Crime Science 4 (1). https://doi.org/10.1186/s40163-015-0028-3.\n\n\nMatthews, Ben, and Jon Minton. 2018. “Rethinking One of Criminology’s ‘Brute Facts’: The Agecrime Curve and the Crime Drop in Scotland.” European Journal of Criminology 15 (3): 296–320. https://doi.org/10.1177/1477370817731706.\n\n\nTuttle, James. 2024. “The End of the Age-Crime Curve? A Historical Comparison of Male Arrest Rates in the United States, 19852019.” The British Journal of Criminology 64 (3): 638–55. https://doi.org/10.1093/bjc/azad049."
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#what-is-your-estimand",
+    "href": "02_script/reconviction-standardization-decomposition.html#what-is-your-estimand",
+    "title": "Understanding change in reconviction rates",
+    "section": "What is your estimand?",
+    "text": "What is your estimand?\n\nBasically, what theoretical thing are you trying to measure?\nA ‘unit-specific quantity’: at the individual level, what is the probability that a given person will be reconvicted?\nA ‘target population’: “over whom or what do we aggregate that unit-specific quantity”\nThe annual reconviction rate aggregates over the population who could have been reconvicted in each year.\nBecause of changes in the characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort."
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#past-approaches",
+    "href": "02_script/reconviction-standardization-decomposition.html#past-approaches",
+    "title": "Understanding change in reconviction rates",
+    "section": "Past approaches",
+    "text": "Past approaches\n\nThis is known.\nPrevious approaches used an individual-level logistic regression approach to calculate ‘predicted’ reconviction rates.\nAn alternative approach from demography is standardization and decomposition. This lets us separate out the contributions of changing demographics as well as changes in the sub-group reconviction rates to the overall rate.\nWe use the methods proposed by Das Gupta (1993) as implemented in the {dasguptr} R package."
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#huh",
+    "href": "02_script/reconviction-standardization-decomposition.html#huh",
+    "title": "Understanding change in reconviction rates",
+    "section": "Huh?",
+    "text": "Huh?\nAbout 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 we can attribute to demographic change in the population of people convicted, rather than falls in the reconviction rate per se.\nThis could still be due to criminal justice (e.g. more diversion from prosecution for young people)"
   }
 ]
