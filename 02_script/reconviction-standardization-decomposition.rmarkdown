@@ -5,6 +5,8 @@ output-dir: docs
 bibliography: references.bib
 ---
 
+
+
 ## Introduction
 
 -   The crime drop has changed the demographics of people being convicted (cite: ; [@matthews2018]; [@tuttle2024]; [@farrell2015])
@@ -61,6 +63,8 @@ Note: it's possible to get data back to 1997-98 with different age categories.
 
 ## Results
 
+
+
 ```{r warnings=FALSE}
 
 library(DasGuptR)
@@ -113,6 +117,8 @@ overall_res |>
   knitr::kable()
 ```
 
+
+
 ## Huh?
 
 About 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 we can attribute to demographic change in the population of people convicted, rather than falls in the reconviction rate *per se*.
@@ -120,6 +126,8 @@ About 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020
 This could still be due to criminal justice (e.g. more diversion from prosecution for young people)
 
 ## More results
+
+
 
 ```{r}
 
@@ -141,3 +149,4 @@ scot_res$rates |>
 
 
 ```
+
