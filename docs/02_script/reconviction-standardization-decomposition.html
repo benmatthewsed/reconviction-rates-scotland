@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="reconviction-standardization-decomposition_files/libs/clipboard/clipboard.min.js"></script>
-<script src="reconviction-standardization-decomposition_files/libs/quarto-html/tabby.min.js"></script>
-<script src="reconviction-standardization-decomposition_files/libs/quarto-html/popper.min.js"></script>
-<script src="reconviction-standardization-decomposition_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="reconviction-standardization-decomposition_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="reconviction-standardization-decomposition_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="reconviction-standardization-decomposition_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="reconviction-standardization-decomposition_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <title>Understanding change in reconviction rates</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="reconviction-standardization-decomposition_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="reconviction-standardization-decomposition_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,11 +29,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="reconviction-standardization-decomposition_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="reconviction-standardization-decomposition_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="reconviction-standardization-decomposition_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="reconviction-standardization-decomposition_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="reconviction-standardization-decomposition_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -382,23 +382,56 @@
 <section id="results" class="slide level2">
 <h2>Results</h2>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>                2004-05   2020-21          diff decomp
-prevalence    0.3056272 0.2774586 -0.0281685765  51.15
-gender_struct 0.2930193 0.2931417  0.0001224674  -0.22
-age_struct    0.3050606 0.2780376 -0.0270230786  49.07
-crude         0.3237422 0.2686730 -0.0550691876 100.00</code></pre>
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">2004-05</th>
+<th style="text-align: right;">2020-21</th>
+<th style="text-align: right;">diff</th>
+<th style="text-align: right;">decomp</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">prevalence</td>
+<td style="text-align: right;">0.3056272</td>
+<td style="text-align: right;">0.2774586</td>
+<td style="text-align: right;">-0.0281686</td>
+<td style="text-align: right;">51.15</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">gender_struct</td>
+<td style="text-align: right;">0.2930193</td>
+<td style="text-align: right;">0.2931417</td>
+<td style="text-align: right;">0.0001225</td>
+<td style="text-align: right;">-0.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">age_struct</td>
+<td style="text-align: right;">0.3050606</td>
+<td style="text-align: right;">0.2780376</td>
+<td style="text-align: right;">-0.0270231</td>
+<td style="text-align: right;">49.07</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">crude</td>
+<td style="text-align: right;">0.3237422</td>
+<td style="text-align: right;">0.2686730</td>
+<td style="text-align: right;">-0.0550692</td>
+<td style="text-align: right;">100.00</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </section>
 <section id="more-results" class="slide level2">
 <h2>More results</h2>
-<p>scot_res &lt;- dgnpop(overall_res, pop=“year”, factors=c(“prevalence”),id_vars=c(“gender”,“age”), crossclassified=“number_of_offenders”)</p>
-<p>scot_res_rates &lt;- scot_res$rates |&gt; as_tibble() |&gt; mutate(country = “Scotland”)</p>
-<p>scot_res_rates |&gt;<br>
-ggplot(aes(x=pop,y=rate,col=factor, group = factor))+ geom_path()+ theme_bw()</p>
-<p>}</p>
-<div class="quarto-auto-generated-content">
+
+
+<img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
@@ -408,19 +441,19 @@ ggplot(aes(x=pop,y=rate,col=factor, group = factor))+ geom_path()+ theme_bw()</p
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="reconviction-standardization-decomposition_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="reconviction-standardization-decomposition_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="reconviction-standardization-decomposition_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="reconviction-standardization-decomposition_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="reconviction-standardization-decomposition_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="reconviction-standardization-decomposition_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="reconviction-standardization-decomposition_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="reconviction-standardization-decomposition_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="reconviction-standardization-decomposition_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="reconviction-standardization-decomposition_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

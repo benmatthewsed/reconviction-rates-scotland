@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#introduction",
+    "href": "02_script/reconviction-standardization-decomposition.html#introduction",
+    "title": "Understanding change in reconviction rates",
+    "section": "Introduction",
+    "text": "Introduction\n\nThe crime drop has changed the demographics of people being convicted (cite: me; the one from EW; Farrell)\nThis has downstream impacts on how we understand aggregate indicators of ‘performance’ in the criminal justice system"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#people-want-to-use-reconviction-rates-as-a-performance-metric",
+    "href": "02_script/reconviction-standardization-decomposition.html#people-want-to-use-reconviction-rates-as-a-performance-metric",
+    "title": "Understanding change in reconviction rates",
+    "section": "People want to use reconviction rates as a performance metric",
+    "text": "People want to use reconviction rates as a performance metric\n“The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government” (NI stats) - see equivalent from SG\n\nThe logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders\nBut, as NI statistics said: “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.”\n\nWhat is your estimand?\n\nBasically, what theoretical thing are you trying to measure?\nA ‘unit-specific quantity’: at the individual level, what is the probability that a given person will be reconvicted?\nA ‘target population’: “over whom or what do we aggregate that unit-specific quantity”\nThe annual reconviction rate aggregates over the population who could have been reconvicted in each year.\nBecause of changes in the characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.\nThis is known.\nPrevious approaches used an individual-level logistic regression approach to calculate ‘predicted’ reconviction rates.\nAn alternative approach from demography is standardization and decomposition. This lets us separate out the contributions of changing demographics as well as changes in the sub-group reconviction rates to the overall rate.\nWe use the methods proposed by Das Gupta (1993) as implemented in the {dasguptr} R package."
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#data",
+    "href": "02_script/reconviction-standardization-decomposition.html#data",
+    "title": "Understanding change in reconviction rates",
+    "section": "Data",
+    "text": "Data\nWe explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland (Matthews and Minton 2018). There is nothing particularly special about these time points, and the same approach would work for oither time periods.\nNote: include a figure of the overall reconvictions rate here\nNote: it’s possible to get data back to 1997-98 with different age categories."
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#measures",
+    "href": "02_script/reconviction-standardization-decomposition.html#measures",
+    "title": "Understanding change in reconviction rates",
+    "section": "Measures",
+    "text": "Measures\n\nWhat actual measure do they use in Scotland?\nAge groups included\nGenders included"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#method",
+    "href": "02_script/reconviction-standardization-decomposition.html#method",
+    "title": "Understanding change in reconviction rates",
+    "section": "Method",
+    "text": "Method\n\nDescription of standardization and decomposition\nDraw from the vignettes?"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#results",
+    "href": "02_script/reconviction-standardization-decomposition.html#results",
+    "title": "Understanding change in reconviction rates",
+    "section": "Results",
+    "text": "Results\n\n\n\n\n\n\n2004-05\n2020-21\ndiff\ndecomp\n\n\n\n\nprevalence\n0.3056272\n0.2774586\n-0.0281686\n51.15\n\n\ngender_struct\n0.2930193\n0.2931417\n0.0001225\n-0.22\n\n\nage_struct\n0.3050606\n0.2780376\n-0.0270231\n49.07\n\n\ncrude\n0.3237422\n0.2686730\n-0.0550692\n100.00"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#more-results",
+    "href": "02_script/reconviction-standardization-decomposition.html#more-results",
+    "title": "Understanding change in reconviction rates",
+    "section": "More results",
+    "text": "More results"
+  }
+]

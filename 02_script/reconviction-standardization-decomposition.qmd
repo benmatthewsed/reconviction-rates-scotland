@@ -1,6 +1,7 @@
 ---
 title: "Understanding change in reconviction rates"
 format: revealjs
+output-dir: docs
 ---
 
 ## Introduction
