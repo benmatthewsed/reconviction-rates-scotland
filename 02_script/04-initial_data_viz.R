@@ -95,3 +95,70 @@ age_res |>
               aes(ymin = conf_low, ymax = conf_high,
                   group = 1),
               alpha = 0.5)
+
+
+
+# but the problem is that the overall rate isn't the average of the rates
+
+age_res |> 
+  group_by(year) |> 
+  summarise(mean_prevalence = mean(prevalence))
+
+age_res |> 
+  group_by(year) |> 
+  mutate(age_prop = number_of_offenders / sum(number_of_offenders)) |> 
+  summarise(mean_prevalence = mean(prevalence),
+            weighted_mean_prevalence = weighted.mean(prevalence, age_prop))
+
+
+by_age_approx <- 
+age_res |> 
+  group_by(year) |> 
+  mutate(age_prop = number_of_offenders / sum(number_of_offenders)) |> 
+  ungroup() |> 
+  mutate(age_length = case_when(
+    age == "21 to 25" ~ 25 - 21 + 1,
+    age == "26 to 30" ~ 30 - 26 + 1,
+    age == "31 to 40" ~ 40 - 31 + 1,
+    age == "under 21" ~ 21 - 16 + 1,
+    age == "over 40" ~ 65 - 41 + 1
+  ),
+  age_start = case_when(
+    age == "21 to 25" ~ 21,
+    age == "26 to 30" ~ 26,
+    age == "31 to 40" ~ 31,
+    age == "under 21" ~ 16,
+    age == "over 40" ~ 41
+    ),
+  age_end = case_when(
+    age == "21 to 25" ~ 25,
+    age == "26 to 30" ~ 30,
+    age == "31 to 40" ~ 40,
+    age == "under 21" ~ 20,
+    age == "over 40" ~ 65
+  ),
+  age_seq = map2(age_start, age_end, seq)) |> 
+  select(year, age, number_of_offenders, no_reconvicted, age_seq, age_length) |> 
+  unnest(age_seq) |> 
+  group_by(year, age) |> 
+  mutate(mean_number_of_offenders = number_of_offenders / age_length,
+         mean_no_reconvicted = no_reconvicted / age_length,
+         mean_prevalence = mean_no_reconvicted/mean_number_of_offenders) |> 
+  group_by(year) |> 
+  mutate(age_prop = number_of_offenders / age_length / sum(number_of_offenders))
+
+by_age_approx |> 
+  ungroup() |> View()
+
+by_age_approx |> 
+  ungroup() |> 
+  ggplot(aes(x = as.numeric(age_seq), y = age_prop)) +
+  geom_point() +
+  geom_bar(stat = "identity") +
+  facet_wrap(~year)
+
+
+by_age_approx |> 
+  ungroup() |> 
+  ggplot(aes(x = age_seq, y = fct_rev(year))) +
+  ggridges::geom_ridgeline(aes(height = age_prop * 100))
