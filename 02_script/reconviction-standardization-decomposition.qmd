@@ -12,15 +12,29 @@ bibliography: references.bib
 
 ## People want to use reconviction rates as a performance metric
 
+"Reduced reoffending is an important objective that can facilitate desistance and reintegration. While reducing reoffending is important, in the absence of reintegration or desistance, reductions in offending are less likely to persist. Yet, reoffending can be a more quantifiable metric which has advantages – though care must still be taken as there are different definitions of reoffending" [@gormley2022]. Basically it can help measure the 'effectiveness' of sentencing (... if imperfectly).
+
 "The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government" (NI stats) - see equivalent from SG
 
 -   The logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders
 
 -   But, as NI statistics said: "differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions."
 
+
+## Our key point
+
+- The change in the demographics of people convicted over the course of the crime drop introduces statistical bias in the aggregate reconviction rate if it's used as a measure of 'effectiveness' of the justice system
+- Because the crime drop implies a change in the 'offender mix' who have been through the justice system over time
+- This can complicate comparisons in the reconviction rate over time (and jurisdictions too, but we won't go into that now)
+- Previous approaches to correct for this problem can't (easily) assess the extent of this bias
+- The methods of standardization and decomposition (standard in demography) can
+- We illustrate this with an empirical example of Scotland's reconviction rate
+- However, this technical fix may be limited in its application as it ... ignores? the ... politics? of reconviction statistics
+
+
 ## What is your estimand?
 
--   Basically, what theoretical thing are you trying to measure?
+-   Basically, what theoretical thing are you trying to measure? [@lundberg2021]
 
 -   A 'unit-specific quantity': at the individual level, what is the probability that a given person will be reconvicted?
 
@@ -34,11 +48,11 @@ bibliography: references.bib
 
 -   This is known.
 
--   Previous approaches used an individual-level logistic regression approach to calculate 'predicted' reconviction rates.
+-   Previous approaches used an individual-level logistic regression approach to calculate 'predicted' reconviction rates [@francis2005]
 
--   An alternative approach from demography is standardization and decomposition. This lets us separate out the contributions of changing demographics as well as changes in the sub-group reconviction rates to the overall rate.
+-   An alternative approach from demography is standardization and decomposition [@kitagawa1964]. This lets us separate out the contributions of changing demographics as well as changes in the sub-group reconviction rates to the overall rate.
 
--   We use the methods proposed by Das Gupta (1993) as implemented in the `{dasguptr}` R package.
+-   We use the methods proposed by @dasgupta1993 as implemented in the `{dasguptr}` R package.
 
 ## Data
 
@@ -46,17 +60,28 @@ We explore change in reconviction rates in Scotland between 2004-2020. These are
 
 Note: include a figure of the overall reconvictions rate here
 
-Note: it's possible to get data back to 1997-98 with different age categories.
+Note: it's possible to get data back to 1997-98 with different age categories. Not sure if this would mess up the comparison though?
 
 ## Measures
 
 -   What actual measure do they use in Scotland?
+
+"The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year," [@scottishgovernment2024]
+
+There are alternatives (e.g. the average number of convictions per person reconvicted). The same principles apply regardless of the measure used.
+
 -   Age groups included
 -   Genders included
 
 ## Method
 
 -   Description of standardization and decomposition
+
+- The Kitagawa/Das Gupta approach to decomposition calculates what the reconviction rate would have been in each year if each year had the average demographic composition
+- And then uses the differences from these 'standardized' rates to the observed rates to calculate how much of the change in the observed rate is due to changes in the underlying reconviction rates for each age group and how much is due to the change in the mix of the age groups
+
+- ADD AN EMPIRICAL EXAMPLE HERE
+
 -   Draw from the vignettes?
 
 ## Results
@@ -141,3 +166,16 @@ scot_res$rates |>
 
 
 ```
+
+## Discussion
+
+- The crime drop in Scotland has led to a profound shift in the demographics of the people coming through the criminal justice system
+- This shift is so pronounced that it limits our capacity to understand the 'effectiveness' of punishment through aggregate measures such as the overall reconviction rate
+
+## So what?
+
+- Who is actually using the aggregate reconviction rate to understand the effectiveness of the justice system?
+- SG already know that 'offender mix' is important - and they factor this in to analysis at Local Authority level
+
+
+## References
