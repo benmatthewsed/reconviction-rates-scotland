@@ -263,6 +263,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -493,7 +494,8 @@
 <section id="huh" class="slide level2">
 <h2>Huh?</h2>
 <p>About 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 we can attribute to demographic change in the population of people convicted, rather than falls in the reconviction rate <em>per se</em>.</p>
-<p>This could still be due to criminal justice (e.g.&nbsp;more diversion from prosecution for young people)</p>
+<p>This could still be due to criminal justice (e.g.&nbsp;more diversion from prosecution for young people), but is not attributable to the ‘effectiveness’ of sentencing</p>
+<p>The demographic change in convictions in Scotland over the course of the past 20 years have been so great as to distort other CJS indicators.</p>
 </section>
 <section id="discussion" class="slide level2">
 <h2>Discussion</h2>
@@ -582,7 +584,7 @@ Tuttle, James. 2024. <span>“The End of the Age-Crime Curve? A Historical Compa
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
+'smaller': true,
  
         // Display controls in the bottom right corner
         controls: false,
