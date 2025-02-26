@@ -377,23 +377,32 @@
 <li>The methods of standardization and decomposition (standard in demography) can</li>
 <li>We illustrate this with an empirical example of Scotland’s reconviction rate</li>
 <li>However, this technical fix may be limited in its application as it … ignores? the … politics? of reconviction statistics</li>
+<li>The reconvictions indicator is a convenient abstraction - Information as Nguyen paraphrases Porter - designed to reduce context to make comparisons more portable. People in SG don’t have to read all the assessments of all the people convicted in a previous year</li>
 </ul>
 </section>
 <section id="what-is-your-estimand" class="slide level2">
 <h2>What is your estimand?</h2>
 <ul>
 <li><p>Basically, what theoretical thing are you trying to measure? <span class="citation" data-cites="lundberg2021">(<a href="#/references" role="doc-biblioref" onclick="">Lundberg, Johnson, and Stewart 2021</a>)</span></p></li>
-<li><p>A ‘unit-specific quantity’: at the individual level, what is the probability that a given person will be reconvicted?</p></li>
+<li><p>A ‘unit-specific quantity’: at the individual level, what is the probability that a given person will be reconvicted?</p>
+<ul>
+<li>How would you measure ‘reintegration’ or ‘desistance’? At least we can measure reconviction easily</li>
+</ul></li>
 <li><p>A ‘target population’: “over whom or what do we aggregate that unit-specific quantity”</p></li>
-<li><p>The annual reconviction rate aggregates over the population who could have been reconvicted in each year.</p></li>
-<li><p>Because of changes in the characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.</p></li>
+<li><p>The annual reconviction rate aggregates over the population who could have been reconvicted in each year. // take this from the demography literature</p></li>
+<li><p>Because of changes in the distribution of characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.</p></li>
+<li><p>This is the point that Josiah puts like - we can think of the overall reconviction rate as a <em>weighted</em> mean of the reconviction rates in different demographic groups, weighted by the group size. You can have changes in the rate due to changes in the means or changes in the rates.</p></li>
+<li><p>This is also known:</p>
+<ul>
+<li>“The two-year reconviction rates for the 2002/03 cohort of those released from custody or receiving non-custodial sentences was 45%, the same rate recorded for the 1995/96 cohort; the rates for all other cohorts from 1996/97 to 2001/02 ranged from 44% to 42% (Scottish Executive, 2006b). However, as shown in figure 1, when the data is broken down by gender, the 2002/03 rates for men and for women were actually the highest on record over the eight-year period … This can be explained in part by the fact that the proportion of women in the cohort has increased from 14% in 1995 to 16% in 2002/03 (Scottish Executive, 2001), and that women have a notably lower reconviction rate than men (37% compared with 47%; Scottish Executive, 2006b). That is, the sample now contains a higher proportion of people who have a lower likelihood of being reconvicted … This means that a headline reduction in reconvictions in line with targets might be due to a change in the gender balance of the incarcerated population, rather than the success of any policy or intervention. If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration.” <span class="citation" data-cites="kirkwood2008">(<a href="#/references" role="doc-biblioref" onclick=""><strong>kirkwood2008?</strong></a>)</span></li>
+</ul></li>
 </ul>
 </section>
 <section id="past-approaches" class="slide level2">
 <h2>Past approaches</h2>
 <ul>
 <li><p>This is known.</p></li>
-<li><p>Previous approaches used an individual-level logistic regression approach to calculate ‘predicted’ reconviction rates <span class="citation" data-cites="francis2005">(<a href="#/references" role="doc-biblioref" onclick="">Francis, Harman, and Humphreys 2005</a>)</span></p></li>
+<li><p>Previous approaches used an individual-level logistic regression approach to calculate ‘predicted’ reconviction rates <span class="citation" data-cites="francis2005 cunliffe2007">(<a href="#/references" role="doc-biblioref" onclick="">Francis, Harman, and Humphreys 2005</a>; <a href="#/references" role="doc-biblioref" onclick="">Cunliffe and Shepherd 2007</a>)</span></p></li>
 <li><p>An alternative approach from demography is standardization and decomposition <span class="citation" data-cites="kitagawa1964">(<a href="#/references" role="doc-biblioref" onclick="">Kitagawa 1964</a>)</span>. This lets us separate out the contributions of changing demographics as well as changes in the sub-group reconviction rates to the overall rate.</p></li>
 <li><p>We use the methods proposed by <span class="citation" data-cites="dasgupta1993">Das Gupta (<a href="#/references" role="doc-biblioref" onclick="">1993</a>)</span> as implemented in the <code>{dasguptr}</code> R package.</p></li>
 </ul>
@@ -428,6 +437,13 @@
 </section>
 <section id="results" class="slide level2">
 <h2>Results</h2>
+</section>
+<section id="more-results" class="slide level2">
+<h2>More results</h2>
+
+<img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="percentage-change" class="slide level2">
+<h2>Percentage change</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top">
@@ -479,10 +495,6 @@
 <p>About 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 we can attribute to demographic change in the population of people convicted, rather than falls in the reconviction rate <em>per se</em>.</p>
 <p>This could still be due to criminal justice (e.g.&nbsp;more diversion from prosecution for young people)</p>
 </section>
-<section id="more-results" class="slide level2">
-<h2>More results</h2>
-
-<img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
 <section id="discussion" class="slide level2">
 <h2>Discussion</h2>
 <ul>
@@ -495,6 +507,7 @@
 <ul>
 <li>Who is actually using the aggregate reconviction rate to understand the effectiveness of the justice system?</li>
 <li>SG already know that ‘offender mix’ is important - and they factor this in to analysis at Local Authority level</li>
+<li>Some evidence that Scotland might be an extreme case here (e.g.&nbsp;Matthews 2023)</li>
 </ul>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
@@ -506,6 +519,9 @@
 </div>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-cunliffe2007" class="csl-entry" role="listitem">
+Cunliffe, Jack, and Adrian Shepherd. 2007. <span>“Re-Offending of Adults: Results from the 2004 Cohort.”</span>
+</div>
 <div id="ref-dasgupta1993" class="csl-entry" role="listitem">
 Das Gupta, Prithwis. 1993. <em>Standardization and Decomposition of Rates: A User’s Manual</em>. 186. US Department of Commerce, Economics; Statistics Administration, Bureau of the Census.
 </div>
