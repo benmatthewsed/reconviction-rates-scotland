@@ -366,6 +366,7 @@
 <ul>
 <li><p>The logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders</p></li>
 <li><p>But, as NI statistics said: “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.”</p></li>
+<li><p>There are reasons why we might not want to use reconvictions as a performance measure - but these are unrelated to the points we make here. That is, even if you think that reconvictions are a valid measure of criminal justice system effectiveness, the problem we outline still applies</p></li>
 </ul>
 </section>
 <section id="our-key-point" class="slide level2">
@@ -373,14 +374,28 @@
 <ul>
 <li>The change in the demographics of people convicted over the course of the crime drop introduces statistical bias in the aggregate reconviction rate if it’s used as a measure of ‘effectiveness’ of the justice system</li>
 <li>Because the crime drop implies a change in the ‘offender mix’ who have been through the justice system over time</li>
-<li>This can complicate comparisons in the reconviction rate over time (and jurisdictions too, but we won’t go into that now)</li>
-<li>Previous approaches to correct for this problem can’t (easily) assess the extent of this bias</li>
+<li>And changes in ‘offender mix’ can complicate comparisons in the reconviction rate over time (and jurisdictions too, but we won’t go into that now)</li>
+<li>Previous approaches to correct for the problem of changing ‘offender mix’ can’t (easily) assess the extent of this bias</li>
 <li>The methods of standardization and decomposition (standard in demography) can</li>
 <li>We illustrate this with an empirical example of Scotland’s reconviction rate</li>
 <li>However, this technical fix may be limited in its application as it … ignores? the … politics? of reconviction statistics</li>
 <li>The reconvictions indicator is a convenient abstraction - Information as Nguyen paraphrases Porter - designed to reduce context to make comparisons more portable. People in SG don’t have to read all the assessments of all the people convicted in a previous year</li>
 </ul>
 </section>
+<section id="demographic-mix" class="slide level2">
+<h2>Demographic mix</h2>
+<ul>
+<li>This matters because young people typically have the highest reconviction rate</li>
+</ul>
+</section>
+<section id="an-illustration" class="slide level2">
+<h2>An illustration</h2>
+
+<img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="an-illustration-1" class="slide level2">
+<h2>An illustration</h2>
+
+<img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
 <section id="what-is-your-estimand" class="slide level2">
 <h2>What is your estimand?</h2>
 <ul>
@@ -406,11 +421,12 @@
 <li><p>Previous approaches used an individual-level logistic regression approach to calculate ‘predicted’ reconviction rates <span class="citation" data-cites="francis2005 cunliffe2007">(<a href="#/references" role="doc-biblioref" onclick="">Francis, Harman, and Humphreys 2005</a>; <a href="#/references" role="doc-biblioref" onclick="">Cunliffe and Shepherd 2007</a>)</span></p></li>
 <li><p>An alternative approach from demography is standardization and decomposition <span class="citation" data-cites="kitagawa1964">(<a href="#/references" role="doc-biblioref" onclick="">Kitagawa 1964</a>)</span>. This lets us separate out the contributions of changing demographics as well as changes in the sub-group reconviction rates to the overall rate.</p></li>
 <li><p>We use the methods proposed by <span class="citation" data-cites="dasgupta1993">Das Gupta (<a href="#/references" role="doc-biblioref" onclick="">1993</a>)</span> as implemented in the <code>{dasguptr}</code> R package.</p></li>
+<li><p>These approaches actually are kind of similar</p></li>
 </ul>
 </section>
 <section id="data" class="slide level2">
 <h2>Data</h2>
-<p>We explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland (Matthews and Minton 2018). There is nothing particularly special about these time points, and the same approach would work for oither time periods.</p>
+<p>We explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland (Matthews and Minton 2018). There is nothing particularly special about these time points, and the same approach would work for other time periods.</p>
 <p>Note: include a figure of the overall reconvictions rate here</p>
 <p>Note: it’s possible to get data back to 1997-98 with different age categories. Not sure if this would mess up the comparison though?</p>
 </section>
@@ -439,63 +455,1040 @@
 <section id="results" class="slide level2">
 <h2>Results</h2>
 </section>
-<section id="more-results" class="slide level2">
-<h2>More results</h2>
+<section id="descriptives-change-in-reconviction-rate-overall" class="slide level2">
+<h2>Descriptives: Change in reconviction rate overall</h2>
 
-<img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="percentage-change" class="slide level2">
-<h2>Percentage change</h2>
+<img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="change-in-reconviciton-rate-by-age-group" class="slide level2">
+<h2>Change in reconviciton rate by age group</h2>
+
+<img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="change-in-the-relative-size-of-age-group" class="slide level2">
+<h2>Change in the relative size of age group</h2>
+
+<img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="changing-demographic-mix" class="slide level2">
+<h2>Changing demographic mix</h2>
+
+<img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="how-much-change-in-the-reconviction-rate-is-due-to-demographic-mix" class="slide level2">
+<h2>How much change in the reconviction rate is due to demographic mix?</h2>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top">
+<div id="xgmunufedx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xgmunufedx table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#xgmunufedx thead, #xgmunufedx tbody, #xgmunufedx tfoot, #xgmunufedx tr, #xgmunufedx td, #xgmunufedx th {
+  border-style: none;
+}
+
+#xgmunufedx p {
+  margin: 0;
+  padding: 0;
+}
+
+#xgmunufedx .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#xgmunufedx .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#xgmunufedx .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xgmunufedx .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xgmunufedx .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xgmunufedx .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xgmunufedx .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xgmunufedx .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#xgmunufedx .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#xgmunufedx .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#xgmunufedx .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#xgmunufedx .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#xgmunufedx .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#xgmunufedx .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#xgmunufedx .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xgmunufedx .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#xgmunufedx .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#xgmunufedx .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#xgmunufedx .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xgmunufedx .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#xgmunufedx .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#xgmunufedx .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#xgmunufedx .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xgmunufedx .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#xgmunufedx .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#xgmunufedx .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xgmunufedx .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xgmunufedx .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#xgmunufedx .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xgmunufedx .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#xgmunufedx .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xgmunufedx .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xgmunufedx .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xgmunufedx .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xgmunufedx .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xgmunufedx .gt_left {
+  text-align: left;
+}
+
+#xgmunufedx .gt_center {
+  text-align: center;
+}
+
+#xgmunufedx .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#xgmunufedx .gt_font_normal {
+  font-weight: normal;
+}
+
+#xgmunufedx .gt_font_bold {
+  font-weight: bold;
+}
+
+#xgmunufedx .gt_font_italic {
+  font-style: italic;
+}
+
+#xgmunufedx .gt_super {
+  font-size: 65%;
+}
+
+#xgmunufedx .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#xgmunufedx .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#xgmunufedx .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#xgmunufedx .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#xgmunufedx .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#xgmunufedx .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#xgmunufedx .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#xgmunufedx .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#xgmunufedx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: right;">2004-05</th>
-<th style="text-align: right;">2020-21</th>
-<th style="text-align: right;">diff</th>
-<th style="text-align: right;">decomp</th>
+<tr class="header gt_col_headings">
+<th id="a2004-05" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">2004-05</th>
+<th id="a2020-21" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">2020-21</th>
+<th id="diff" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">diff</th>
+<th id="decomp" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">decomp</th>
 </tr>
 </thead>
-<tbody>
+<tbody class="gt_table_body">
 <tr class="odd">
-<td style="text-align: left;">prevalence</td>
-<td style="text-align: right;">0.3056272</td>
-<td style="text-align: right;">0.2774586</td>
-<td style="text-align: right;">-0.0281686</td>
-<td style="text-align: right;">51.15</td>
+<td class="gt_row gt_right" headers="2004-05">0.3050234</td>
+<td class="gt_row gt_right" headers="2020-21">0.2780063</td>
+<td class="gt_row gt_right" headers="diff">-0.027017160</td>
+<td class="gt_row gt_right" headers="decomp">49.06</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">gender_struct</td>
-<td style="text-align: right;">0.2930193</td>
-<td style="text-align: right;">0.2931417</td>
-<td style="text-align: right;">0.0001225</td>
-<td style="text-align: right;">-0.22</td>
+<td class="gt_row gt_right" headers="2004-05">0.2914536</td>
+<td class="gt_row gt_right" headers="2020-21">0.2915760</td>
+<td class="gt_row gt_right" headers="diff">0.000122371</td>
+<td class="gt_row gt_right" headers="decomp">-0.22</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">age_struct</td>
-<td style="text-align: right;">0.3050606</td>
-<td style="text-align: right;">0.2780376</td>
-<td style="text-align: right;">-0.0270231</td>
-<td style="text-align: right;">49.07</td>
+<td class="gt_row gt_right" headers="2004-05">0.3056384</td>
+<td class="gt_row gt_right" headers="2020-21">0.2774640</td>
+<td class="gt_row gt_right" headers="diff">-0.028174399</td>
+<td class="gt_row gt_right" headers="decomp">51.16</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">crude</td>
-<td style="text-align: right;">0.3237422</td>
-<td style="text-align: right;">0.2686730</td>
-<td style="text-align: right;">-0.0550692</td>
-<td style="text-align: right;">100.00</td>
+<td class="gt_row gt_right" headers="2004-05">0.3237422</td>
+<td class="gt_row gt_right" headers="2020-21">0.2686730</td>
+<td class="gt_row gt_right" headers="diff">-0.055069188</td>
+<td class="gt_row gt_right" headers="decomp">100.00</td>
 </tr>
 </tbody>
 </table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="percentage-change-by-group" class="slide level2">
+<h2>Percentage change by group</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="pqgzswnmta" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pqgzswnmta table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#pqgzswnmta thead, #pqgzswnmta tbody, #pqgzswnmta tfoot, #pqgzswnmta tr, #pqgzswnmta td, #pqgzswnmta th {
+  border-style: none;
+}
+
+#pqgzswnmta p {
+  margin: 0;
+  padding: 0;
+}
+
+#pqgzswnmta .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pqgzswnmta .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#pqgzswnmta .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pqgzswnmta .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pqgzswnmta .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pqgzswnmta .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqgzswnmta .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pqgzswnmta .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pqgzswnmta .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pqgzswnmta .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pqgzswnmta .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pqgzswnmta .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pqgzswnmta .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#pqgzswnmta .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#pqgzswnmta .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pqgzswnmta .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#pqgzswnmta .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#pqgzswnmta .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pqgzswnmta .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqgzswnmta .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#pqgzswnmta .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#pqgzswnmta .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#pqgzswnmta .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqgzswnmta .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#pqgzswnmta .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#pqgzswnmta .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqgzswnmta .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqgzswnmta .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#pqgzswnmta .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqgzswnmta .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#pqgzswnmta .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pqgzswnmta .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pqgzswnmta .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqgzswnmta .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pqgzswnmta .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pqgzswnmta .gt_left {
+  text-align: left;
+}
+
+#pqgzswnmta .gt_center {
+  text-align: center;
+}
+
+#pqgzswnmta .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pqgzswnmta .gt_font_normal {
+  font-weight: normal;
+}
+
+#pqgzswnmta .gt_font_bold {
+  font-weight: bold;
+}
+
+#pqgzswnmta .gt_font_italic {
+  font-style: italic;
+}
+
+#pqgzswnmta .gt_super {
+  font-size: 65%;
+}
+
+#pqgzswnmta .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#pqgzswnmta .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#pqgzswnmta .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#pqgzswnmta .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#pqgzswnmta .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#pqgzswnmta .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#pqgzswnmta .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#pqgzswnmta .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#pqgzswnmta div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="category" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">category</th>
+<th id="comp_ce" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">comp_ce</th>
+<th id="rate_ce" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">rate_ce</th>
+<th id="tot_ce" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">tot_ce</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd gt_group_heading_row">
+<td colspan="4" id="gender" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">gender</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left" headers="gender  category">Female</td>
+<td class="gt_row gt_right" headers="gender  comp_ce">2.14</td>
+<td class="gt_row gt_right" headers="gender  rate_ce">3.82</td>
+<td class="gt_row gt_right" headers="gender  tot_ce">5.96</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="gender  category">Male</td>
+<td class="gt_row gt_right" headers="gender  comp_ce">-2.36</td>
+<td class="gt_row gt_right" headers="gender  rate_ce">21.76</td>
+<td class="gt_row gt_right" headers="gender  tot_ce">19.40</td>
+</tr>
+<tr class="even gt_group_heading_row">
+<td colspan="4" id="age" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">age</td>
+</tr>
+<tr class="odd gt_row_group_first">
+<td class="gt_row gt_left" headers="age  category">21 to 25</td>
+<td class="gt_row gt_right" headers="age  comp_ce">47.26</td>
+<td class="gt_row gt_right" headers="age  rate_ce">9.39</td>
+<td class="gt_row gt_right" headers="age  tot_ce">56.66</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="age  category">26 to 30</td>
+<td class="gt_row gt_right" headers="age  comp_ce">-7.21</td>
+<td class="gt_row gt_right" headers="age  rate_ce">6.03</td>
+<td class="gt_row gt_right" headers="age  tot_ce">-1.18</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="age  category">31 to 40</td>
+<td class="gt_row gt_right" headers="age  comp_ce">-37.16</td>
+<td class="gt_row gt_right" headers="age  rate_ce">-0.27</td>
+<td class="gt_row gt_right" headers="age  tot_ce">-37.43</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="age  category">over 40</td>
+<td class="gt_row gt_right" headers="age  comp_ce">-54.01</td>
+<td class="gt_row gt_right" headers="age  rate_ce">-1.54</td>
+<td class="gt_row gt_right" headers="age  tot_ce">-55.55</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="age  category">under 21</td>
+<td class="gt_row gt_right" headers="age  comp_ce">100.17</td>
+<td class="gt_row gt_right" headers="age  rate_ce">11.97</td>
+<td class="gt_row gt_right" headers="age  tot_ce">112.15</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 </div>
 </div>
 </section>
 <section id="huh" class="slide level2">
 <h2>Huh?</h2>
 <p>About 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 we can attribute to demographic change in the population of people convicted, rather than falls in the reconviction rate <em>per se</em>.</p>
-<p>This could still be due to criminal justice (e.g.&nbsp;more diversion from prosecution for young people), but is not attributable to the ‘effectiveness’ of sentencing</p>
-<p>The demographic change in convictions in Scotland over the course of the past 20 years have been so great as to distort other CJS indicators.</p>
+<p>This could still be due to criminal justice practices (e.g.&nbsp;more diversion from prosecution for young people), but is not attributable to the ‘effectiveness’ of sentencing - it is purely due to changes in the demographic mix of people being convicted in the first place</p>
 </section>
 <section id="discussion" class="slide level2">
 <h2>Discussion</h2>

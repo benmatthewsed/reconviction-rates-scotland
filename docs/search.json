@@ -11,14 +11,14 @@
     "href": "02_script/reconviction-standardization-decomposition.html#people-want-to-use-reconviction-rates-as-a-performance-metric",
     "title": "Understanding change in reconviction rates",
     "section": "People want to use reconviction rates as a performance metric",
-    "text": "People want to use reconviction rates as a performance metric\n“Reduced reoffending is an important objective that can facilitate desistance and reintegration. While reducing reoffending is important, in the absence of reintegration or desistance, reductions in offending are less likely to persist. Yet, reoffending can be a more quantifiable metric which has advantages – though care must still be taken as there are different definitions of reoffending” (Gormley, Hamilton, and Belton 2022). Basically it can help measure the ‘effectiveness’ of sentencing (… if imperfectly).\n“The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government” (NI stats) - see equivalent from SG\n\nThe logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders\nBut, as NI statistics said: “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.”"
+    "text": "People want to use reconviction rates as a performance metric\n“Reduced reoffending is an important objective that can facilitate desistance and reintegration. While reducing reoffending is important, in the absence of reintegration or desistance, reductions in offending are less likely to persist. Yet, reoffending can be a more quantifiable metric which has advantages – though care must still be taken as there are different definitions of reoffending” (Gormley, Hamilton, and Belton 2022). Basically it can help measure the ‘effectiveness’ of sentencing (… if imperfectly).\n“The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government” (NI stats) - see equivalent from SG\n\nThe logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders\nBut, as NI statistics said: “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.”\nThere are reasons why we might not want to use reconvictions as a performance measure - but these are unrelated to the points we make here. That is, even if you think that reconvictions are a valid measure of criminal justice system effectiveness, the problem we outline still applies"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#data",
     "href": "02_script/reconviction-standardization-decomposition.html#data",
     "title": "Understanding change in reconviction rates",
     "section": "Data",
-    "text": "Data\nWe explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland (Matthews and Minton 2018). There is nothing particularly special about these time points, and the same approach would work for oither time periods.\nNote: include a figure of the overall reconvictions rate here\nNote: it’s possible to get data back to 1997-98 with different age categories. Not sure if this would mess up the comparison though?"
+    "text": "Data\nWe explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland (Matthews and Minton 2018). There is nothing particularly special about these time points, and the same approach would work for other time periods.\nNote: include a figure of the overall reconvictions rate here\nNote: it’s possible to get data back to 1997-98 with different age categories. Not sure if this would mess up the comparison though?"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#measures",
@@ -60,14 +60,14 @@
     "href": "02_script/reconviction-standardization-decomposition.html#past-approaches",
     "title": "Understanding change in reconviction rates",
     "section": "Past approaches",
-    "text": "Past approaches\n\nThis is known.\nPrevious approaches used an individual-level logistic regression approach to calculate ‘predicted’ reconviction rates (Francis, Harman, and Humphreys 2005; Cunliffe and Shepherd 2007)\nAn alternative approach from demography is standardization and decomposition (Kitagawa 1964). This lets us separate out the contributions of changing demographics as well as changes in the sub-group reconviction rates to the overall rate.\nWe use the methods proposed by Das Gupta (1993) as implemented in the {dasguptr} R package."
+    "text": "Past approaches\n\nThis is known.\nPrevious approaches used an individual-level logistic regression approach to calculate ‘predicted’ reconviction rates (Francis, Harman, and Humphreys 2005; Cunliffe and Shepherd 2007)\nAn alternative approach from demography is standardization and decomposition (Kitagawa 1964). This lets us separate out the contributions of changing demographics as well as changes in the sub-group reconviction rates to the overall rate.\nWe use the methods proposed by Das Gupta (1993) as implemented in the {dasguptr} R package.\nThese approaches actually are kind of similar"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#huh",
     "href": "02_script/reconviction-standardization-decomposition.html#huh",
     "title": "Understanding change in reconviction rates",
     "section": "Huh?",
-    "text": "Huh?\nAbout 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 we can attribute to demographic change in the population of people convicted, rather than falls in the reconviction rate per se.\nThis could still be due to criminal justice (e.g. more diversion from prosecution for young people), but is not attributable to the ‘effectiveness’ of sentencing\nThe demographic change in convictions in Scotland over the course of the past 20 years have been so great as to distort other CJS indicators."
+    "text": "Huh?\nAbout 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 we can attribute to demographic change in the population of people convicted, rather than falls in the reconviction rate per se.\nThis could still be due to criminal justice practices (e.g. more diversion from prosecution for young people), but is not attributable to the ‘effectiveness’ of sentencing - it is purely due to changes in the demographic mix of people being convicted in the first place"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#references",
@@ -81,7 +81,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#our-key-point",
     "title": "Understanding change in reconviction rates",
     "section": "Our key point",
-    "text": "Our key point\n\nThe change in the demographics of people convicted over the course of the crime drop introduces statistical bias in the aggregate reconviction rate if it’s used as a measure of ‘effectiveness’ of the justice system\nBecause the crime drop implies a change in the ‘offender mix’ who have been through the justice system over time\nThis can complicate comparisons in the reconviction rate over time (and jurisdictions too, but we won’t go into that now)\nPrevious approaches to correct for this problem can’t (easily) assess the extent of this bias\nThe methods of standardization and decomposition (standard in demography) can\nWe illustrate this with an empirical example of Scotland’s reconviction rate\nHowever, this technical fix may be limited in its application as it … ignores? the … politics? of reconviction statistics\nThe reconvictions indicator is a convenient abstraction - Information as Nguyen paraphrases Porter - designed to reduce context to make comparisons more portable. People in SG don’t have to read all the assessments of all the people convicted in a previous year"
+    "text": "Our key point\n\nThe change in the demographics of people convicted over the course of the crime drop introduces statistical bias in the aggregate reconviction rate if it’s used as a measure of ‘effectiveness’ of the justice system\nBecause the crime drop implies a change in the ‘offender mix’ who have been through the justice system over time\nAnd changes in ‘offender mix’ can complicate comparisons in the reconviction rate over time (and jurisdictions too, but we won’t go into that now)\nPrevious approaches to correct for the problem of changing ‘offender mix’ can’t (easily) assess the extent of this bias\nThe methods of standardization and decomposition (standard in demography) can\nWe illustrate this with an empirical example of Scotland’s reconviction rate\nHowever, this technical fix may be limited in its application as it … ignores? the … politics? of reconviction statistics\nThe reconvictions indicator is a convenient abstraction - Information as Nguyen paraphrases Porter - designed to reduce context to make comparisons more portable. People in SG don’t have to read all the assessments of all the people convicted in a previous year"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#discussion",
@@ -102,7 +102,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#percentage-change",
     "title": "Understanding change in reconviction rates",
     "section": "Percentage change",
-    "text": "Percentage change\n\n\n\n\n\n\n2004-05\n2020-21\ndiff\ndecomp\n\n\n\n\nprevalence\n0.3056272\n0.2774586\n-0.0281686\n51.15\n\n\ngender_struct\n0.2930193\n0.2931417\n0.0001225\n-0.22\n\n\nage_struct\n0.3050606\n0.2780376\n-0.0270231\n49.07\n\n\ncrude\n0.3237422\n0.2686730\n-0.0550692\n100.00"
+    "text": "Percentage change\n\n\n\n\n\n\n\n\n2004-05\n2020-21\ndiff\ndecomp\n\n\n\n\n0.3050234\n0.2780063\n-0.027017160\n49.06\n\n\n0.2914536\n0.2915760\n0.000122371\n-0.22\n\n\n0.3056384\n0.2774640\n-0.028174399\n51.16\n\n\n0.3237422\n0.2686730\n-0.055069188\n100.00"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#the-key-problem",
@@ -110,5 +110,68 @@
     "title": "Understanding change in reconviction rates",
     "section": "The key problem",
     "text": "The key problem\n“The two-year reconviction rates for the 2002/03 cohort of those released from custody or receiving non-custodial sentences was 45%, the same rate recorded for the 1995/96 cohort; the rates for all other cohorts from 1996/97 to 2001/02 ranged from 44% to 42% (Scottish Executive, 2006b). However, as shown in figure 1, when the data is broken down by gender, the 2002/03 rates for men and for women were actually the highest on record over the eight-year period … This can be explained in part by the fact that the proportion of women in the cohort has increased from 14% in 1995 to 16% in 2002/03 (Scottish Executive, 2001), and that women have a notably lower reconviction rate than men (37% compared with 47%; Scottish Executive, 2006b). That is, the sample now contains a higher proportion of people who have a lower likelihood of being reconvicted … This means that a headline reduction in reconvictions in line with targets might be due to a change in the gender balance of the incarcerated population, rather than the success of any policy or intervention. If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration.” (kirkwood2008?)"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#descriptives-change-in-reconviction-rate-overall",
+    "href": "02_script/reconviction-standardization-decomposition.html#descriptives-change-in-reconviction-rate-overall",
+    "title": "Understanding change in reconviction rates",
+    "section": "Descriptives: Change in reconviction rate overall",
+    "text": "Descriptives: Change in reconviction rate overall"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#change-in-reconviciton-rate-by-age-group",
+    "href": "02_script/reconviction-standardization-decomposition.html#change-in-reconviciton-rate-by-age-group",
+    "title": "Understanding change in reconviction rates",
+    "section": "Change in reconviciton rate by age group",
+    "text": "Change in reconviciton rate by age group"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#change-in-the-relative-size-of-age-group",
+    "href": "02_script/reconviction-standardization-decomposition.html#change-in-the-relative-size-of-age-group",
+    "title": "Understanding change in reconviction rates",
+    "section": "Change in the relative size of age group",
+    "text": "Change in the relative size of age group"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#percentage-change-by-group",
+    "href": "02_script/reconviction-standardization-decomposition.html#percentage-change-by-group",
+    "title": "Understanding change in reconviction rates",
+    "section": "Percentage change by group",
+    "text": "Percentage change by group\n\n\n\n\n\n\n\n\ncategory\ncomp_ce\nrate_ce\ntot_ce\n\n\n\n\ngender\n\n\nFemale\n2.14\n3.82\n5.96\n\n\nMale\n-2.36\n21.76\n19.40\n\n\nage\n\n\n21 to 25\n47.26\n9.39\n56.66\n\n\n26 to 30\n-7.21\n6.03\n-1.18\n\n\n31 to 40\n-37.16\n-0.27\n-37.43\n\n\nover 40\n-54.01\n-1.54\n-55.55\n\n\nunder 21\n100.17\n11.97\n112.15"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#demographic-mix",
+    "href": "02_script/reconviction-standardization-decomposition.html#demographic-mix",
+    "title": "Understanding change in reconviction rates",
+    "section": "Demographic mix",
+    "text": "Demographic mix\n\nThis matters because young people typically have the highest reconviction rate"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#an-illustration",
+    "href": "02_script/reconviction-standardization-decomposition.html#an-illustration",
+    "title": "Understanding change in reconviction rates",
+    "section": "An illustration",
+    "text": "An illustration"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#an-illustration-1",
+    "href": "02_script/reconviction-standardization-decomposition.html#an-illustration-1",
+    "title": "Understanding change in reconviction rates",
+    "section": "An illustration",
+    "text": "An illustration"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#changing-demographic-mix",
+    "href": "02_script/reconviction-standardization-decomposition.html#changing-demographic-mix",
+    "title": "Understanding change in reconviction rates",
+    "section": "Changing demographic mix",
+    "text": "Changing demographic mix"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#how-much-change-in-the-reconviction-rate-is-due-to-demographic-mix",
+    "href": "02_script/reconviction-standardization-decomposition.html#how-much-change-in-the-reconviction-rate-is-due-to-demographic-mix",
+    "title": "Understanding change in reconviction rates",
+    "section": "How much change in the reconviction rate is due to demographic mix?",
+    "text": "How much change in the reconviction rate is due to demographic mix?\n\n\n\n\n\n\n\n\n2004-05\n2020-21\ndiff\ndecomp\n\n\n\n\n0.3050234\n0.2780063\n-0.027017160\n49.06\n\n\n0.2914536\n0.2915760\n0.000122371\n-0.22\n\n\n0.3056384\n0.2774640\n-0.028174399\n51.16\n\n\n0.3237422\n0.2686730\n-0.055069188\n100.00"
   }
 ]

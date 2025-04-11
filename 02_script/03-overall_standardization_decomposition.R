@@ -56,25 +56,87 @@ scot_reconv |>
     frequency = number_of_reconvictions/number_of_offenders,
   )
 
-
+# just the first and last year
 
 overall_res |> 
   filter(year == "2004-05" | year == "2020-21") |> 
   dgnpop(pop="year", 
        factors=c("prevalence"),id_vars=c("gender","age"),
-       crossclassified="number_of_offenders") |> 
-  dg_table() |> 
-  as_tibble() |> 
-  pivot_wider(names_from= pop,
-              values_from = n) |> 
-  mutate(decomp = diff / diff[factor == "crude"] * 100)
+       crossclassified="number_of_offenders",
+       agg = TRUE) |> 
+  dg_table()
 
+# and now the category effects
 
-scot_res <- 
-dgnpop(overall_res,
-         pop="year", 
+res <- 
+overall_res |> 
+  filter(year == "2004-05" | year == "2020-21") |> 
+  dgnpop(pop="year", 
          factors=c("prevalence"),id_vars=c("gender","age"),
-         crossclassified="number_of_offenders")
+         crossclassified="number_of_offenders",
+         agg = FALSE)
+
+gender_ce <- 
+  res |>
+  pivot_wider(names_from = factor, values_from = rate) |>
+  group_by(pop, gender) |>
+  summarise(
+    JBj = sum(gender_struct),
+    RTj = sum(prevalence) * (1 / 2),
+    CEj = JBj + RTj
+  ) |>
+  group_by(gender) |>
+  summarise(
+    comp_ce = diff(JBj),
+    rate_ce = diff(RTj),
+    tot_ce = diff(CEj)
+  )
+
+age_ce <- 
+  res |>
+  pivot_wider(names_from = factor, values_from = rate) |>
+  group_by(pop, age) |>
+  summarise(
+    JBj = sum(age_struct),
+    RTj = sum(prevalence) * (1 / 2),
+    CEj = JBj + RTj
+  ) |>
+  group_by(age) |>
+  summarise(
+    comp_ce = diff(JBj),
+    rate_ce = diff(RTj),
+    tot_ce = diff(CEj)
+  )
+
+
+bind_rows(
+  sex_ce |> mutate(var = "gender") |> rename(category = gender),
+  age_ce |> mutate(var = "age") |> rename(category = age)
+) |>
+  mutate(
+    comp_ce = comp_ce / sum(tot_ce) * 100,
+    rate_ce = rate_ce / sum(tot_ce) * 100,
+    tot_ce = tot_ce / sum(tot_ce) * 100
+  ) |>
+  group_by(var) |>
+  mutate(across(2:4, ~ round(., 2))) |>
+  gt::gt()
+
+
+# all years
+
+# scot_res <- 
+# dgnpop(overall_res,
+#          pop="year", 
+#          factors=c("prevalence"),id_vars=c("gender","age"),
+#          crossclassified="number_of_offenders")
+
+# saveRDS(scot_res,
+#         here::here("03_results",
+#                    "scotland_decomposition.rds"))
+
+scot_res <- readRDS(here::here("03_results",
+                              "scotland_decomposition.rds"))
 
 scot_res_rates <- 
 scot_res$rates |> 
@@ -82,7 +144,10 @@ scot_res$rates |>
   mutate(country = "Scotland")
 
 
-
+scot_res_rates |>  
+  ggplot(aes(x=pop,y=rate,col=factor, group = factor))+
+  geom_path()+
+  theme_bw()
 
 
 
@@ -225,3 +290,53 @@ ew_offence |>
   pivot_wider(names_from= pop,
               values_from = n) |> 
   mutate(decomp = diff / diff[factor == "crude"] * 100)
+
+
+
+# data viz ----------------------------------------------------------------
+
+average_age_df <- 
+scot_reconv |> 
+  mutate(age_first = case_when(
+    age == "under 21" ~ 16,
+    age == "21 to 25" ~ 21,
+    age == "26 to 30" ~ 26,
+    age == "31 to 40" ~ 31,
+    age == "over 40" ~ 41,
+  ),
+  age_last = case_when(
+    age == "under 21" ~ 20,
+    age == "21 to 25" ~ 25,
+    age == "26 to 30" ~ 30,
+    age == "31 to 40" ~ 40,
+    age == "over 40" ~ 75,
+    
+  ),
+  age_length = age_last - age_first) |> 
+  group_by(year, gender, age, age_first, age_last, age_length) |> 
+  summarise(number_of_offenders = sum(number_of_offenders)) |> 
+  mutate(age_seq = map2(age_first, age_last, ~ seq(from = .x, to = .y))) |> 
+  unnest(age_seq) |> 
+  ungroup() |> 
+  mutate(mean_number_of_offenders = number_of_offenders / age_length)
+
+average_age_df |> 
+  ggplot(aes(x = age_seq, y = fct_rev(year), colour = gender, fill = gender, height = mean_number_of_offenders)) +
+  geom_density_ridges(stat = "identity",
+                      alpha = 0.4) +
+  facet_wrap(~ gender)
+
+
+
+average_age_df |> 
+  mutate(year = as.integer(str_sub(year, 1, 4))) |> 
+  ggplot(aes(x = age_seq, y = mean_number_of_offenders, colour = gender, fill = gender)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~ gender) +
+  labs(title = 'Year: {frame_time}', x = 'Age', y = 'Number of offenders') +
+  transition_time(year) +
+  enter_appear() +
+  exit_disappear()
+
+# maybe do the smooth approximation here
+# also... is there a nice table that would work instead? Just the proportions for the first and last year?

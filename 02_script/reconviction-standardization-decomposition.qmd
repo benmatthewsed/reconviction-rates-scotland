@@ -23,16 +23,79 @@ bibliography: references.bib
 
 -   But, as NI statistics said: "differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions."
 
+-   There are reasons why we might not want to use reconvictions as a performance measure - but these are unrelated to the points we make here. That is, even if you think that reconvictions are a valid measure of criminal justice system effectiveness, the problem we outline still applies
+
 ## Our key point
 
 -   The change in the demographics of people convicted over the course of the crime drop introduces statistical bias in the aggregate reconviction rate if it's used as a measure of 'effectiveness' of the justice system
 -   Because the crime drop implies a change in the 'offender mix' who have been through the justice system over time
--   This can complicate comparisons in the reconviction rate over time (and jurisdictions too, but we won't go into that now)
--   Previous approaches to correct for this problem can't (easily) assess the extent of this bias
+-   And changes in 'offender mix' can complicate comparisons in the reconviction rate over time (and jurisdictions too, but we won't go into that now)
+-   Previous approaches to correct for the problem of changing 'offender mix' can't (easily) assess the extent of this bias
 -   The methods of standardization and decomposition (standard in demography) can
 -   We illustrate this with an empirical example of Scotland's reconviction rate
 -   However, this technical fix may be limited in its application as it ... ignores? the ... politics? of reconviction statistics
 -   The reconvictions indicator is a convenient abstraction - Information as Nguyen paraphrases Porter - designed to reduce context to make comparisons more portable. People in SG don't have to read all the assessments of all the people convicted in a previous year
+
+## Demographic mix
+
+- This matters because young people typically have the highest reconviction rate
+
+
+## An illustration
+
+```{r}
+library(tidyverse)
+
+dat <- tribble(
+  ~year, ~id, ~group, ~v1, ~v2, ~v3, ~v4, ~v5,
+  "1", "1", "1", 1, 1, 1, 0, 0,
+  "1", "2","1",  1, 1, 1, 0, 0,
+  "1", "3", "1", 1, 1, 1, 0, 0,
+  "1", "4", "2", 1, 0,0 , 0 , 0,
+  "1", "5", "2", 1, 0, 0, 0, 0,
+  "2", "1", "1", 1, 1, 1, 0, 0,
+  "2", "2","1",  1, 1, 1, 0, 0,
+  "2", "3", "2", 1, 0,0 , 0 , 0,
+  "2", "4", "2", 1, 0,0 , 0 , 0,
+  "2", "5", "2", 1, 0, 0, 0, 0
+)
+
+dat |>
+  pivot_longer(cols = v1:v5) |>
+  ggplot(aes(x = name, y = fct_rev(id))) +
+  geom_point(aes(colour = factor(value)),
+             size = 4) +
+  facet_wrap(~year) +
+  theme_minimal() +
+  theme(axis.title = element_blank(),
+        axis.text = element_blank(),
+        legend.position = "none") +
+  scale_colour_manual(values = c("#bdbdbd",
+                                 "#636363"))
+
+
+```
+
+## An illustration
+
+```{r}
+dat |>
+  pivot_longer(cols = v1:v5) |>
+  ggplot(aes(x = name, y = fct_rev(id))) +
+  geom_point(aes(colour = interaction(factor(value), group)),
+             size = 4) +
+  facet_wrap(~year) +
+  theme_minimal() +
+  theme(axis.title = element_blank(),
+        axis.text = element_blank(),
+        legend.position = "none") +
+  scale_colour_manual(values = c("#9ecae1",
+                                 "#3182bd",
+                                 "#fee0d2",
+                                 "#de2d26"))
+
+```
+
 
 ## What is your estimand?
 
@@ -64,9 +127,11 @@ bibliography: references.bib
 
 -   We use the methods proposed by @dasgupta1993 as implemented in the `{dasguptr}` R package.
 
+-   These approaches actually are kind of similar
+
 ## Data
 
-We explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland (Matthews and Minton 2018). There is nothing particularly special about these time points, and the same approach would work for oither time periods.
+We explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland (Matthews and Minton 2018). There is nothing particularly special about these time points, and the same approach would work for other time periods.
 
 Note: include a figure of the overall reconvictions rate here
 
@@ -102,7 +167,7 @@ There are alternatives (e.g. the average number of convictions per person reconv
 library(DasGuptR)
 library(readxl)
 library(here)
-library(tidyverse)
+library(binom)
 
 scot_reconv <- read_xlsx(here("01_data",
                       "reconvictions-2020-21-offender-cohort-additional-datasets.xlsx"),
@@ -139,15 +204,185 @@ scot_reconv |>
 
 ```
 
-## More results
+## Descriptives: Change in reconviction rate overall
+
+```{r}
+reconvs <- 
+  scot_reconv |> 
+  group_by(year, age) |> 
+  summarise(number_of_offenders = sum(number_of_offenders),
+            no_reconvicted = sum(no_reconvicted),
+            number_of_reconvictions = sum(number_of_reconvictions),
+            .groups = "drop") |> 
+  mutate(
+    prevalence = no_reconvicted/number_of_offenders,
+    frequency = number_of_reconvictions/number_of_offenders,
+  )
+
+overall_reconv <- 
+reconvs |> 
+  group_by(year) |> 
+  summarise(number_of_offenders = sum(number_of_offenders),
+            no_reconvicted = sum(no_reconvicted),
+            number_of_reconvictions = sum(number_of_reconvictions),
+            .groups = "drop") |> 
+  mutate(
+    prevalence = no_reconvicted/number_of_offenders,
+    frequency = number_of_reconvictions/number_of_offenders,
+  ) |> 
+  mutate(conf_low_95 = map2_dbl(no_reconvicted,
+                         number_of_offenders,
+                         ~ binom.wilson(.x, .y)$lower[[1]]),
+         conf_high_95 = map2_dbl(no_reconvicted,
+                          number_of_offenders,
+                          ~ binom.wilson(.x, .y)$upper[[1]]),
+         conf_low_80 = map2_dbl(no_reconvicted,
+                            number_of_offenders,
+                            ~ binom.wilson(.x, .y, conf.level = 0.8)$lower[[1]]),
+         conf_high_80 = map2_dbl(no_reconvicted,
+                             number_of_offenders,
+                             ~ binom.wilson(.x, .y, conf.level = 0.8)$upper[[1]]),
+         conf_low_50 = map2_dbl(no_reconvicted,
+                            number_of_offenders,
+                            ~ binom.wilson(.x, .y, conf.level = 0.5)$lower[[1]]),
+         conf_high_50 = map2_dbl(no_reconvicted,
+                             number_of_offenders,
+                             ~ binom.wilson(.x, .y, conf.level = 0.5)$upper[[1]]),
+  )
+
+
+
+overall_reconv |> 
+  ggplot(aes(x = year, y = as.numeric(prevalence), group = 1)) +
+  geom_point() +
+  geom_line() +
+  geom_ribbon(aes(ymin = conf_low_95, ymax = conf_high_95),
+              alpha = 0.3) +
+  geom_ribbon(aes(ymin = conf_low_80, ymax = conf_high_80),
+              alpha = 0.3) +
+  geom_ribbon(aes(ymin = conf_low_50, ymax = conf_high_50),
+              alpha = 0.3) +
+  theme_minimal() +
+  labs(y = "Reconviction rate",
+       x = "Reconviction cohort",
+       colour = "Age",
+       fill = "Age",
+       caption = "Grey line shows overall reconviction rate") +
+  theme(axis.text.x = element_text(angle = 45, hjust=1)) +
+  scale_y_continuous(limits = c(0.15, 0.45))
+
+```
+
+## Change in reconviciton rate by age group
 
 ```{r}
 
-scot_res <- 
-dgnpop(overall_res,
-         pop="year", 
-         factors=c("prevalence"),id_vars=c("gender","age"),
-         crossclassified="number_of_offenders")
+
+age_res <- 
+reconvs |> 
+  mutate(conf_low_95 = map2_dbl(no_reconvicted,
+                                number_of_offenders,
+                                ~ binom.wilson(.x, .y)$lower[[1]]),
+         conf_high_95 = map2_dbl(no_reconvicted,
+                                 number_of_offenders,
+                                 ~ binom.wilson(.x, .y)$upper[[1]]),
+         conf_low_80 = map2_dbl(no_reconvicted,
+                                number_of_offenders,
+                                ~ binom.wilson(.x, .y, conf.level = 0.8)$lower[[1]]),
+         conf_high_80 = map2_dbl(no_reconvicted,
+                                 number_of_offenders,
+                                 ~ binom.wilson(.x, .y, conf.level = 0.8)$upper[[1]]),
+         conf_low_50 = map2_dbl(no_reconvicted,
+                                number_of_offenders,
+                                ~ binom.wilson(.x, .y, conf.level = 0.5)$lower[[1]]),
+         conf_high_50 = map2_dbl(no_reconvicted,
+                                 number_of_offenders,
+                                 ~ binom.wilson(.x, .y, conf.level = 0.5)$upper[[1]]),
+  )
+
+age_res |> 
+   mutate(age = fct_relevel(age,
+                           "under 21",
+                           "21 to 25",
+                           "26 to 30",
+                           "31 to 40",
+                           "over 40")) |> 
+  ggplot(aes(x = year, y = as.numeric(prevalence))) +
+  geom_ribbon(aes(fill = age, group = age, 
+                      ymin = conf_low_95, ymax = conf_high_95),
+              alpha = 0.3) +
+  geom_ribbon(aes(fill = age, group = age, 
+                  ymin = conf_low_80, ymax = conf_high_80),
+              alpha = 0.3) +
+  geom_ribbon(aes(fill = age, group = age, 
+                  ymin = conf_low_50, ymax = conf_high_50),
+              alpha = 0.3) +
+  geom_line(aes(group = age, colour = age)) +
+  geom_point(aes(group = age,
+                 colour = age)) +
+  geom_point(data = overall_reconv) +
+  geom_line(data = overall_reconv,
+            aes(group = 1)) +
+  geom_ribbon(data = overall_reconv,
+              aes(ymin = conf_low_95, ymax = conf_high_95,
+                  group = 1),
+              alpha = 0.3) +
+  geom_ribbon(data = overall_reconv,
+              aes(ymin = conf_low_80, ymax = conf_high_80,
+                  group = 1),
+              alpha = 0.3) +
+  geom_ribbon(data = overall_reconv,
+              aes(ymin = conf_low_50, ymax = conf_high_50,
+                  group = 1),
+              alpha = 0.3) +
+  scale_color_viridis_d() +
+  scale_fill_viridis_d() +
+  theme_minimal() +
+  labs(y = "Reconviction rate",
+       x = "Reconviction cohort",
+       colour = "Age",
+       fill = "Age",
+       caption = "Grey line shows overall reconviction rate") +
+  theme(axis.text.x = element_text(angle = 45, hjust=1)) +
+  scale_y_continuous(limits = c(0.15, 0.45))
+
+```
+
+## Change in the relative size of age group
+
+```{r}
+age_res |> 
+  group_by(year) |> 
+  mutate(prop = number_of_offenders / sum(number_of_offenders)) |> 
+  ungroup() |> 
+  select(year, age, prop) |> 
+  mutate(age = fct_relevel(age,
+                           "under 21",
+                           "21 to 25",
+                           "26 to 30",
+                           "31 to 40",
+                           "over 40")) |> 
+  arrange(year, age) |> 
+  ggplot(aes(x = year, y = prop, fill = age, colour = age)) +
+  geom_bar(stat = "identity") +
+  scale_color_viridis_d() +
+  scale_fill_viridis_d() +
+  theme_minimal() +
+  labs(y = "Proportion of reconviction cohort",
+       x = "Reconviction cohort",
+       colour = "Age",
+       fill = "Age") +
+  theme(axis.text.x = element_text(angle = 45, hjust=1))
+
+
+```
+
+## Changing demographic mix
+
+```{r}
+
+scot_res <- readRDS(here::here("03_results",
+                              "scotland_decomposition.rds"))
 
 scot_res_rates <- 
 scot_res$rates |> 
@@ -155,14 +390,18 @@ scot_res$rates |>
   mutate(country = "Scotland")
 
  scot_res_rates |>  
-  ggplot(aes(x=pop,y=rate,col=factor, group = factor))+
+  ggplot(aes(x=pop, y=rate, colour =factor, group = factor))+
   geom_path()+
-  theme_bw()
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust=1)) +
+   labs(y = "Reconviction rate",
+       x = "Reconviction cohort",
+       colour = "Factor")
 
 
 ```
 
-## Percentage change
+## How much change in the reconviction rate is due to demographic mix?
 
 ```{r}
 overall_res |> 
@@ -171,16 +410,80 @@ overall_res |>
        factors=c("prevalence"),id_vars=c("gender","age"),
        crossclassified="number_of_offenders") |> 
   dg_table() |> 
-  knitr::kable()
+  gt::gt()
+```
+
+## Percentage change by group
+
+```{r}
+
+res <- 
+overall_res |> 
+  filter(year == "2004-05" | year == "2020-21") |> 
+  dgnpop(pop="year", 
+         factors=c("prevalence"),id_vars=c("gender","age"),
+         crossclassified="number_of_offenders",
+         agg = FALSE)
+
+gender_ce <- 
+  res |>
+  pivot_wider(names_from = factor, values_from = rate) |>
+   mutate(age = fct_relevel(age,
+                           "under 21",
+                           "21 to 25",
+                           "26 to 30",
+                           "31 to 40",
+                           "over 40")) |> 
+  group_by(pop, gender) |>
+  summarise(
+    JBj = sum(gender_struct),
+    RTj = sum(prevalence) * (1 / 2),
+    CEj = JBj + RTj
+  ) |>
+  group_by(gender) |>
+  summarise(
+    comp_ce = diff(JBj),
+    rate_ce = diff(RTj),
+    tot_ce = diff(CEj)
+  )
+
+age_ce <- 
+  res |>
+  pivot_wider(names_from = factor, values_from = rate) |>
+  group_by(pop, age) |>
+  summarise(
+    JBj = sum(age_struct),
+    RTj = sum(prevalence) * (1 / 2),
+    CEj = JBj + RTj
+  ) |>
+  group_by(age) |>
+  summarise(
+    comp_ce = diff(JBj),
+    rate_ce = diff(RTj),
+    tot_ce = diff(CEj)
+  )
+
+
+bind_rows(
+  gender_ce |> mutate(var = "gender") |> rename(category = gender),
+  age_ce |> mutate(var = "age") |> rename(category = age)
+) |>
+  mutate(
+    comp_ce = comp_ce / sum(tot_ce) * 100,
+    rate_ce = rate_ce / sum(tot_ce) * 100,
+    tot_ce = tot_ce / sum(tot_ce) * 100
+  ) |>
+  group_by(var) |>
+  mutate(across(2:4, ~ round(., 2))) |>
+  gt::gt()
+
 ```
 
 ## Huh?
 
 About 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 we can attribute to demographic change in the population of people convicted, rather than falls in the reconviction rate *per se*.
 
-This could still be due to criminal justice (e.g. more diversion from prosecution for young people), but is not attributable to the 'effectiveness' of sentencing
-
-The demographic change in convictions in Scotland over the course of the past 20 years have been so great as to distort other CJS indicators.
+This could still be due to criminal justice practices (e.g. more diversion from prosecution for young people), but is not attributable to the 'effectiveness' of sentencing - it is purely due to changes in the demographic mix of people being convicted in the first place
 
 ## Discussion
 
