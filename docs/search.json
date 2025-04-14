@@ -25,7 +25,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#measures",
     "title": "Understanding change in reconviction rates",
     "section": "Measures",
-    "text": "Measures\n\nWhat actual measure do they use in Scotland?\n\n“The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year,” (Scottish Government 2024)\nThere are alternatives (e.g. the average number of convictions per person reconvicted). The same principles apply regardless of the measure used.\n\nAge groups included\nGenders included"
+    "text": "Measures\n\nWhat actual measure do they use in Scotland?\n\n“The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year,” (Scottish Government 2024)\nThere are alternatives (e.g. the average number of convictions per person reconvicted). The same principles apply regardless of the measure used.\n\n(klingele2019?) advocates for measuring ‘markers of desistance’ instead of a binary reconviction measure\nMaybe (weaver2019?) for something conceptual about desistance?\nWhat we describe is orthogonal to this?\nAge groups included\nGenders included"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#method",
@@ -173,5 +173,12 @@
     "title": "Understanding change in reconviction rates",
     "section": "How much change in the reconviction rate is due to demographic mix?",
     "text": "How much change in the reconviction rate is due to demographic mix?\n\n\n\n\n\n\n\n\n2004-05\n2020-21\ndiff\ndecomp\n\n\n\n\n0.3050234\n0.2780063\n-0.027017160\n49.06\n\n\n0.2914536\n0.2915760\n0.000122371\n-0.22\n\n\n0.3056384\n0.2774640\n-0.028174399\n51.16\n\n\n0.3237422\n0.2686730\n-0.055069188\n100.00"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#reconviction-statistics-as-information",
+    "href": "02_script/reconviction-standardization-decomposition.html#reconviction-statistics-as-information",
+    "title": "Understanding change in reconviction rates",
+    "section": "Reconviction statistics as information",
+    "text": "Reconviction statistics as information\n\nQuantification in general is a way of communicating without shared understanding by sacrificing context (Porter)\nTo the extent that reconviction rates are a performance measure they are open to gaming (klingele2019?)"
   }
 ]
