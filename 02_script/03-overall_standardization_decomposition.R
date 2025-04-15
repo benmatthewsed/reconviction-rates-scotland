@@ -110,7 +110,7 @@ age_ce <-
 
 
 bind_rows(
-  sex_ce |> mutate(var = "gender") |> rename(category = gender),
+  gender_ce |> mutate(var = "gender") |> rename(category = gender),
   age_ce |> mutate(var = "age") |> rename(category = age)
 ) |>
   mutate(

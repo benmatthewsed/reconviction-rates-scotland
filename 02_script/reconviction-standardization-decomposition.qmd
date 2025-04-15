@@ -1,5 +1,6 @@
 ---
-title: "Understanding change in reconviction rates"
+title: "Why is Scotland's reconviction rate falling?"
+author: "Ben Matthews and Josiah King"
 format: 
   revealjs:
     smaller: true
@@ -119,15 +120,15 @@ dat |>
 
 -   Because of changes in the distribution of characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.
 
+## Rates and weights
+
 -   This is the point that Josiah puts like - we can think of the overall reconviction rate as a *weighted* mean of the reconviction rates in different demographic groups, weighted by the group size. You can have changes in the rate due to changes in the means or changes in the rates.
 
--   This is also known:
+-   This is known:
 
     -   "The two-year reconviction rates for the 2002/03 cohort of those released from custody or receiving non-custodial sentences was 45%, the same rate recorded for the 1995/96 cohort; the rates for all other cohorts from 1996/97 to 2001/02 ranged from 44% to 42% (Scottish Executive, 2006b). However, as shown in figure 1, when the data is broken down by gender, the 2002/03 rates for men and for women were actually the highest on record over the eight-year period ... This can be explained in part by the fact that the proportion of women in the cohort has increased from 14% in 1995 to 16% in 2002/03 (Scottish Executive, 2001), and that women have a notably lower reconviction rate than men (37% compared with 47%; Scottish Executive, 2006b). That is, the sample now contains a higher proportion of people who have a lower likelihood of being reconvicted ... This means that a headline reduction in reconvictions in line with targets might be due to a change in the gender balance of the incarcerated population, rather than the success of any policy or intervention. If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." [@kirkwood2008]
 
 ## Past approaches
-
--   This is known.
 
 -   Previous approaches used an individual-level logistic regression approach to calculate 'predicted' reconviction rates [@francis2005; @cunliffe2007]
 
@@ -168,7 +169,7 @@ There are alternatives (e.g. the average number of convictions per person reconv
 
 -   And then uses the differences from these 'standardized' rates to the observed rates to calculate how much of the change in the observed rate is due to changes in the underlying reconviction rates for each age group and how much is due to the change in the mix of the age groups
 
--   ADD AN EMPIRICAL EXAMPLE HERE
+-   ADD AN EMPIRICAL EXAMPLE HERE - use from the example above
 
 -   Draw from the vignettes?
 
@@ -393,7 +394,7 @@ age_res |>
 
 ```{r}
 
-scot_res <- readRDS(here::here("03_results",
+scot_res <- readRDS(here::here("04_results",
                               "scotland_decomposition.rds"))
 
 scot_res_rates <- 
@@ -497,6 +498,9 @@ About 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020
 
 This could still be due to criminal justice practices (e.g. more diversion from prosecution for young people), but is not attributable to the 'effectiveness' of sentencing - it is purely due to changes in the demographic mix of people being convicted in the first place
 
+The by-group decomposition shows that this overall fall in reonvictions is primarily due to the under 21 group, and then the 21-25. Conversely the increase in the relative size 
+
+
 ## Discussion
 
 -   The crime drop in Scotland has led to a profound shift in the demographics of the people coming through the criminal justice system
@@ -504,8 +508,8 @@ This could still be due to criminal justice practices (e.g. more diversion from 
 
 ## So what?
 
--   Who is actually using the aggregate reconviction rate to understand the effectiveness of the justice system?
--   SG already know that 'offender mix' is important - and they factor this in to analysis at Local Authority level
--   Some evidence that Scotland might be an extreme case here (e.g. Matthews 2023)
+-   Who is actually using the aggregate reconviction rate to understand the effectiveness of the justice system? In what way?
+-   SG already know that 'offender mix' is important - and they factor this in to reconviction analysis at Local Authority level
+-   Some evidence that Scotland might be an extreme case here with larger demographic changes than in other countries (e.g. Matthews 2023)
 
 ## References
