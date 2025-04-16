@@ -52,8 +52,7 @@ reconv |>
 
 ```
 
-
-So it looks like the trend is generally downwards for young people but less clear for older people, regardless of gender. We can test whether the linear trend for each age is downwards pretty simply. I'm not sure if we need the _quasi_ poisson bit here but feels like it should help with the confidence intervals and stuff.
+So it looks like the trend is generally downwards for young people but less clear for older people, regardless of gender. We can test whether the linear trend for each age is downwards pretty simply. I'm not sure if we need the *quasi* poisson bit here but feels like it should help with the confidence intervals and stuff.
 
 ```{r, fig.width=12,fig.height=10}
 reconv <- 
@@ -91,7 +90,6 @@ reconv |>
 For every LA (and high court) the linear slope is negative for young people, and for most of the 21-25 group too. For most of the LAs there is no linear trend for older people.
 
 So the demographics of people convicted in Scotland are changing quite a lot. Implications: all else equal, more people being convicted will be parents (as they are more likely to be of parenting age)? Could check the overall parity statistics by age to assess this.
-
 
 ## Something simpler
 

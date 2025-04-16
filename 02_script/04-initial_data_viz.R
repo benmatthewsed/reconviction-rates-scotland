@@ -2,6 +2,7 @@ library(tidyverse)
 library(readxl)
 library(binom)
 library(here)
+library(patchwork)
 
 scot_reconv <- read_xlsx(here("01_data",
                               "reconvictions-2020-21-offender-cohort-additional-datasets.xlsx"),
@@ -297,6 +298,7 @@ dat <- tribble(
   "2", "5", "2", 1, 0, 0, 0, 0
 )
 
+fig_1 <- 
 dat |>
   pivot_longer(cols = v1:v5) |>
   ggplot(aes(x = name, y = fct_rev(id))) +
@@ -310,6 +312,15 @@ dat |>
   scale_colour_manual(values = c("#bdbdbd",
                                  "#636363"))
 
+ggsave(
+  here::here("03_figures", "grey_example.svg"),
+  fig_1,
+  width = 10,
+  height = 5
+)
+
+
+fig_2 <- 
 dat |>
   pivot_longer(cols = v1:v5) |>
   ggplot(aes(x = name, y = fct_rev(id))) +
@@ -326,4 +337,10 @@ dat |>
                                  "#de2d26"))
 
 
+ggsave(
+  here::here("03_figures", "colour_example.svg"),
+  fig_2,
+  width = 10,
+  height = 5
+)
 
