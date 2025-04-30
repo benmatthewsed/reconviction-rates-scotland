@@ -91,7 +91,7 @@ combined_dat |>
        y = "(Badly) Estimated Conviction Rate",
        colour = "Age categories",
        caption = "Estimated conviction rate per 10,000 people. Source: Scottish Government (2013, 2024)
-       Note that the age categories used in the data change in 2013)") +
+       Note that the age categories used in the data change in 2013") +
   ggtitle("Year = {current_frame}") +
   transition_manual(frame = year) +
     theme_minimal()
