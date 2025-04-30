@@ -172,7 +172,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#how-much-change-in-the-reconviction-rate-is-due-to-demographic-mix",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "How much change in the reconviction rate is due to demographic mix?",
-    "text": "How much change in the reconviction rate is due to demographic mix?\n\n\n\n\n\n\n\n\n2004-05\n2020-21\ndiff\ndecomp\n\n\n\n\n0.3050234\n0.2780063\n-0.027017160\n49.06\n\n\n0.2914536\n0.2915760\n0.000122371\n-0.22\n\n\n0.3056384\n0.2774640\n-0.028174399\n51.16\n\n\n0.3237422\n0.2686730\n-0.055069188\n100.00"
+    "text": "How much change in the reconviction rate is due to demographic mix?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStandardization and Decomposition of reconviction rates in Scotland\n\n\nMeasure\n\nYear\n\nDifference in rates\n% of crude difference\n\n\n2004-05\n2020-21\n\n\n\n\nage_struct\n0.31\n0.28\n-0.03\n49.06\n\n\ngender_struct\n0.29\n0.29\n0.00\n-0.22\n\n\nprevalence\n0.31\n0.28\n-0.03\n51.16\n\n\ncrude\n0.32\n0.27\n-0.06\n100.00\n\n\n\nData from Scottish Government (2023). Calculations authors' own."
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#reconviction-statistics-as-information",

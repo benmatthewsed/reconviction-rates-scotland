@@ -432,13 +432,40 @@ scot_res$rates |>
 ## How much change in the reconviction rate is due to demographic mix?
 
 ```{r}
+library(gt)
+
 overall_res |> 
   filter(year == "2004-05" | year == "2020-21") |> 
   dgnpop(pop="year", 
        factors=c("prevalence"),id_vars=c("gender","age"),
        crossclassified="number_of_offenders") |> 
   dg_table() |> 
-  gt::gt()
+  mutate(across(where(is.numeric), ~ round(.x, 2))) |>
+  rownames_to_column() |> 
+  gt::gt() |>
+  tab_header(
+    title = "Standardization and Decomposition of reconviction rates in Scotland"
+  ) |> 
+  tab_source_note(
+    source_note = "Data from Scottish Government (2023). Calculations authors' own."
+  ) |>
+  tab_stubhead(label = "Measure")|>
+  tab_spanner(
+    label = "Year",
+    columns = c(`2004-05`, `2020-21`)
+  ) |> 
+  cols_label(
+    diff = "Difference in rates",
+    decomp = "% of crude difference"
+  ) |>
+  tab_style_body(
+    style = list(
+      cell_fill(color = "#006938"),
+      cell_text(color = "white"))
+    ,
+    values = c(49.06),
+    targets = "row"
+  )
 ```
 
 ## Percentage change by group
