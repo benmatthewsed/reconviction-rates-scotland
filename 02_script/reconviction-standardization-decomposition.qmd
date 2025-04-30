@@ -59,11 +59,39 @@ The Sentencing Council (for England and Wales) says the reconviction rate is a "
 > "a headline reduction in reconvictions in line with targets might be due to a change in the gender balance of the incarcerated population, rather than the success of any policy or intervention. If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." [@kirkwood2008]
 
 
+## Kirkwood
+
+```{r}
+
+library(tidyverse)
+library(DasGuptR)
+
+kirwood_dat <- tribble(
+  ~year, ~rate, ~demographic, ~proportion,
+  "1995/96", 0.45, "Total", 1,
+  "2003/04", 0.45, "Total", 1,
+  "1995/96", 0.46, "Men", 1 - 0.14,
+  "1995/96", 0.31, "Women", 0.14,
+  "2003/04", 0.47, "Men", 1- 0.16,
+  "2003/04", 0.37, "Women", 0.16
+)
+
+
+dgnpop(kirwood_dat |> 
+         filter(demographic != "Total"),
+       pop="year", 
+       factors=c("rate"),id_vars=c("demographic"),
+       crossclassified="proportion") |> 
+  dg_table()
+
+
+```
+
 
 ## An illustration
 
 ```{r}
-library(tidyverse)
+
 
 dat <- tribble(
   ~year, ~id, ~group, ~v1, ~v2, ~v3, ~v4, ~v5,
