@@ -11,7 +11,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#people-want-to-use-reconviction-rates-as-a-performance-metric",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "People want to use reconviction rates as a performance metric",
-    "text": "People want to use reconviction rates as a performance metric\nThe Sentencing Council (for England and Wales) is a “key metric for evaluating the effectiveness of sentencing” (gormleyEffectivenessSentencingOptions2022:18?)\n“Reduced reoffending is an important objective that can facilitate desistance and reintegration. While reducing reoffending is important, in the absence of reintegration or desistance, reductions in offending are less likely to persist. Yet, reoffending can be a more quantifiable metric which has advantages – though care must still be taken as there are different definitions of reoffending” (gormleyEffectivenessSentencingOptions2022:5?). Basically it can help measure the ‘effectiveness’ of sentencing (… if imperfectly).\n“The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government” (Browne 2024)\n\nThe logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders\nBut, as NI statistics said: “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.” (Browne 2024)\nThere are reasons why we might not want to use reconvictions as a performance measure - but these are unrelated to the points we make here. That is, even if you think that reconvictions are a valid measure of criminal justice system effectiveness, the problem we outline still applies"
+    "text": "People want to use reconviction rates as a performance metric\nThe Sentencing Council (for England and Wales) says the reconviction rate is a “key metric for evaluating the effectiveness of sentencing” (gormleyEffectivenessSentencingOptions2022:18?)\n“Reduced reoffending is an important objective that can facilitate desistance and reintegration. While reducing reoffending is important, in the absence of reintegration or desistance, reductions in offending are less likely to persist. Yet, reoffending can be a more quantifiable metric which has advantages – though care must still be taken as there are different definitions of reoffending” (gormleyEffectivenessSentencingOptions2022:5?). Basically it can help measure the ‘effectiveness’ of sentencing (… if imperfectly).\n“The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government” (Browne 2024)\n\nThe logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#data",
@@ -179,7 +179,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#reconviction-statistics-as-information",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Reconviction statistics as information",
-    "text": "Reconviction statistics as information\n\nQuantification in general is a way of communicating without shared understanding by sacrificing context (Porter 1996)\nTo the extent that reconviction rates are a performance measure they are open to gaming (Klingele 2019)"
+    "text": "Reconviction statistics as information\n\nHowever, this technical fix may be limited in its application as it … ignores? the … politics? of reconviction statistics\nThe reconvictions indicator is a convenient abstraction - Information as Nguyen paraphrases Porter - designed to reduce context to make comparisons more portable. People in SG don’t have to read all the assessments of all the people convicted in a previous year"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#rates-and-weights",
@@ -207,7 +207,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#the-solution",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The solution?",
-    "text": "The solution?\n\nThe problem of changing ‘offender mix’ is known\nPrevious regression-based approaches to correct for the problem of changing ‘offender mix’ can’t (easily) assess the extent of this bias\nThe methods of standardization and decomposition (standard in demography) can\nWe illustrate this with an empirical example of Scotland’s reconviction rate\nHowever, this technical fix may be limited in its application as it … ignores? the … politics? of reconviction statistics\nThe reconvictions indicator is a convenient abstraction - Information as Nguyen paraphrases Porter - designed to reduce context to make comparisons more portable. People in SG don’t have to read all the assessments of all the people convicted in a previous year"
+    "text": "The solution?\n\nThe methods of standardization and decomposition (standard in demography) can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups\nPrevious regression-based approaches (as discussed by (Browne 2024)) to correct for the problem of changing ‘offender mix’ can’t (easily) assess the extent of the bias due to demographic change\nWe illustrate this with an empirical example of Scotland’s reconviction rate"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#following-consultation-with-key-users",
@@ -243,5 +243,19 @@
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Change in the demographics of conviction",
     "text": "Change in the demographics of conviction"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#but-its-not-so-simple",
+    "href": "02_script/reconviction-standardization-decomposition.html#but-its-not-so-simple",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "But it’s not so simple",
+    "text": "But it’s not so simple\n\nBut, as NI statistics says: “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.” (Browne 2024)\nThere are also conceptual reasons why we might not want to use reconvictions as a performance measure - but these are unrelated to the points we make here. That is, even if you think that reconvictions are a valid measure of criminal justice system effectiveness, the problem we outline still applies"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#reconviction-statistics-as-information-1",
+    "href": "02_script/reconviction-standardization-decomposition.html#reconviction-statistics-as-information-1",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "Reconviction statistics as information",
+    "text": "Reconviction statistics as information\n\nQuantification in general is a way of communicating without shared understanding by sacrificing context (Porter 1996)\nTo the extent that reconviction rates are a performance measure they are open to gaming (Klingele 2019)"
   }
 ]
