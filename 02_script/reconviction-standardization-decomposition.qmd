@@ -19,6 +19,10 @@ bibliography: references.bib
 # Part One {background-color="#006938"}
 
 
+## Change in the demographics of conviction
+
+![](https://raw.githubusercontent.com/benmatthewsed/reconviction-rates-scotland/refs/heads/main/03_figures/acc_animation.gif)
+
 
 ## People want to use reconviction rates as a performance metric
 

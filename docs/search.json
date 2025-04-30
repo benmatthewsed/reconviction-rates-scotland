@@ -236,5 +236,12 @@
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Overview",
     "text": "Overview\n\nThe crime drop has changed the demographics of people being convicted ((Matthews and Minton 2018); (Tuttle 2024); (Farrell, Laycock, and Tilley 2015))\nAnd changes in the ‘offender mix’ can complicate comparisons in the reconviction rate over time\nThe change in the demographics of people convicted over the course of the crime drop introduces statistical bias in the aggregate reconviction rate if it’s used as a measure of ‘effectiveness’ of the justice system"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#change-in-the-demographics-of-conviction",
+    "href": "02_script/reconviction-standardization-decomposition.html#change-in-the-demographics-of-conviction",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "Change in the demographics of conviction",
+    "text": "Change in the demographics of conviction"
   }
 ]
