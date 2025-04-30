@@ -1,6 +1,7 @@
 library(tidyverse)
 library(readxl)
-library(ungroup)
+library(gganimate)
+
 
 proceedings_1314 <- read_excel(here::here("01_data", "criminal_proceedings-1314-tables.xls"),
                                sheet = "Table 5",
@@ -8,7 +9,7 @@ proceedings_1314 <- read_excel(here::here("01_data", "criminal_proceedings-1314-
   janitor::clean_names()
 
 proceedings_2324 <- read_excel(here::here("01_data", "criminal_proceedings-2324-tables.xlsx"),
-                               sheet = "Table_5a",
+                               sheet = "Table_5c",
                                skip = 3,
                                range = "A4:L31") |> 
   janitor::clean_names()
@@ -20,7 +21,6 @@ proceedings_2324 |>
   select(age_range:x2022_23) |> 
   mutate(age = as.numeric(str_extract(age_range, "[0-9]+")))
 
-View(data_2324)
 
 
 dat_2324 <- 
@@ -78,14 +78,15 @@ combined_dat <-
     select(year, mean_rate, age_seq) |> 
     mutate(source = "Old age categories"))
 
-library(gganimate)
 
 anim <- 
 combined_dat |> 
   mutate(year = as.numeric(year)) |> 
-    ggplot(aes(x = age_seq, y = mean_rate, colour = source)) +
+    ggplot(aes(x = age_seq, y = mean_rate)) +
     geom_line(stat = "identity") +
-    geom_area(fill = "grey") +
+    geom_area(fill = "#006938",
+              colour = "#006938",
+              alpha = 0.7) +
   labs(x = "Age",
        y = "(Badly) Estimated Conviction Rate",
        colour = "Age categories",
