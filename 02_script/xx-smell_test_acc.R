@@ -99,9 +99,10 @@ combined_dat |>
 acc_anim <- 
   animate(anim, fps = 2, 
         nframes = distinct(combined_dat |> select(year)) |> nrow(),
-        height = 900 / 2, width = 1600 / 2,
+        height = 900, width = 1600,
         device = "ragg_png",
-        end_pause = 2)  
+        end_pause = 2,
+        res = 150)  
 
 anim_save(here::here("03_figures", "acc_animation.gif"),
           acc_anim)  

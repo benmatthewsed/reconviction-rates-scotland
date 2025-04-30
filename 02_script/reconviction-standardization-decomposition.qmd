@@ -18,6 +18,8 @@ bibliography: references.bib
 
 # Part One: The Demographics of the Criminal Justice System {background-color="#006938"}
 
+## Change in the number of reconvictions
+
 
 ## Change in the demographics of conviction
 
@@ -44,13 +46,14 @@ The Sentencing Council (for England and Wales) says the reconviction rate is a "
 -   There are also conceptual reasons why we might not want to use reconvictions as a performance measure - but these are unrelated to the points we make here. That is, even if you think that reconvictions are a valid measure of criminal justice system effectiveness, the problem we outline still applies
 
 
-# Part Three: A solution? {background-color="#006938"}
+## Rates and weights
 
-## The solution?
+-   This is the point that Josiah puts like - we can think of the overall reconviction rate as a *weighted* mean of the reconviction rates in different demographic groups, weighted by the group size. You can have changes in the rate due to changes in the means or changes in the rates.
+-   Because of changes in the distribution of characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.
 
--   The methods of standardization and decomposition (standard in demography) can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups
--   Previous regression-based approaches (as discussed by [@browneAdultYouthReoffending2024]) to correct for the problem of changing 'offender mix' can't (easily) assess the extent of the bias due to demographic change
--   We illustrate this with an empirical example of Scotland's reconviction rate
+## Rates and weights
+
+> "a headline reduction in reconvictions in line with targets might be due to a change in the gender balance of the incarcerated population, rather than the success of any policy or intervention. If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." [@kirkwood2008]
 
 
 
@@ -109,16 +112,22 @@ dat |>
 
 ```
 
-## Rates and weights
 
--   This is the point that Josiah puts like - we can think of the overall reconviction rate as a *weighted* mean of the reconviction rates in different demographic groups, weighted by the group size. You can have changes in the rate due to changes in the means or changes in the rates.
--   Because of changes in the distribution of characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.
 
 ## Rates and weights
 
--   This is known:
 
-> "The two-year reconviction rates for the 2002/03 cohort of those released from custody or receiving non-custodial sentences was 45%, the same rate recorded for the 1995/96 cohort; the rates for all other cohorts from 1996/97 to 2001/02 ranged from 44% to 42% (Scottish Executive, 2006b). However, as shown in figure 1, when the data is broken down by gender, the 2002/03 rates for men and for women were actually the highest on record over the eight-year period ... This can be explained in part by the fact that the proportion of women in the cohort has increased from 14% in 1995 to 16% in 2002/03 (Scottish Executive, 2001), and that women have a notably lower reconviction rate than men (37% compared with 47%; Scottish Executive, 2006b). That is, the sample now contains a higher proportion of people who have a lower likelihood of being reconvicted ... This means that a headline reduction in reconvictions in line with targets might be due to a change in the gender balance of the incarcerated population, rather than the success of any policy or intervention. If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." [@kirkwood2008]
+
+
+
+# Part Three: A solution? {background-color="#006938"}
+
+## The solution?
+
+-   The methods of standardization and decomposition (standard in demography) can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups
+-   Previous regression-based approaches (as discussed by [@browneAdultYouthReoffending2024]) to correct for the problem of changing 'offender mix' can't (easily) assess the extent of the bias due to demographic change
+-   We illustrate this with an empirical example of Scotland's reconviction rate
+
 
 ## Past approaches
 
@@ -136,11 +145,9 @@ We explore change in reconviction rates in Scotland between 2004-2020. These are
 
 Note: include a figure of the overall reconvictions rate here
 
-Note: it's possible to get data back to 1997-98 with different age categories. Not sure if this would mess up the comparison though?
+
 
 ## Measures
-
--   What actual measure do they use in Scotland?
 
 "The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year," [@scottishgovernmentReconvictionRatesScotland2024]
 
@@ -212,74 +219,6 @@ scot_reconv |>
 
 ```
 
-## Descriptives: Change in reconviction rate overall
-
-```{r}
-reconvs <- 
-  scot_reconv |> 
-  group_by(year, age) |> 
-  summarise(number_of_offenders = sum(number_of_offenders),
-            no_reconvicted = sum(no_reconvicted),
-            number_of_reconvictions = sum(number_of_reconvictions),
-            .groups = "drop") |> 
-  mutate(
-    prevalence = no_reconvicted/number_of_offenders,
-    frequency = number_of_reconvictions/number_of_offenders,
-  )
-
-overall_reconv <- 
-reconvs |> 
-  group_by(year) |> 
-  summarise(number_of_offenders = sum(number_of_offenders),
-            no_reconvicted = sum(no_reconvicted),
-            number_of_reconvictions = sum(number_of_reconvictions),
-            .groups = "drop") |> 
-  mutate(
-    prevalence = no_reconvicted/number_of_offenders,
-    frequency = number_of_reconvictions/number_of_offenders,
-  ) |> 
-  mutate(conf_low_95 = map2_dbl(no_reconvicted,
-                         number_of_offenders,
-                         ~ binom.wilson(.x, .y)$lower[[1]]),
-         conf_high_95 = map2_dbl(no_reconvicted,
-                          number_of_offenders,
-                          ~ binom.wilson(.x, .y)$upper[[1]]),
-         conf_low_80 = map2_dbl(no_reconvicted,
-                            number_of_offenders,
-                            ~ binom.wilson(.x, .y, conf.level = 0.8)$lower[[1]]),
-         conf_high_80 = map2_dbl(no_reconvicted,
-                             number_of_offenders,
-                             ~ binom.wilson(.x, .y, conf.level = 0.8)$upper[[1]]),
-         conf_low_50 = map2_dbl(no_reconvicted,
-                            number_of_offenders,
-                            ~ binom.wilson(.x, .y, conf.level = 0.5)$lower[[1]]),
-         conf_high_50 = map2_dbl(no_reconvicted,
-                             number_of_offenders,
-                             ~ binom.wilson(.x, .y, conf.level = 0.5)$upper[[1]]),
-  )
-
-
-
-overall_reconv |> 
-  ggplot(aes(x = year, y = as.numeric(prevalence), group = 1)) +
-  geom_point() +
-  geom_line() +
-  geom_ribbon(aes(ymin = conf_low_95, ymax = conf_high_95),
-              alpha = 0.3) +
-  geom_ribbon(aes(ymin = conf_low_80, ymax = conf_high_80),
-              alpha = 0.3) +
-  geom_ribbon(aes(ymin = conf_low_50, ymax = conf_high_50),
-              alpha = 0.3) +
-  theme_minimal() +
-  labs(y = "Reconviction rate",
-       x = "Reconviction cohort",
-       colour = "Age",
-       fill = "Age",
-       caption = "Grey line shows overall reconviction rate") +
-  theme(axis.text.x = element_text(angle = 45, hjust=1)) +
-  scale_y_continuous(limits = c(0.15, 0.45))
-
-```
 
 ## Change in reconviciton rate by age group
 
