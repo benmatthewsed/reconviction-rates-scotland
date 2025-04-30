@@ -18,21 +18,21 @@
     "href": "02_script/reconviction-standardization-decomposition.html#data",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Data",
-    "text": "Data\nWe explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland (Matthews and Minton 2018). There is nothing particularly special about these time points, and the same approach would work for other time periods.\nNote: include a figure of the overall reconvictions rate here\nNote: it’s possible to get data back to 1997-98 with different age categories. Not sure if this would mess up the comparison though?"
+    "text": "Data\nWe explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland (Matthews and Minton 2018). There is nothing particularly special about these time points, and the same approach would work for other time periods."
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#measures",
     "href": "02_script/reconviction-standardization-decomposition.html#measures",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Measures",
-    "text": "Measures\n\nWhat actual measure do they use in Scotland?\n\n“The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year,” (Scottish Government 2024)\nThere are alternatives (e.g. the average number of convictions per person reconvicted). The same principles apply regardless of the measure used.\n\nKlingele (2019) advocates for measuring ‘markers of desistance’ instead of a binary reconviction measure\nMaybe Weaver (2019) and Maruna (2025) for something conceptual about desistance?\nWhat we describe is orthogonal to this?\nAge groups included\nGenders included"
+    "text": "Measures\n“The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year,” (Scottish Government 2024)\nThere are alternatives (e.g. the average number of convictions per person reconvicted). The same principles apply regardless of the measure used.\n\nAge groups included: under 21, 21 to 25, 26 to 30, 31 to 40, over 40\nGenders included: male, female"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#method",
     "href": "02_script/reconviction-standardization-decomposition.html#method",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Method",
-    "text": "Method\n\nDescription of standardization and decomposition\nThe Kitagawa/Das Gupta approach to decomposition calculates what the reconviction rate would have been in each year if each year had the average demographic composition\nAnd then uses the differences from these ‘standardized’ rates to the observed rates to calculate how much of the change in the observed rate is due to changes in the underlying reconviction rates for each age group and how much is due to the change in the mix of the age groups\nADD AN EMPIRICAL EXAMPLE HERE - use from the example above\nDraw from the vignettes?"
+    "text": "Method\n\nThe Kitagawa/Das Gupta approach to decomposition calculates what the reconviction rate ‘would have been’ in each year if each year had the average demographic composition\nThe differences between these ‘standardized’ rates to the observed rates are then used to calculate how much of the change in the observed rate is due to changes in the underlying reconviction rates for each age group, and how much is due to the change in the mix of the age groups"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#results",
@@ -67,14 +67,14 @@
     "href": "02_script/reconviction-standardization-decomposition.html#huh",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Huh?",
-    "text": "Huh?\nAbout 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 we can attribute to demographic change in the population of people convicted, rather than falls in the reconviction rate per se.\nThis could still be due to criminal justice practices (e.g. more diversion from prosecution for young people), but is not attributable to the ‘effectiveness’ of sentencing - it is purely due to changes in the demographic mix of people being convicted in the first place\nThe by-group decomposition shows that this overall fall in reonvictions is primarily due to the under 21 group, and then the 21-25. Conversely the increase in the relative size"
+    "text": "Huh?\n\nWe can attribute about 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 to demographic change in the population of people convicted, rather than falls in the reconviction rate per se.\nIf you want to use the reconviction rate as a measure of sentencing effectiveness or similar, you would think the justice system is doing about twice as a good a job as it is\nThe change in the mix of people being reconvicted could still be due to criminal justice practices (e.g. more diversion from prosecution for young people), but is not attributable to the ‘effectiveness’ of sentencing - it is purely due to changes in the demographic mix of people being convicted in the first place\nThe by-group decomposition shows that this overall fall in reonvictions is primarily due to the under 21 group, and then the 21-25 group"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#references",
     "href": "02_script/reconviction-standardization-decomposition.html#references",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\n\n\nBrowne, S. 2024. “Adult and Youth Reoffending in Northern Ireland (2021/22 Cohort).” Northern Ireland Statistics and Research Agency.\n\n\nDas Gupta, Prithwis. 1993. Standardization and Decomposition of Rates: A User’s Manual. 186. US Department of Commerce, Economics and Statistics Administration, Bureau of the Census.\n\n\nFarrell, Graham, Gloria Laycock, and Nick Tilley. 2015. “Debuts and Legacies: The Crime Drop and the Role of Adolescence-Limited and Persistent Offending.” Crime Science 4 (1). https://doi.org/10.1186/s40163-015-0028-3.\n\n\nKitagawa, Evelyn M. 1955. “Components of a Difference Between Two Rates.” Journal of the American Statistical Association 50 (272): 1168–94. https://doi.org/10.1080/01621459.1955.10501299.\n\n\nKlingele, Cecelia. 2019. “Measuring Change.” The Journal of Criminal Law and Criminology (1973-) 109 (4): 769–817.\n\n\nMaruna, Shadd. 2025. “Redeeming Desistance: From Individual Journeys to a Social Movement.” Criminology n/a (n/a). https://doi.org/10.1111/1745-9125.12393.\n\n\nMatthews, Ben, and Jon Minton. 2018. “Rethinking One of Criminology’s ‘Brute Facts’: The Age–Crime Curve and the Crime Drop in Scotland.” European Journal of Criminology 15 (3): 296–320. https://doi.org/10.1177/1477370817731706.\n\n\nPorter, Theodore. 1996. Trust in Numbers.\n\n\nScottish Government. 2024. “Reconviction Rates in Scotland: 2020-21 Offender Cohort.” Scottish Government.\n\n\nTuttle, James. 2024. “The End of the Age-Crime Curve? A Historical Comparison of Male Arrest Rates in the United States, 1985–2019.” The British Journal of Criminology 64 (3): 638–55. https://doi.org/10.1093/bjc/azad049.\n\n\nWeaver, Beth. 2019. “Understanding Desistance: A Critical Review of Theories of Desistance.” Psychology, Crime & Law 25 (6): 641–58. https://doi.org/10.1080/1068316X.2018.1560444."
+    "text": "References\n\n\n\n\n\n\n\n\nBrowne, S. 2024. “Adult and Youth Reoffending in Northern Ireland (2021/22 Cohort).” Northern Ireland Statistics and Research Agency.\n\n\nDas Gupta, Prithwis. 1993. Standardization and Decomposition of Rates: A User’s Manual. 186. US Department of Commerce, Economics and Statistics Administration, Bureau of the Census.\n\n\nFarrell, Graham, Gloria Laycock, and Nick Tilley. 2015. “Debuts and Legacies: The Crime Drop and the Role of Adolescence-Limited and Persistent Offending.” Crime Science 4 (1). https://doi.org/10.1186/s40163-015-0028-3.\n\n\nKirkwood, Steve. 2008. “Evidencing the Impact of Criminal Justice Services on Re-offending.” CJScotland.\n\n\nKlingele, Cecelia. 2019. “Measuring Change.” The Journal of Criminal Law and Criminology (1973-) 109 (4): 769–817.\n\n\nMaruna, Shadd. 2025. “Redeeming Desistance: From Individual Journeys to a Social Movement.” Criminology n/a (n/a). https://doi.org/10.1111/1745-9125.12393.\n\n\nMatthews, Ben, and Jon Minton. 2018. “Rethinking One of Criminology’s ‘Brute Facts’: The Age–Crime Curve and the Crime Drop in Scotland.” European Journal of Criminology 15 (3): 296–320. https://doi.org/10.1177/1477370817731706.\n\n\nPorter, Theodore. 1996. Trust in Numbers.\n\n\nScottish Government. 2024. “Reconviction Rates in Scotland: 2020-21 Offender Cohort.” Scottish Government.\n\n\nTuttle, James. 2024. “The End of the Age-Crime Curve? A Historical Comparison of Male Arrest Rates in the United States, 1985–2019.” The British Journal of Criminology 64 (3): 638–55. https://doi.org/10.1093/bjc/azad049.\n\n\nWeaver, Beth. 2019. “Understanding Desistance: A Critical Review of Theories of Desistance.” Psychology, Crime & Law 25 (6): 641–58. https://doi.org/10.1080/1068316X.2018.1560444."
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#our-key-point",
@@ -88,7 +88,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#discussion",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Discussion",
-    "text": "Discussion\n\nThe crime drop in Scotland has led to a profound shift in the demographics of the people coming through the criminal justice system\nThis shift is so pronounced that it limits our capacity to understand the ‘effectiveness’ of punishment through aggregate measures such as the overall reconviction rate\nA perspective which focuses on the criminal justice system rather than the people involved with the system will be mislead by aggregate measures of system ‘performance’"
+    "text": "Discussion\n\nThe crime drop in Scotland has led to a profound shift in the demographics of the people coming through the criminal justice system\nThis shift is so pronounced that it affects our capacity to understand the ‘effectiveness’ of punishment through aggregate measures such as the overall reconviction rate\nA perspective which focuses on the criminal justice system rather than the people involved with the system will be mislead by aggregate measures of system ‘performance’"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#so-what",
@@ -179,7 +179,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#reconviction-statistics-as-information",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Reconviction statistics as information",
-    "text": "Reconviction statistics as information\n\nHowever, this technical fix may be limited in its application as it … ignores? the … politics? of reconviction statistics\nThe reconvictions indicator is a convenient abstraction - Information as Nguyen paraphrases Porter - designed to reduce context to make comparisons more portable. People in SG don’t have to read all the assessments of all the people convicted in a previous year"
+    "text": "Reconviction statistics as information\n\nQuantification in general is a way of communicating without shared understanding by sacrificing context (Porter 1996)"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#rates-and-weights",
@@ -193,7 +193,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#rates-and-weights-1",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Rates and weights",
-    "text": "Rates and weights\n\nThis is known:\n\n\n“The two-year reconviction rates for the 2002/03 cohort of those released from custody or receiving non-custodial sentences was 45%, the same rate recorded for the 1995/96 cohort; the rates for all other cohorts from 1996/97 to 2001/02 ranged from 44% to 42% (Scottish Executive, 2006b). However, as shown in figure 1, when the data is broken down by gender, the 2002/03 rates for men and for women were actually the highest on record over the eight-year period … This can be explained in part by the fact that the proportion of women in the cohort has increased from 14% in 1995 to 16% in 2002/03 (Scottish Executive, 2001), and that women have a notably lower reconviction rate than men (37% compared with 47%; Scottish Executive, 2006b). That is, the sample now contains a higher proportion of people who have a lower likelihood of being reconvicted … This means that a headline reduction in reconvictions in line with targets might be due to a change in the gender balance of the incarcerated population, rather than the success of any policy or intervention. If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration.” (kirkwood2008?)"
+    "text": "Rates and weights\n\n“a headline reduction in reconvictions in line with targets might be due to a change in the gender balance of the incarcerated population, rather than the success of any policy or intervention. If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration.” (Kirkwood 2008)"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#the-problem",
@@ -207,14 +207,14 @@
     "href": "02_script/reconviction-standardization-decomposition.html#the-solution",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The solution?",
-    "text": "The solution?\n\nThe methods of standardization and decomposition (standard in demography) can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups\nPrevious regression-based approaches (as discussed by (Browne 2024)) to correct for the problem of changing ‘offender mix’ can’t (easily) assess the extent of the bias due to demographic change\nWe illustrate this with an empirical example of Scotland’s reconviction rate"
+    "text": "The solution?\n\nThe methods of standardization and decomposition (standard in demography) can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups\nPrevious regression-based approaches (e.g. (francis2005?; cunliffe2007?); (drank2010?)) to correct for the problem of changing ‘offender mix’ are more flexible, but can’t as easily assess the extent of the bias due to demographic change and are much more data intensive\nStandardization and decomposition can also separate out the relative importance of different factors in driving aggregate change\nWe illustrate this using the methods described by (Das Gupta 1993) and implemented in the {dasguptr} R package (king2025?) to Scottish reconvictions data from 2004-2022"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#following-consultation-with-key-users",
     "href": "02_script/reconviction-standardization-decomposition.html#following-consultation-with-key-users",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "“Following consultation with key users”",
-    "text": "“Following consultation with key users”\n\nIn practice there might be limited appetite for an esoteric and tricky to understand measure amongst ‘key users’\n\n\nIn bulletins prior to 2017/18, reoffending figures were provided alongside adjusted reoffending rates for adults and the overall cohort, to help provide an estimate of change in reoffending. Following consultation with key users, the decision was taken to exclude this from future publications to avoid confusion in he interpretation of findings.\n\n(Browne 2024)"
+    "text": "“Following consultation with key users”\n\nThe technical ‘fix’ in terms of standardization and decomposition may be limited in its application as it … ignores? the … politics? of reconviction statistics\nIn practice there might be limited appetite for an esoteric and tricky to understand measure amongst ‘key users’\n\n\nIn bulletins prior to 2017/18, reoffending figures were provided alongside adjusted reoffending rates for adults and the overall cohort, to help provide an estimate of change in reoffending. Following consultation with key users, the decision was taken to exclude this from future publications to avoid confusion in he interpretation of findings.\n\n(Browne 2024)"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#implications",
@@ -249,7 +249,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#but-its-not-so-simple",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "But it’s not so simple",
-    "text": "But it’s not so simple\n\nBut, as NI statistics says: “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.” (Browne 2024)\nThere are also conceptual reasons why we might not want to use reconvictions as a performance measure - but these are unrelated to the points we make here. That is, even if you think that reconvictions are a valid measure of criminal justice system effectiveness, the problem we outline still applies"
+    "text": "But it’s not so simple\n\nBut, as NI statistics says: “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.” (Browne 2024)\nThere are also conceptual reasons why we might not want to use reconvictions as a performance measure (e.g. Klingele (2019) advocates for measuring ‘markers of desistance’ instead of a binary reconviction measure; see Weaver (2019) and Maruna (2025) for more conceptual critiques) - but these are unrelated to the points we make here. That is, even if you think that reconvictions are a valid measure of criminal justice system effectiveness, the problem we outline still applies"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#reconviction-statistics-as-information-1",
@@ -257,5 +257,47 @@
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Reconviction statistics as information",
     "text": "Reconviction statistics as information\n\nQuantification in general is a way of communicating without shared understanding by sacrificing context (Porter 1996)\nTo the extent that reconviction rates are a performance measure they are open to gaming (Klingele 2019)"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#change-in-the-number-of-reconvictions",
+    "href": "02_script/reconviction-standardization-decomposition.html#change-in-the-number-of-reconvictions",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "Change in the number of reconvictions",
+    "text": "Change in the number of reconvictions"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#kirkwood",
+    "href": "02_script/reconviction-standardization-decomposition.html#kirkwood",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "Kirkwood",
+    "text": "Kirkwood\n\n\n                   1995/96 2003/04    diff decomp\ndemographic_struct  0.4475   0.445 -0.0025 -16.67\nrate                0.4375   0.455  0.0175 116.67\ncrude               0.4390   0.454  0.0150 100.00"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#research-question",
+    "href": "02_script/reconviction-standardization-decomposition.html#research-question",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "Research Question",
+    "text": "Research Question\n\nHow much of the change in the overall reconviction rate in Scotland between 2004 and 2022 is attributable to changing demographics?"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#next-steps-for-the-crime-drop",
+    "href": "02_script/reconviction-standardization-decomposition.html#next-steps-for-the-crime-drop",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "Next steps for the crime drop",
+    "text": "Next steps for the crime drop\n\nThere has been a lot written about the causes of the crime drop, and some previous attempts to describe changes in the demographics of crime and use these descriptions to build explanations for why there is less crime now than in the past\nThere haven’t - at least as far as I’m aware - been any studies which go on to explore the consequences of these changing demographics for the justice system more broadly\nSome evidence that Scotland might be an extreme case here with larger demographic changes than in other countries (e.g. Matthews 2023)"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#non-criminological-implications",
+    "href": "02_script/reconviction-standardization-decomposition.html#non-criminological-implications",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "Non-criminological implications",
+    "text": "Non-criminological implications\n\nThis is partly a story about the ‘amalgamation fallacy’ - trends for sub-groups don’t always move in the same direction as headline trends\nDoes this sound like it might be relevant in your area?"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#what-do-to-about-this",
+    "href": "02_script/reconviction-standardization-decomposition.html#what-do-to-about-this",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "What do to about this?",
+    "text": "What do to about this?\n\nIf we wanted to make a ‘so here’s what the Sentencing Council should do now’ recommendation there are two possible recommendations we can make\nOption one: Recommend that Sentencing Council/Scottish Government/whoever use the methods outlined here as an ‘improved’ performance measure\nOption two: Recommend that [see above] look at reconviction rates for each demographic sub-group as well as overall reconviction rates"
   }
 ]

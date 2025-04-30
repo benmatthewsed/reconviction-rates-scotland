@@ -232,6 +232,74 @@ scot_reconv |>
 
 ```
 
+## Descriptives: Change in reconviction rate overall
+
+```{r}
+reconvs <- 
+  scot_reconv |> 
+  group_by(year, age) |> 
+  summarise(number_of_offenders = sum(number_of_offenders),
+            no_reconvicted = sum(no_reconvicted),
+            number_of_reconvictions = sum(number_of_reconvictions),
+            .groups = "drop") |> 
+  mutate(
+    prevalence = no_reconvicted/number_of_offenders,
+    frequency = number_of_reconvictions/number_of_offenders,
+  )
+
+overall_reconv <- 
+reconvs |> 
+  group_by(year) |> 
+  summarise(number_of_offenders = sum(number_of_offenders),
+            no_reconvicted = sum(no_reconvicted),
+            number_of_reconvictions = sum(number_of_reconvictions),
+            .groups = "drop") |> 
+  mutate(
+    prevalence = no_reconvicted/number_of_offenders,
+    frequency = number_of_reconvictions/number_of_offenders,
+  ) |> 
+  mutate(conf_low_95 = map2_dbl(no_reconvicted,
+                         number_of_offenders,
+                         ~ binom.wilson(.x, .y)$lower[[1]]),
+         conf_high_95 = map2_dbl(no_reconvicted,
+                          number_of_offenders,
+                          ~ binom.wilson(.x, .y)$upper[[1]]),
+         conf_low_80 = map2_dbl(no_reconvicted,
+                            number_of_offenders,
+                            ~ binom.wilson(.x, .y, conf.level = 0.8)$lower[[1]]),
+         conf_high_80 = map2_dbl(no_reconvicted,
+                             number_of_offenders,
+                             ~ binom.wilson(.x, .y, conf.level = 0.8)$upper[[1]]),
+         conf_low_50 = map2_dbl(no_reconvicted,
+                            number_of_offenders,
+                            ~ binom.wilson(.x, .y, conf.level = 0.5)$lower[[1]]),
+         conf_high_50 = map2_dbl(no_reconvicted,
+                             number_of_offenders,
+                             ~ binom.wilson(.x, .y, conf.level = 0.5)$upper[[1]]),
+  )
+
+
+
+overall_reconv |> 
+  ggplot(aes(x = year, y = as.numeric(prevalence), group = 1)) +
+  geom_point() +
+  geom_line() +
+  geom_ribbon(aes(ymin = conf_low_95, ymax = conf_high_95),
+              alpha = 0.3) +
+  geom_ribbon(aes(ymin = conf_low_80, ymax = conf_high_80),
+              alpha = 0.3) +
+  geom_ribbon(aes(ymin = conf_low_50, ymax = conf_high_50),
+              alpha = 0.3) +
+  theme_minimal() +
+  labs(y = "Reconviction rate",
+       x = "Reconviction cohort",
+       colour = "Age",
+       fill = "Age",
+       caption = "Grey line shows overall reconviction rate") +
+  theme(axis.text.x = element_text(angle = 45, hjust=1)) +
+  scale_y_continuous(limits = c(0.15, 0.45))
+
+```
 
 ## Change in reconviciton rate by age group
 
