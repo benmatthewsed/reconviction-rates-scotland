@@ -9,10 +9,16 @@ output-dir: docs
 bibliography: references.bib
 ---
 
-## Introduction
+## Overview
 
--   The crime drop has changed the demographics of people being convicted (cite: ; [@matthewsRethinkingOneCriminologys2018]; [@tuttleEndAgeCrimeCurve2024]; [@farrellDebutsLegaciesCrime2015])
--   This has downstream impacts on how we understand aggregate indicators of 'performance' in the criminal justice system
+-   The crime drop has changed the demographics of people being convicted ([@matthewsRethinkingOneCriminologys2018]; [@tuttleEndAgeCrimeCurve2024]; [@farrellDebutsLegaciesCrime2015])
+-   And changes in the 'offender mix' can complicate comparisons in the reconviction rate over time
+-   The change in the demographics of people convicted over the course of the crime drop introduces statistical bias in the aggregate reconviction rate if it's used as a measure of 'effectiveness' of the justice system
+
+
+# Part One {background-color="#006938"}
+
+
 
 ## People want to use reconviction rates as a performance metric
 
@@ -28,11 +34,7 @@ The Sentencing Council (for England and Wales) is a "key metric for evaluating t
 
 -   There are reasons why we might not want to use reconvictions as a performance measure - but these are unrelated to the points we make here. That is, even if you think that reconvictions are a valid measure of criminal justice system effectiveness, the problem we outline still applies
 
-## The problem
 
--   The crime drop implies a change in the 'offender mix' who have been through the justice system over time
--   And changes in 'offender mix' can complicate comparisons in the reconviction rate over time (and jurisdictions too, but we won't go into that now)
--   The change in the demographics of people convicted over the course of the crime drop introduces statistical bias in the aggregate reconviction rate if it's used as a measure of 'effectiveness' of the justice system
 
 ## The solution?
 

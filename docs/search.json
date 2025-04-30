@@ -229,5 +229,12 @@
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Reconviction rates for each group",
     "text": "Reconviction rates for each group\n\nSuggesting that policy-makers/whoever analyse trends for all groups runs counter to the logic of quantification - the whole point is to reduce the amount of information required to understand the thing you care about (Maybe Porter?)\nIt also raises the question of which groups would make the cut, and how they would be defined\nThis is famously the paradoxical bit of Simpson’s paradox - the hard part is identifying the subgroups you need to stratify by"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#overview",
+    "href": "02_script/reconviction-standardization-decomposition.html#overview",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "Overview",
+    "text": "Overview\n\nThe crime drop has changed the demographics of people being convicted ((Matthews and Minton 2018); (Tuttle 2024); (Farrell, Laycock, and Tilley 2015))\nAnd changes in the ‘offender mix’ can complicate comparisons in the reconviction rate over time\nThe change in the demographics of people convicted over the course of the crime drop introduces statistical bias in the aggregate reconviction rate if it’s used as a measure of ‘effectiveness’ of the justice system"
   }
 ]
