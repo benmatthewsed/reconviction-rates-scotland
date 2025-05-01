@@ -27,14 +27,33 @@ bibliography: references.bib
 
 ## Change in the number of reconvictions
 
-## Change in reconviction rate overall
-
 ```{r warnings=FALSE}
 library(tidyverse)
 library(DasGuptR)
 library(readxl)
 library(here)
 library(binom)
+
+
+combined_convs <- readRDS(here::here("01_data", "combined_convs.rds"))
+
+combined_convs |> 
+  ggplot(aes(x = year, group = 1, y = rate)) +
+  geom_line() +
+  theme_minimal() +
+  geom_line(linewidth = 1.5,
+            alpha = 0.9,
+            colour = "#006938") +
+  labs(y = "People proceeded against in court (thousands)",
+       x = "Year",
+       caption = "Source: Scottish Government (2013; 2024)") +
+  theme(axis.text.x = element_text(angle = 45, hjust=1))
+```
+
+## Change in reconviction rate overall
+
+```{r warnings=FALSE}
+
 
 scot_reconv <- read_xlsx(here("01_data",
                       "reconvictions-2020-21-offender-cohort-additional-datasets.xlsx"),
@@ -594,7 +613,7 @@ overall_res |>
 - We can attribute about 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 to demographic change in the population of people convicted, rather than falls in the reconviction rate *per se*.
 - If you want to use the reconviction rate as a measure of sentencing effectiveness or similar, you would think the justice system is doing about twice as a good a job as it is
 - The change in the mix of people being reconvicted could still be due to criminal justice practices (e.g. more diversion from prosecution for young people), but is not attributable to the 'effectiveness' of sentencing - it is purely due to changes in the demographic mix of people being convicted in the first place
-- The by-group decomposition shows that this overall fall in reonvictions is primarily due to the under 21 group, and then the 21-25 group
+
 
 ## Discussion
 
@@ -603,10 +622,6 @@ overall_res |>
 -   A perspective which focuses on the criminal justice *system* rather than the *people involved with the system* will be mislead by aggregate measures of system 'performance'
 - There are lots of other possible ways that demographic changes in crime may impact the functioning of the criminal justice system and public perceptions of crime
 
-
-## Non-criminological implications
-- This is partly a story about the 'amalgamation fallacy' - trends for sub-groups don't always move in the same direction as headline trends
-- Does this sound like it might be relevant in your area?
 
 
 
@@ -622,11 +637,11 @@ overall_res |>
 ## Reconviction rates for each group
 - Suggesting that policy-makers/whoever analyse trends for all groups runs counter to the logic of quantification - the whole point is to reduce the amount of information required to understand the thing you care about (Maybe Porter?)
 - It also raises the question of which groups would make the cut, and how they would be defined
-- This is famously the paradoxical bit of Simpson's paradox - the hard part is identifying the subgroups you need to stratify by
+- This is famously the paradoxical bit of Simpson's paradox - the hard part is identifying the subgroups you need to stratify by [@pearl2014]
 
 ## "Following consultation with key users"
 
--   The  technical 'fix' in terms of standardization and decomposition may be limited in its application as it ... ignores? the ... politics? of reconviction statistics
+-   The  technical 'fix' in terms of standardization and decomposition may be limited in its application as it ignores the politics of reconviction statistics
 - In practice there might be limited appetite for an esoteric and tricky to understand measure amongst 'key users'
 
 > In bulletins prior to 2017/18, reoffending figures were provided alongside adjusted reoffending rates for adults and the overall cohort, to help provide an estimate of change in reoffending. Following consultation with key users, the decision was taken to exclude this from future publications to avoid confusion in he interpretation of findings.
