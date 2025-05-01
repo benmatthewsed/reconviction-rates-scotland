@@ -85,7 +85,7 @@ combined_dat |>
     ggplot(aes(x = age_seq, y = mean_rate)) +
     geom_line(stat = "identity") +
     geom_area(fill = "#006938",
-              colour = "#006938",
+              colour = "#005734",
               alpha = 0.7) +
   labs(x = "Age",
        y = "(Badly) Estimated Conviction Rate",

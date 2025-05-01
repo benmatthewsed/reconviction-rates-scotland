@@ -30,7 +30,7 @@ bibliography: references.bib
 ## Change in reconviction rate overall
 
 ```{r warnings=FALSE}
-
+library(tidyverse)
 library(DasGuptR)
 library(readxl)
 library(here)
@@ -142,6 +142,12 @@ overall_reconv |>
 
 ![](https://raw.githubusercontent.com/benmatthewsed/reconviction-rates-scotland/refs/heads/main/03_figures/acc_animation.gif)
 
+## A gap in the crime drop
+
+- There has been *a lot* written about the causes of the crime drop
+- And some previous attempts to describe changes in the demographics of crime and use these descriptions to build explanations for why there is less crime now than in the past
+- There haven't - at least as far as I'm aware - been any studies which go on to explore the _consequences_ of these changing demographics for the justice system more broadly
+- One area these changing demographics can matter are when measuring CJS 'performance'
 
 # Part Two: Measuring 'Performance' {background-color="#006938"}
 
@@ -156,29 +162,30 @@ The Sentencing Council (for England and Wales) says the reconviction rate is a "
 
 -   The logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders
 
+- "Reduce reconviction rates" was a National Performance Framework indicator until (at least) 2017 [@scottishgovernment2017]
+
+
 ## But it's not so simple
 
 -   But, as NI statistics says: "differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions." [@browneAdultYouthReoffending2024]
 
--   There are also conceptual reasons why we might not want to use reconvictions as a performance measure (e.g. @klingeleMeasuringChange2019 advocates for measuring 'markers of desistance' instead of a binary reconviction measure; see @weaverUnderstandingDesistanceCritical2019 and @marunaRedeemingDesistanceIndividual2025 for more conceptual critiques) - but these are unrelated to the points we make here. That is, even if you think that reconvictions are a valid measure of criminal justice system effectiveness, the problem we outline still applies
-
-
-## Rates and weights
-
--   This is the point that Josiah puts like - we can think of the overall reconviction rate as a *weighted* mean of the reconviction rates in different demographic groups, weighted by the group size. You can have changes in the rate due to changes in the means or changes in the rates.
+-   We can think of the overall reconviction rate as a *weighted* mean of the reconviction rates in different demographic groups, weighted by the group size. You can have changes in the rate due to changes in the means or changes in the rates.
 -   Because of changes in the distribution of characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.
 
-## Rates and weights
 
-> "a headline reduction in reconvictions in line with targets might be due to a change in the gender balance of the incarcerated population, rather than the success of any policy or intervention. If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." [@kirkwood2008]
+
+## Rates and weights
 
 
 ## Kirkwood
+
+
 
 ```{r}
 
 library(tidyverse)
 library(DasGuptR)
+library(gt)
 
 kirwood_dat <- tribble(
   ~year, ~rate, ~demographic, ~proportion,
@@ -189,75 +196,146 @@ kirwood_dat <- tribble(
   "2003/04", 0.47, "Men", 1- 0.16,
   "2003/04", 0.37, "Women", 0.16
 )
-
-
-dgnpop(kirwood_dat |> 
-         filter(demographic != "Total"),
-       pop="year", 
-       factors=c("rate"),id_vars=c("demographic"),
-       crossclassified="proportion") |> 
-  dg_table()
-
-
 ```
 
 
-## An illustration
 
 ```{r}
 
-
-dat <- tribble(
-  ~year, ~id, ~group, ~v1, ~v2, ~v3, ~v4, ~v5,
-  "1", "1", "1", 1, 1, 1, 0, 0,
-  "1", "2","1",  1, 1, 1, 0, 0,
-  "1", "3", "1", 1, 1, 1, 0, 0,
-  "1", "4", "2", 1, 0,0 , 0 , 0,
-  "1", "5", "2", 1, 0, 0, 0, 0,
-  "2", "1", "1", 1, 1, 1, 0, 0,
-  "2", "2","1",  1, 1, 1, 0, 0,
-  "2", "3", "2", 1, 0,0 , 0 , 0,
-  "2", "4", "2", 1, 0,0 , 0 , 0,
-  "2", "5", "2", 1, 0, 0, 0, 0
-)
-
-dat |>
-  pivot_longer(cols = v1:v5) |>
-  ggplot(aes(x = name, y = fct_rev(id))) +
-  geom_point(aes(colour = factor(value)),
-             size = 4) +
-  facet_wrap(~year) +
-  theme_minimal() +
-  theme(axis.title = element_blank(),
-        axis.text = element_blank(),
-        legend.position = "none") +
-  scale_colour_manual(values = c("#bdbdbd",
-                                 "#636363"))
+tribble(
+  ~sex, ~`1995/96_rate`, ~`2003/04_rate`, 
+  "Men", 0.46, 0.47, 
+  "Women", 0.31, 0.37, 
+  "Total", 0.45, 0.45, 
+) |> 
+  gt() |> 
+   tab_header(
+    title = "Simpson's paradox in reconviction rates"
+  ) |> 
+  tab_source_note(
+    source_note = "Source: Kirkwood (2008)"
+  ) |>
+  tab_spanner(
+    label = "Reconviction rate",
+    columns = c(`1995/96_rate`, `2003/04_rate`)
+  ) |> 
+  cols_label(
+    `1995/96_rate` = "1995/96",
+    `2003/04_rate` = "2003/04",
+    sex = "Sex"
+  )
 
 
 ```
 
-## An illustration
+## Kirkwood
 
 ```{r}
-dat |>
-  pivot_longer(cols = v1:v5) |>
-  ggplot(aes(x = name, y = fct_rev(id))) +
-  geom_point(aes(colour = interaction(factor(value), group)),
-             size = 4) +
-  facet_wrap(~year) +
-  theme_minimal() +
-  theme(axis.title = element_blank(),
-        axis.text = element_blank(),
-        legend.position = "none") +
-  scale_colour_manual(values = c("#9ecae1",
-                                 "#3182bd",
-                                 "#fee0d2",
-                                 "#de2d26"))
+
+tribble(
+  ~sex, ~`1995/96_rate`, ~`2003/04_rate`,
+  "Men", 0.46, 0.47, 
+  "Women", 0.31, 0.37, 
+  "Total", 0.45, 0.45, 
+) |> 
+  gt() |> 
+   tab_header(
+    title = "Simpson's paradox in reconviction rates"
+  ) |> 
+  tab_source_note(
+    source_note = "Source: Kirkwood (2008)"
+  ) |>
+  tab_spanner(
+    label = "Reconviction rate",
+    columns = c(`1995/96_rate`, `2003/04_rate`)
+  ) |> 
+  cols_label(
+    `1995/96_rate` = "1995/96",
+    `2003/04_rate` = "2003/04",
+    sex = "Sex"
+  ) |>  tab_style_body(
+    style = list(
+      cell_fill(color = "#852903"),
+      cell_text(color = "white"))
+    ,
+    values = c(0.47),
+    targets = "cell") |> 
+  tab_style_body(
+    style = list(
+      cell_fill(color = "#852903"),
+      cell_text(color = "white"))
+    ,
+    values = c(0.37),
+    targets = "cell")
+
 
 ```
 
 
+## Kirkwood
+
+
+
+```{r}
+
+tribble(
+  ~sex, ~`1995/96_rate`, ~`2003/04_rate`, ~`1995/96_proportion`, ~`2003/04_proportion`,
+  "Men", 0.46, 0.47, "0.86", "0.84",
+  "Women", 0.31, 0.37, "0.14", "0.16",
+  "Total", 0.45, 0.45, "-", "-"
+) |> 
+  gt() |> 
+   tab_header(
+    title = "Simpson's paradox in reconviction rates"
+  ) |> 
+  tab_source_note(
+    source_note = "Source: Kirkwood (2008)"
+  ) |>
+  tab_spanner(
+    label = "Reconviction rate",
+    columns = c(`1995/96_rate`, `2003/04_rate`)
+  ) |> 
+  tab_spanner(
+    label = "Proportion of people convicted",
+    columns = c(`1995/96_proportion`, `2003/04_proportion`)
+  ) |> 
+  cols_label(
+    `1995/96_rate` = "1995/96",
+    `2003/04_rate` = "2003/04",
+    `1995/96_proportion` = "1995/96",
+    `2003/04_proportion` = "2003/04",
+    sex = "Sex"
+  )  |>  tab_style_body(
+    style = list(
+      cell_fill(color = "#852903"),
+      cell_text(color = "white"))
+    ,
+    values = c(0.47),
+    targets = "cell") |> 
+  tab_style_body(
+    style = list(
+      cell_fill(color = "#852903"),
+      cell_text(color = "white"))
+    ,
+    values = c(0.37),
+    targets = "cell")
+
+
+```
+
+## Rates and weights
+
+> "a headline reduction in reconvictions in line with targets might be due to a change in the gender balance of the incarcerated population, rather than the success of any policy or intervention. If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." [@kirkwood2008]
+
+## Measuring performance
+
+- This is well known, and typically what people do is come up with some counterfactual 'standardized' reconviction rate to facilitate comparisons across years when measuring performance [@francis2005; @cunliffe2007; @drank2010] to correct for the problem of changing 'offender mix'
+
+- However, this is usually conducted with a focus on producing some overall assessment of justice system performance, and not in exploring the relative importance of demographic changes and change in underlying reconviction rates in driving change in the aggregate rate
+
+- No studies have assessed the extent to which these long-term demographic changes as reflected in the crime drop can influence aggregate performance measures
+
+- (There are also conceptual reasons why we might not want to use reconvictions as a performance measure (e.g. @klingeleMeasuringChange2019 advocates for measuring 'markers of desistance' instead of a binary reconviction measure; see @weaverUnderstandingDesistanceCritical2019 and @marunaRedeemingDesistanceIndividual2025 for more conceptual critiques) - but this isn't so relevant for our concerns here)
 
 
 # Part Three: A solution? {background-color="#006938"}
@@ -265,8 +343,8 @@ dat |>
 ## The solution?
 
 -   The methods of standardization and decomposition (standard in demography) can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups
--   Previous regression-based approaches (e.g. [@francis2005; @cunliffe2007]; @drank2010) to correct for the problem of changing 'offender mix' are more flexible, but can't as easily assess the extent of the bias due to demographic change and are much more data intensive
 - Standardization and decomposition can also separate out the relative importance of different factors in driving aggregate change
+-   Previous regression-based approaches (e.g. [@francis2005; @cunliffe2007]; @drank2010) to correct for the problem of changing 'offender mix' can perform this standardization part, but don't focus on the decomposition part
 -   We illustrate this using the methods described by [@dasguptaStandardizationDecompositionRates1993] and implemented in the `{dasguptr}` R package [@king2025] to Scottish reconvictions data from 2004-2022
 
 
@@ -279,8 +357,9 @@ dat |>
 
 ## Data
 
-We explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland [@matthewsRethinkingOneCriminologys2018]. There is nothing particularly special about these time points, and the same approach would work for other time periods.
+We explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland [@matthewsRethinkingOneCriminologys2018]. There is nothing particularly special about these time points, and the same approach would work for other time periods and other characteristics.
 
+-   Some evidence that Scotland might be an extreme case here with larger demographic changes than in other countries [@matthews23]
 
 ## Measures
 
@@ -311,6 +390,9 @@ There are alternatives (e.g. the average number of convictions per person reconv
 
 ```{r}
 
+stir_blue <- c(
+  "#122c54", "#2c498a", "#3d7dca", "#77a4da", "#b2cdef"
+)
 
 age_res <- 
 reconvs |> 
@@ -353,7 +435,8 @@ age_res |>
               alpha = 0.3) +
   geom_line(aes(group = age, colour = age)) +
   geom_point(aes(group = age,
-                 colour = age)) +
+                 colour = age),
+             fill = "black") +
   geom_point(data = overall_reconv) +
   geom_line(data = overall_reconv,
             aes(group = 1)) +
@@ -369,8 +452,8 @@ age_res |>
               aes(ymin = conf_low_50, ymax = conf_high_50,
                   group = 1),
               alpha = 0.3) +
-  scale_color_viridis_d() +
-  scale_fill_viridis_d() +
+  scale_color_manual(values = stir_blue) +
+  scale_fill_manual(values = stir_blue) +
   theme_minimal() +
   labs(y = "Reconviction rate",
        x = "Reconviction cohort",
@@ -385,6 +468,8 @@ age_res |>
 ## Change in the relative size of age group
 
 ```{r}
+
+
 age_res |> 
   group_by(year) |> 
   mutate(prop = number_of_offenders / sum(number_of_offenders)) |> 
@@ -399,8 +484,8 @@ age_res |>
   arrange(year, age) |> 
   ggplot(aes(x = year, y = prop, fill = age, colour = age)) +
   geom_bar(stat = "identity") +
-  scale_color_viridis_d() +
-  scale_fill_viridis_d() +
+  scale_color_manual(values = stir_blue) +
+  scale_fill_manual(values = stir_blue) +
   theme_minimal() +
   labs(y = "Proportion of reconviction cohort",
        x = "Reconviction cohort",
@@ -430,7 +515,13 @@ scot_res$rates |>
   theme(axis.text.x = element_text(angle = 45, hjust=1)) +
    labs(y = "Reconviction rate",
        x = "Reconviction cohort",
-       colour = "Factor")
+       colour = "Factor") +
+   scale_colour_manual(values = c(
+     "#3d7dca",
+     "black",
+     "#ff994c",
+     "#006938"
+   ))
 
 
 ```
@@ -552,13 +643,7 @@ bind_rows(
 -   The crime drop in Scotland has led to a profound shift in the demographics of the people coming through the criminal justice system
 -   This shift is so pronounced that it affects our capacity to understand the 'effectiveness' of punishment through aggregate measures such as the overall reconviction rate
 -   A perspective which focuses on the criminal justice *system* rather than the *people involved with the system* will be mislead by aggregate measures of system 'performance'
-
-
-## Next steps for the crime drop
-
-- There has been *a lot* written about the causes of the crime drop, and some previous attempts to describe changes in the demographics of crime and use these descriptions to build explanations for why there is less crime now than in the past
-- There haven't - at least as far as I'm aware - been any studies which go on to explore the consequences of these changing demographics for the justice system more broadly
--   Some evidence that Scotland might be an extreme case here with larger demographic changes than in other countries (e.g. Matthews 2023)
+- There are lots of other possible ways that demographic changes in crime may impact the functioning of the criminal justice system and public perceptions of crime
 
 
 ## Non-criminological implications
