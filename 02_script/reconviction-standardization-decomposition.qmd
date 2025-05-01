@@ -8,6 +8,7 @@ format:
   revealjs:
     smaller: true
     scrollable: true
+    theme: [default, styles.scss]
 output-dir: docs
 bibliography: references.bib
 ---
@@ -19,11 +20,7 @@ bibliography: references.bib
 -   The change in the demographics of people convicted over the course of the crime drop introduces statistical bias in the aggregate reconviction rate if it's used as a measure of 'effectiveness' of the justice system
 
 
-# Part One: The Demographics of the Criminal Justice System {background-color="#006938"}
-
-## Change in police recorded crime
-
-# Put in a graph here
+# Part One: The crime drop in Scotland {background-color="#006938"}
 
 ## Change in the number of reconvictions
 
