@@ -466,7 +466,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The anatomy of a rate",
-    "text": "The anatomy of a rate\n\nTo use reconviction rates as measures of criminal justice system ‘performance’ you only want to measure change in the subgroup rates\nBut change in the overall rate can come from either changes in the subgroup rates or changes in the subgroup sizes"
+    "text": "The anatomy of a rate\n\\[\n\\[\n\\text{Overall Rate} = \\sum_{i} (\\text{Subgroup Rate}_i \\times \\text{Subgroup Size}_i)\n\\]\n\\]"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-1",
