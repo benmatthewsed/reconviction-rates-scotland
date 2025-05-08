@@ -9,6 +9,7 @@ format:
     smaller: true
     scrollable: true
     theme: [default, styles.scss]
+    math: mathjax
 output-dir: docs
 bibliography: references.bib
 ---
@@ -198,9 +199,7 @@ smaller: false
 ## The anatomy of a rate
 
 $$
-
 \text{Overall Rate} = \sum_{i} (\text{Subgroup Rate}_i \times \text{Subgroup Size}_i)
-
 $$
 
 
