@@ -210,7 +210,6 @@ $$
 \color{grey}{\text{Overall Reconviction Rate} = \sum_{i} (}\text{Subgroup Rate}_i \color{grey}{\times \text{Subgroup Size}_i)}
 $$
 
-
 ---
 smaller: false
 ---
@@ -363,8 +362,7 @@ tribble(
 
 ## Rates and weights
 
-> "If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." 
-[@kirkwood2008, p9]
+> "If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." [@kirkwood2008, p9]
 
 ## Standardized reconviction rates as performance indicators
 
@@ -399,7 +397,7 @@ tribble(
 
 -   We analyse data from 'reconviciton cohorts' in Scotland between 2004-2020. These are made available by Scottish Government as part of their Reconvictions Bulletin [@scottishgovernmentReconvictionRatesScotland2024]. We decompose the overall reconviction rate by age and sex.
 
--   A reconviction cohort is "all offenders who either received a non-custodial conviction or were released from a custodial sentence in a given financial year, from the 1st April to the 31st March the following year" [@scottishgovernmentReconvictionRatesScotland2024] p40
+-   A reconviction cohort is "all offenders who either received a non-custodial conviction or were released from a custodial sentence in a given financial year, from the 1st April to the 31st March the following year" [@scottishgovernmentReconvictionRatesScotland2024, p40]
 
 -   There is nothing particularly special about these time points, and the same approach would work for other time periods and other characteristics.
 
@@ -411,12 +409,11 @@ tribble(
 
 There are alternatives (e.g. the average number of convictions per person reconvicted). The same principles apply regardless of the measure used.
 
--   Age groups: 
-      - Under 21, 21 to 25, 26 to 30, 31 to 40, over 40
+-   Age groups:
+    -   Under 21, 21 to 25, 26 to 30, 31 to 40, over 40
+-   Sex:
+    -   Male, female
 
--   Sex: 
-      - Male, female
-      
 ::: aside
 Sex is "generally based on how a person presents and is recorded when a person’s details are entered into the \[Criminal Histories System\]. It is recorded for operational purposes, such as requirements for searching" [@scottishgovernment2024, p44]
 :::
