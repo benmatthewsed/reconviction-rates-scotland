@@ -466,7 +466,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The anatomy of a rate",
-    "text": "The anatomy of a rate\n\\[\n\\[\n\\text{Overall Rate} = \\sum_{i} (\\text{Subgroup Rate}_i \\times \\text{Subgroup Size}_i)\n\\]\n\\]"
+    "text": "The anatomy of a rate\n$$\n = _{i} (_i _i)\n$$"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-1",
@@ -487,7 +487,7 @@
     "href": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-.smallerfalse",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The anatomy of a rate {.smaller=false}",
-    "text": "The anatomy of a rate {.smaller=false}\n\\[\n\\[\n\\text{Overall Rate} = \\sum_{i} (\\text{Subgroup Rate}_i \\times \\text{Subgroup Size}_i)\n\\]\n\\]"
+    "text": "The anatomy of a rate {.smaller=false}\n$$\n = _{i} (_i _i)\n$$"
   },
   {
     "objectID": "02_script/reconviction-standardization-decomposition.html#so-what-to-do",
