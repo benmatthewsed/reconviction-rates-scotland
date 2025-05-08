@@ -670,8 +670,8 @@ overall_res |>
 ## Reconviction rates for each group
 
 -   Suggesting that policy-makers/whoever analyse trends for all groups runs counter to the logic of quantification - the whole point is to reduce the amount of information required to understand the thing you care about and have an 'objective' and apolitical measure [@porter1996]
--   It also raises the question of which groups would make the cut, and how they would be defined
--   This is famously the paradoxical bit of Simpson's paradox - the hard part is identifying the subgroups you need to stratify by [@pearl2014]; it is paradoxical because of the story you tell about the data, not because of anything inherently statistical
+-   Requiring reconviction rates for pre-defined population groups raises the question of which groups would make the cut, and how they would be defined
+-   This is famously the paradoxical bit of Simpson's paradox - the hard part is identifying the subgroups you need to stratify by [@pearl2014]; it is paradoxical because you need to choose what story to tell about the data, not because of anything inherently statistical
 
 ## "Following consultation with key users"
 
