@@ -170,19 +170,19 @@ overall_reconv |>
 
 ## Reconviction rates as a performance metric
 
--   The Sentencing Council (for England and Wales) says the reconviction rate is a "key metric for evaluating the effectiveness of sentencing" [@gormley2022, p.18]
+-   The Sentencing Council (for England and Wales) says the reconviction rate is a "key metric for evaluating the effectiveness of sentencing" [@gormley2022, p18]
 
 -   "Measuring recidivism is important, as it is one indicator of the effectiveness of the criminal justice system in the rehabilitation of offenders. Reconviction rates are a proxy measure for recidivism" [@scottishgovernmentReconvictionRatesScotland2024, p8]
 
--   "The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government" [@browne2024, p.19]
+-   "The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government" [@browne2024, p19]
 
 -   The common logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders
 
--   Previously "Reduce reconviction rates" was a National Performance Framework indicator until (at least) 2017 [@scottishgovernment2017, p.6]
+-   Previously "Reduce reconviction rates" was a National Performance Framework indicator until (at least) 2017 [@scottishgovernment2017, p6]
 
 ## But it's not so simple
 
--   However, "differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions." [@browne2024, p.19]
+-   However, "differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions." [@browne2024, p19]
 
 -   We can think of the overall reconviction rate as a *weighted* mean of the reconviction rates in different demographic groups, weighted by the group size. You can have changes in the rate due to changes in the means or changes in the rates.
 
@@ -210,6 +210,7 @@ $$
 \color{grey}{\text{Overall Reconviction Rate} = \sum_{i} (}\text{Subgroup Rate}_i \color{grey}{\times \text{Subgroup Size}_i)}
 $$
 
+
 ---
 smaller: false
 ---
@@ -217,7 +218,7 @@ smaller: false
 ## The anatomy of a rate
 
 $$
-\color{grey}{\text{Overall Reconviction Rate}} = \color{grey}{\sum_{i} (\text{Subgroup Rate}_i  \times } \text{Subgroup Size}_i\color{grey}{)}
+\color{grey}{\text{Overall Reconviction Rate}} = \color{grey}{\sum_{i} (\text{Subgroup Rate}_i  \times } \text{ Subgroup Size}_i\color{grey}{)}
 $$
 
 ## The anatomy of a rate
@@ -363,7 +364,7 @@ tribble(
 ## Rates and weights
 
 > "If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." 
-[@kirkwood2008, p.9]
+[@kirkwood2008, p9]
 
 ## Standardized reconviction rates as performance indicators
 
@@ -406,7 +407,7 @@ tribble(
 
 ## Measures
 
-"The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year," [@scottishgovernmentReconvictionRatesScotland2024, p.10]
+"The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year," [@scottishgovernmentReconvictionRatesScotland2024, p10]
 
 There are alternatives (e.g. the average number of convictions per person reconvicted). The same principles apply regardless of the measure used.
 
@@ -677,7 +678,7 @@ overall_res |>
 
 > In bulletins prior to 2017/18, reoffending figures were provided alongside adjusted reoffending rates for adults and the overall cohort, to help provide an estimate of change in reoffending. Following consultation with key users, the decision was taken to exclude this from future publications to avoid confusion in he interpretation of findings.
 
-[@browne2024, p.19]
+[@browne2024, p19]
 
 ## So what to do?
 
