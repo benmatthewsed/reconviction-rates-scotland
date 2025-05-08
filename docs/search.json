@@ -446,5 +446,26 @@
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "In summary",
     "text": "In summary\n\nThe crime drop in Scotland has led to a profound shift in the demographics of the people coming through the criminal justice system\nThis shift is so pronounced that it affects our capacity to understand the ‘effectiveness’ of punishment through aggregate measures such as the overall reconviction rate\nA perspective which focuses on aggregate measures of the criminal justice system rather than the people involved with the system will be mislead by measures of system ‘performance’\nThere are lots of other possible ways that demographic changes in crime may impact the functioning of the criminal justice system and public perceptions of crime"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#results-1",
+    "href": "02_script/reconviction-standardization-decomposition.html#results-1",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "Results",
+    "text": "Results\n\nChange in reconviciton rate by age group\nChange in the relative sizes of age groups\nTime series standardized rates\nDecomposition of reconviction rates in 2004/05 and 2020/21"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#limitations",
+    "href": "02_script/reconviction-standardization-decomposition.html#limitations",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "Limitations",
+    "text": "Limitations\n\nCoarse age categories could underplay the impact of changing age mix as a form of ‘measurement error’ (I think?)\nThere might be other demographic or offence characteristics we are interested in (ethnicity; type of offence; type of sentence etc etc)\nThe time periods selected are arbitrary and due to data availability\nBoth of these would be resolvable with access to the underlying Scottish Offenders Index data"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate",
+    "href": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "The anatomy of a rate",
+    "text": "The anatomy of a rate\n[ = _{i} (_i _i) ]"
   }
 ]
