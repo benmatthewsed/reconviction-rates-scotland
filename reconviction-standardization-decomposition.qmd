@@ -389,6 +389,11 @@ tribble(
 
 # Research design {background-color="#006938"}
 
+
+---
+smaller: false
+---
+
 ## Research Question
 
 -   How much of the change in the overall reconviction rate in Scotland between 2004 and 2022 is attributable to changing demographics?
@@ -415,7 +420,7 @@ There are alternatives (e.g. the average number of convictions per person reconv
     -   Male, female
 
 ::: aside
-Sex is "generally based on how a person presents and is recorded when a person’s details are entered into the \[Criminal Histories System\]. It is recorded for operational purposes, such as requirements for searching" [@scottishgovernment2024, p44]
+Sex is "generally based on how a person presents and is recorded when a person’s details are entered into the \[Criminal Histories System\]. It is recorded for operational purposes, such as requirements for searching" [@scottishgovernmentReconvictionRatesScotland2024, p44]
 :::
 
 ## Method
@@ -684,7 +689,7 @@ overall_res |>
 
 # Thank you! {background-color="#006938"}
 
-## Bonus slides
+# Bonus slides {background-color="#006938"}
 
 ## Percentage change by group
 
