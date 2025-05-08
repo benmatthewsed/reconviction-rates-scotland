@@ -162,7 +162,7 @@ overall_reconv |>
 ## A gap in the crime drop
 
 -   There has been *a lot* written about the causes of the crime drop [@farrell2014; @tonry2014; @ball2023]
--   With some previous attempts to describe changes in the demographics of crime and use these descriptions to build explanations for why there is less crime now than in the past (@matthewsRethinkingOneCriminologys2018; @tuttleEndAgeCrimeCurve2024; @farrellDebutsLegaciesCrime2015)
+-   With some previous attempts to describe changes in the demographics of crime and use these descriptions to build explanations for why there is less crime now than in the past [@matthewsRethinkingOneCriminologys2018; @tuttleEndAgeCrimeCurve2024; @farrellDebutsLegaciesCrime2015]
 -   There haven't - at least as far as I'm aware - been any studies which go on to explore the *consequences* of these changing demographics for the justice system more broadly
 -   One area these changing demographics can matter are when measuring CJS 'performance'
 
@@ -170,19 +170,19 @@ overall_reconv |>
 
 ## Reconviction rates as a performance metric
 
--   The Sentencing Council (for England and Wales) says the reconviction rate is a "key metric for evaluating the effectiveness of sentencing" [@gormley2022]
+-   The Sentencing Council (for England and Wales) says the reconviction rate is a "key metric for evaluating the effectiveness of sentencing" [@gormley2022, p.18]
 
--   "Measuring recidivism is important, as it is one indicator of the effectiveness of the criminal justice system in the rehabilitation of offenders. Reconviction rates are a proxy measure for recidivism" [@scottishgovernmentReconvictionRatesScotland2024:p8]
+-   "Measuring recidivism is important, as it is one indicator of the effectiveness of the criminal justice system in the rehabilitation of offenders. Reconviction rates are a proxy measure for recidivism" [@scottishgovernmentReconvictionRatesScotland2024, p8]
 
--   "The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government" [@browne2024]
+-   "The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government" [@browne2024, p.19]
 
 -   The common logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders
 
--   Previously "Reduce reconviction rates" was a National Performance Framework indicator until (at least) 2017 [@scottishgovernment2017]
+-   Previously "Reduce reconviction rates" was a National Performance Framework indicator until (at least) 2017 [@scottishgovernment2017, p.6]
 
 ## But it's not so simple
 
--   However, "differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions." [@browne2024]
+-   However, "differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions." [@browne2024, p.19]
 
 -   We can think of the overall reconviction rate as a *weighted* mean of the reconviction rates in different demographic groups, weighted by the group size. You can have changes in the rate due to changes in the means or changes in the rates.
 
@@ -263,7 +263,7 @@ tribble(
     title = "Reconviction rates in Scotland, 1995/6 and 2003/04"
   ) |> 
   tab_source_note(
-    source_note = "Source: [@kirkwood2008]"
+    source_note = "Source: Kirkwood (2008)"
   ) |>
   tab_spanner(
     label = "Reconviction rate",
@@ -362,7 +362,8 @@ tribble(
 
 ## Rates and weights
 
-> "If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." [@kirkwood2008]
+> "If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." 
+[@kirkwood2008, p.9]
 
 ## Standardized reconviction rates as performance indicators
 
@@ -405,21 +406,23 @@ tribble(
 
 ## Measures
 
-"The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year," [@scottishgovernmentReconvictionRatesScotland2024]
+"The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year," [@scottishgovernmentReconvictionRatesScotland2024, p.10]
 
 There are alternatives (e.g. the average number of convictions per person reconvicted). The same principles apply regardless of the measure used.
 
--   Age groups: Under 21, 21 to 25, 26 to 30, 31 to 40, over 40
+-   Age groups: 
+      - Under 21, 21 to 25, 26 to 30, 31 to 40, over 40
 
--   Sex: Male, female
-
+-   Sex: 
+      - Male, female
+      
 ::: aside
-Sex is "generally based on how a person presents and is recorded when a person’s details are entered into the \[Criminal Histories System\]. It is recorded for operational purposes, such as requirements for searching" [@scottishgovernmentReconvictionRatesScotland2024, p44]
+Sex is "generally based on how a person presents and is recorded when a person’s details are entered into the \[Criminal Histories System\]. It is recorded for operational purposes, such as requirements for searching" [@scottishgovernment2024, p44]
 :::
 
 ## Method
 
--   The @dasguptaStandardizationDecompositionRates1993 (see also [@kitagawa1964] approach to standardization and decomposition calculates what the reconviction rate 'would have been' in each comparison year if each year had the average demographic composition
+-   The @dasguptaStandardizationDecompositionRates1993 approach to standardization and decomposition calculates what the reconviction rate 'would have been' in each comparison year if each year had the average demographic composition
 
 -   The differences between these 'standardized' rates to the observed rates are then used to calculate how much of the change in the observed rate is due to changes in the underlying reconviction rates for each age group, and how much is due to the change in the mix of the age groups
 
