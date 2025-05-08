@@ -18,7 +18,7 @@ bibliography: references.bib
 
 ## Overview
 
--   The crime drop has changed the demographics of people being convicted (@matthewsRethinkingOneCriminologys2018; @tuttleEndAgeCrimeCurve2024; @farrellDebutsLegaciesCrime2015)
+-   The crime drop has changed the demographics of people being convicted
 -   And changes in the 'offender mix' can complicate comparisons in the reconviction rate over time
 -   The change in the demographics of people convicted over the course of the crime drop introduces statistical bias in the aggregate reconviction rate if it's used as a measure of 'effectiveness' of the justice system
 
@@ -149,8 +149,7 @@ overall_reconv |>
   labs(y = "Reconviction rate",
        x = "Reconviction cohort",
        colour = "Age",
-       fill = "Age",
-       caption = "Grey line shows overall reconviction rate") +
+       fill = "Age") +
   theme(axis.text.x = element_text(angle = 45, hjust=1)) +
   scale_y_continuous(limits = c(0.15, 0.45))
 
@@ -162,8 +161,8 @@ overall_reconv |>
 
 ## A gap in the crime drop
 
--   There has been *a lot* written about the causes of the crime drop
--   With some previous attempts to describe changes in the demographics of crime and use these descriptions to build explanations for why there is less crime now than in the past
+-   There has been *a lot* written about the causes of the crime drop [@farrell2014; @tonry2014; @ball2023]
+-   With some previous attempts to describe changes in the demographics of crime and use these descriptions to build explanations for why there is less crime now than in the past (@matthewsRethinkingOneCriminologys2018; @tuttleEndAgeCrimeCurve2024; @farrellDebutsLegaciesCrime2015)
 -   There haven't - at least as far as I'm aware - been any studies which go on to explore the *consequences* of these changing demographics for the justice system more broadly
 -   One area these changing demographics can matter are when measuring CJS 'performance'
 
@@ -201,7 +200,6 @@ $$
 \text{Overall Reconviction Rate} = \sum_{i} (\text{Subgroup Rate}_i \times \text{Subgroup Size}_i)
 $$
 
-
 ---
 smaller: false
 ---
@@ -211,8 +209,6 @@ smaller: false
 $$
 \color{grey}{\text{Overall Reconviction Rate} = \sum_{i} (}\text{Subgroup Rate}_i \color{grey}{\times \text{Subgroup Size}_i)}
 $$
-
-
 
 ---
 smaller: false
@@ -224,7 +220,6 @@ $$
 \color{grey}{\text{Overall Reconviction Rate}} = \color{grey}{\sum_{i} (\text{Subgroup Rate}_i  \times } \text{Subgroup Size}_i\color{grey}{)}
 $$
 
-
 ## The anatomy of a rate
 
 -   To use reconviction rates as measures of criminal justice system 'performance' you only want to measure change in the subgroup rates
@@ -232,17 +227,12 @@ $$
 
 ## The amalgamation paradox in reconviction rates
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="34%"}
-
 The following example comes from @kirkwood2008, who described a situation where reconviction rates in Scotland increased for men and women, but the overall reconviction rate stayed the same
-
 :::
 
 ::: {.column width="66%"}
-
-
 ```{r}
 
 library(tidyverse)
@@ -306,11 +296,8 @@ tribble(
 
 
 ```
-
-
 :::
-
-::::
+:::::
 
 ## The amalgamation paradox in reconviction rates
 
@@ -554,7 +541,6 @@ age_res |>
 
 
 ```
-
 
 ## Changing demographic mix
 
