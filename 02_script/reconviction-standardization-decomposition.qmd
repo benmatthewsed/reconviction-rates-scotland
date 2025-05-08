@@ -2,7 +2,8 @@
 title: "Why is Scotland's reconviction rate falling?"
 title-slide-attributes:
     data-background-color: "#006938"
-author: "Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)"
+author: "Ben Matthews and Josiah King"
+institute: "University of Stirling"
 date: "13 May 2025"
 format: 
   revealjs:
@@ -390,7 +391,11 @@ There are alternatives (e.g. the average number of convictions per person reconv
 
 -   Age groups: Under 21, 21 to 25, 26 to 30, 31 to 40, over 40
 
--   Sex: Male, female (sex is "generally based on how a person presents and is recorded when a person’s details are entered into the \[Criminal Histories System\]. It is recorded for operational purposes, such as requirements for searching") [@scottishgovernmentReconvictionRatesScotland2024, p44]
+-   Sex: Male, female
+
+::: aside
+Sex is "generally based on how a person presents and is recorded when a person’s details are entered into the \[Criminal Histories System\]. It is recorded for operational purposes, such as requirements for searching" [@scottishgovernmentReconvictionRatesScotland2024, p44]
+:::
 
 ## Method
 
