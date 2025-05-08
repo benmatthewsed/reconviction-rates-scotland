@@ -5,6 +5,7 @@ title-slide-attributes:
 author: "Ben Matthews and Josiah King"
 institute: "University of Stirling | University of Edinburgh"
 date: "13 May 2025"
+date-format: long
 format: 
   revealjs:
     smaller: true
