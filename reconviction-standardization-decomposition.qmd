@@ -197,8 +197,32 @@ smaller: false
 ## The anatomy of a rate
 
 $$
-\text{Overall Rate} = \sum_{i} (\text{Subgroup Rate}_i \times \text{Subgroup Size}_i)
+\text{Overall Reconviction Rate} = \sum_{i} (\text{Subgroup Rate}_i \times \text{Subgroup Size}_i)
 $$
+
+
+---
+smaller: false
+---
+
+## The anatomy of a rate
+
+$$
+\color{grey}{\text{Overall Reconviction Rate} = \sum_{i} (}\text{Subgroup Rate}_i \color{grey}{\times \text{Subgroup Size}_i)}
+$$
+
+
+
+---
+smaller: false
+---
+
+## The anatomy of a rate
+
+$$
+\color{grey}{\text{Overall Reconviction Rate}} = \color{grey}{\sum_{i} (\text{Subgroup Rate}_i \times} \text{Subgroup Size}_i\color{grey}{)}
+$$
+
 
 ## The anatomy of a rate
 

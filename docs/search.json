@@ -550,14 +550,14 @@
     "href": "reconviction-standardization-decomposition.html#the-anatomy-of-a-rate",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The anatomy of a rate",
-    "text": "The anatomy of a rate\n\\[\n\\text{Overall Rate} = \\sum_{i} (\\text{Subgroup Rate}_i \\times \\text{Subgroup Size}_i)\n\\]"
+    "text": "The anatomy of a rate\n\\[\n\\text{Overall Reconviction Rate} = \\sum_{i} (\\text{Subgroup Rate}_i \\times \\text{Subgroup Size}_i)\n\\]"
   },
   {
     "objectID": "reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-1",
     "href": "reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-1",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The anatomy of a rate",
-    "text": "The anatomy of a rate\n\nTo use reconviction rates as measures of criminal justice system ‘performance’ you only want to measure change in the subgroup rates\nBut change in the overall rate can come from either changes in the subgroup rates or changes in the subgroup sizes"
+    "text": "The anatomy of a rate\n\\[\n\\color{grey}{\\text{Overall Reconviction Rate} = \\sum_{i} (}\\text{Subgroup Rate}_i \\color{grey}{\\times \\text{Subgroup Size}_i)}\n\\]"
   },
   {
     "objectID": "reconviction-standardization-decomposition.html#the-amalgamation-paradox-in-reconviction-rates",
@@ -733,5 +733,19 @@
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "References",
     "text": "References\n\n\n\n\n\n\n\n\n\nBall, Jude, Richard Grucza, Michael Livingston, Tom ter Bogt, Candace Currie, and Margaretha de Looze. 2023. “The Great Decline in Adolescent Risk Behaviours: Unitary Trend, Separate Trends, or Cascade?” Social Science & Medicine 317 (January): 115616. https://doi.org/10.1016/j.socscimed.2022.115616.\n\n\nBrowne, S. 2024b. “Adult and Youth Reoffending in Northern Ireland (2021/22 Cohort).” Northern Ireland Statistics and Research Agency.\n\n\n———. 2024a. “Adult and Youth Reoffending in Northern Ireland (2021/22 Cohort).” https://www.justice-ni.gov.uk/sites/default/files/publications/justice/Adult%20and%20Youth%20Reoffending%20in%20Northern%20Ireland%20%28202122%20Cohort%29.pdf.\n\n\nCunliffe, Jack, and Adrian Shepherd. 2007. “Re-Offending of Adults: Results from the 2004 Cohort.”\n\n\nDas Gupta, Prithwis. 1993. Standardization and Decomposition of Rates: A User’s Manual. 186. US Department of Commerce, Economics and Statistics Administration, Bureau of the Census.\n\n\nDrake, E. K., S. Aos, and R. Barnoski. 2010. “Washington’s Offender Accountability Act: Final Report on Recidivism Outcomes.” Olympia: Washington State Institute for Public Policy.\n\n\nFarrell, Graham, Gloria Laycock, and Nick Tilley. 2015. “Debuts and Legacies: The Crime Drop and the Role of Adolescence-Limited and Persistent Offending.” Crime Science 4 (1). https://doi.org/10.1186/s40163-015-0028-3.\n\n\nFrancis, Brian, Juliet Harman, and Leslie Humphreys. 2005. “Predicting Reconviction Rates in Northern Ireland.” https://eprints.lancs.ac.uk/id/eprint/49993/1/francis_predicting_reconviction_rates_in_northern_ireland_7_2005.pdf.\n\n\nGood, I. J., and Y. Mittal. 1987. “The Amalgamation and Geometry of Two-by-Two Contingency Tables.” The Annals of Statistics 15 (2): 694–711. https://www.jstor.org/stable/2241334.\n\n\nGormley, Jay, Melissa Hamilton, and Ian Belton. 2022. “The Effectiveness of Sentencing Options on Reoffending.” https://www.sentencingcouncil.org.uk/wp-content/uploads/Effectiveness-of-Sentencing-Options-Review-FINAL.pdf.\n\n\nKing, Josiah, and Ben Matthews. 2025. “DasGuptR: Das Gupta Standardisation and Decomposition.” https://doi.org/10.32614/CRAN.package.DasGuptR.\n\n\nKirkwood, Steve. 2008. “Evidencing the Impact of Criminal Justice Services on Re-offending.” CJScotland.\n\n\nKlingele, Cecelia. 2019. “Measuring Change.” The Journal of Criminal Law and Criminology (1973-) 109 (4): 769–817.\n\n\nMaruna, Shadd. 2025. “Redeeming Desistance: From Individual Journeys to a Social Movement.” Criminology n/a (n/a). https://doi.org/10.1111/1745-9125.12393.\n\n\nMatthews, Ben, and Jon Minton. 2018. “Rethinking One of Criminology’s ‘Brute Facts’: The Age–Crime Curve and the Crime Drop in Scotland.” European Journal of Criminology 15 (3): 296–320. https://doi.org/10.1177/1477370817731706.\n\n\nPearl, Judea. 2014. “Comment: Understanding Simpson’s Paradox.” The American Statistician 68 (1): 8–13. https://www.jstor.org/stable/24591584.\n\n\nPorter, Theodore. 1996. Trust in Numbers.\n\n\nScottish Government. 2017. “Scotland Performs Update.”\n\n\n———. 2024a. “Reconviction Rates in Scotland: 2020-21 Offender Cohort.” Scottish Government.\n\n\nScottish Government. 2024b. “Reconviction Rates in Scotland: 2020-21 Offender Cohort.” https://www.gov.scot/publications/reconviction-rates-scotland-2020-21-offender-cohort/pages/4/.\n\n\nSimpson, E. H. 1951. “The Interpretation of Interaction in Contingency Tables.” Journal of the Royal Statistical Society: Series B (Methodological) 13 (2): 238–41. https://doi.org/10.1111/j.2517-6161.1951.tb00088.x.\n\n\nTuttle, James. 2024. “The End of the Age-Crime Curve? A Historical Comparison of Male Arrest Rates in the United States, 1985–2019.” The British Journal of Criminology 64 (3): 638–55. https://doi.org/10.1093/bjc/azad049.\n\n\nWeaver, Beth. 2019. “Understanding Desistance: A Critical Review of Theories of Desistance.” Psychology, Crime & Law 25 (6): 641–58. https://doi.org/10.1080/1068316X.2018.1560444."
+  },
+  {
+    "objectID": "reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-2",
+    "href": "reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-2",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "The anatomy of a rate",
+    "text": "The anatomy of a rate\n\\[\n\\color{grey}{\\text{Overall Reconviction Rate}} = \\color{grey}{\\sum_{i} (\\text{Subgroup Rate}_i \\times} \\text{Subgroup Size}_i\\color{grey}{)}\n\\]"
+  },
+  {
+    "objectID": "reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-3",
+    "href": "reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-3",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "The anatomy of a rate",
+    "text": "The anatomy of a rate\n\nTo use reconviction rates as measures of criminal justice system ‘performance’ you only want to measure change in the subgroup rates\nBut change in the overall rate can come from either changes in the subgroup rates or changes in the subgroup sizes"
   }
 ]
