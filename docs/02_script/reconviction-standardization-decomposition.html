@@ -373,23 +373,23 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
 <h1>Part One: The crime drop in Scotland</h1>
 
 </section>
-<section id="change-in-the-number-of-reconvictions" class="slide level2">
-<h2>Change in the number of reconvictions</h2>
+<section id="fewer-people-are-being-convicted" class="slide level2">
+<h2>Fewer people are being convicted</h2>
 
 <img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
-<section id="change-in-reconviction-rate-overall" class="slide level2">
-<h2>Change in reconviction rate overall</h2>
+<section id="the-overall-reconviction-rate-is-falling" class="slide level2">
+<h2>The overall reconviction rate is falling</h2>
 
 <img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
-<section id="change-in-the-demographics-of-conviction" class="slide level2">
-<h2>Change in the demographics of conviction</h2>
+<section id="the-demographics-of-reconvictions-are-changing" class="slide level2">
+<h2>The demographics of reconvictions are changing</h2>
 
 <img data-src="https://raw.githubusercontent.com/benmatthewsed/reconviction-rates-scotland/refs/heads/main/03_figures/acc_animation.gif" class="r-stretch"></section>
 <section id="a-gap-in-the-crime-drop" class="slide level2">
 <h2>A gap in the crime drop</h2>
 <ul>
 <li>There has been <em>a lot</em> written about the causes of the crime drop</li>
-<li>And some previous attempts to describe changes in the demographics of crime and use these descriptions to build explanations for why there is less crime now than in the past</li>
+<li>With some previous attempts to describe changes in the demographics of crime and use these descriptions to build explanations for why there is less crime now than in the past</li>
 <li>There haven’t - at least as far as I’m aware - been any studies which go on to explore the <em>consequences</em> of these changing demographics for the justice system more broadly</li>
 <li>One area these changing demographics can matter are when measuring CJS ‘performance’</li>
 </ul>
@@ -399,11 +399,12 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
 <h1>Part Two: Measuring ‘Performance’</h1>
 
 </section>
-<section id="people-want-to-use-reconviction-rates-as-a-performance-metric" class="slide level2">
-<h2>People want to use reconviction rates as a performance metric</h2>
-<p>The Sentencing Council (for England and Wales) says the reconviction rate is a “key metric for evaluating the effectiveness of sentencing” <span class="citation" data-cites="gormleyEffectivenessSentencingOptions2022:18">(<a href="#/references" role="doc-biblioref" onclick=""><strong>gormleyEffectivenessSentencingOptions2022:18?</strong></a>)</span></p>
-<p>“Reduced reoffending is an important objective that can facilitate desistance and reintegration. While reducing reoffending is important, in the absence of reintegration or desistance, reductions in offending are less likely to persist. Yet, reoffending can be a more quantifiable metric which has advantages – though care must still be taken as there are different definitions of reoffending” <span class="citation" data-cites="gormleyEffectivenessSentencingOptions2022:5">(<a href="#/references" role="doc-biblioref" onclick=""><strong>gormleyEffectivenessSentencingOptions2022:5?</strong></a>)</span>. Basically it can help measure the ‘effectiveness’ of sentencing (… if imperfectly).</p>
-<p>“The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government” <span class="citation" data-cites="browneAdultYouthReoffending2024">(<a href="#/references" role="doc-biblioref" onclick="">Browne 2024</a>)</span></p>
+<section id="reconviction-rates-as-a-performance-metric" class="slide level2">
+<h2>Reconviction rates as a performance metric</h2>
+<p>The Sentencing Council (for England and Wales) says the reconviction rate is a “key metric for evaluating the effectiveness of sentencing” <span class="citation" data-cites="gormley2022:18">(<a href="#/references" role="doc-biblioref" onclick=""><strong>gormley2022:18?</strong></a>)</span></p>
+<p>“Reduced reoffending is an important objective that can facilitate desistance and reintegration. While reducing reoffending is important, in the absence of reintegration or desistance, reductions in offending are less likely to persist. Yet, reoffending can be a more quantifiable metric which has advantages – though care must still be taken as there are different definitions of reoffending” <span class="citation" data-cites="gormley2022:5">(<a href="#/references" role="doc-biblioref" onclick=""><strong>gormley2022:5?</strong></a>)</span>. Basically it can help measure the ‘effectiveness’ of sentencing (… if imperfectly).</p>
+<p>“The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government” <span class="citation" data-cites="browne2024">(<a href="#/references" role="doc-biblioref" onclick=""><strong>browne2024?</strong></a>)</span></p>
+<p>“Measuring recidivism is important, as it is one indicator of the effectiveness of the criminal justice system in the rehabilitation of offenders. Reconviction rates are a proxy measure for recidivism” <span class="citation" data-cites="scottishgovernment2024:p8">(<a href="#/references" role="doc-biblioref" onclick=""><strong>scottishgovernment2024:p8?</strong></a>)</span></p>
 <ul>
 <li><p>The logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders</p></li>
 <li><p>“Reduce reconviction rates” was a National Performance Framework indicator until (at least) 2017 <span class="citation" data-cites="scottishgovernment2017">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2017</a>)</span></p></li>
@@ -414,34 +415,32 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
 <ul>
 <li><p>But, as NI statistics says: “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.” <span class="citation" data-cites="browneAdultYouthReoffending2024">(<a href="#/references" role="doc-biblioref" onclick="">Browne 2024</a>)</span></p></li>
 <li><p>We can think of the overall reconviction rate as a <em>weighted</em> mean of the reconviction rates in different demographic groups, weighted by the group size. You can have changes in the rate due to changes in the means or changes in the rates.</p></li>
-<li><p>This is known as the amalgamation paradox <span class="citation" data-cites="good1987">(<a href="#/references" role="doc-biblioref" onclick="">Good and Mittal 1987</a>)</span> or Simpson’s <span class="citation" data-cites="simpson1951">(<a href="#/references" role="doc-biblioref" onclick="">Simpson 1951</a>)</span> paradox</p></li>
+<li><p>This is known as the amalgamation paradox <span class="citation" data-cites="good1987">(<a href="#/references" role="doc-biblioref" onclick="">Good and Mittal 1987</a>)</span> or Simpson’s <span class="citation" data-cites="simpson1951">Simpson (<a href="#/references" role="doc-biblioref" onclick="">1951</a>)</span> paradox</p></li>
 <li><p>Because of changes in the distribution of characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.</p></li>
 </ul>
 </section>
-<section id="rates-and-weights" class="slide level2">
-<h2>Rates and weights</h2>
-</section>
-<section id="kirkwood" class="slide level2">
-<h2>Kirkwood</h2>
+<section id="the-amalgamation-paradox-in-reconviction-rates" class="slide level2">
+<h2>The amalgamation paradox in reconviction rates</h2>
+<p>The following example comes from <span class="citation" data-cites="kirkwood2008">(<a href="#/references" role="doc-biblioref" onclick="">Kirkwood 2008</a>)</span>, who described a situation where reconviction rates in Scotland increased for men and women, but the overall reconviction rate stayed the same</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="dckjoccecd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#dckjoccecd table {
+<div id="ilhsrayzyo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ilhsrayzyo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#dckjoccecd thead, #dckjoccecd tbody, #dckjoccecd tfoot, #dckjoccecd tr, #dckjoccecd td, #dckjoccecd th {
+#ilhsrayzyo thead, #ilhsrayzyo tbody, #ilhsrayzyo tfoot, #ilhsrayzyo tr, #ilhsrayzyo td, #ilhsrayzyo th {
   border-style: none;
 }
 
-#dckjoccecd p {
+#ilhsrayzyo p {
   margin: 0;
   padding: 0;
 }
 
-#dckjoccecd .gt_table {
+#ilhsrayzyo .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -467,12 +466,12 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   border-left-color: #D3D3D3;
 }
 
-#dckjoccecd .gt_caption {
+#ilhsrayzyo .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#dckjoccecd .gt_title {
+#ilhsrayzyo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -484,7 +483,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   border-bottom-width: 0;
 }
 
-#dckjoccecd .gt_subtitle {
+#ilhsrayzyo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -496,7 +495,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   border-top-width: 0;
 }
 
-#dckjoccecd .gt_heading {
+#ilhsrayzyo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -508,13 +507,13 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   border-right-color: #D3D3D3;
 }
 
-#dckjoccecd .gt_bottom_border {
+#ilhsrayzyo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dckjoccecd .gt_col_headings {
+#ilhsrayzyo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -529,7 +528,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   border-right-color: #D3D3D3;
 }
 
-#dckjoccecd .gt_col_heading {
+#ilhsrayzyo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -549,7 +548,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   overflow-x: hidden;
 }
 
-#dckjoccecd .gt_column_spanner_outer {
+#ilhsrayzyo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -561,15 +560,15 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   padding-right: 4px;
 }
 
-#dckjoccecd .gt_column_spanner_outer:first-child {
+#ilhsrayzyo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dckjoccecd .gt_column_spanner_outer:last-child {
+#ilhsrayzyo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dckjoccecd .gt_column_spanner {
+#ilhsrayzyo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -581,11 +580,11 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   width: 100%;
 }
 
-#dckjoccecd .gt_spanner_row {
+#ilhsrayzyo .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#dckjoccecd .gt_group_heading {
+#ilhsrayzyo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -611,7 +610,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   text-align: left;
 }
 
-#dckjoccecd .gt_empty_group_heading {
+#ilhsrayzyo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -626,15 +625,15 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   vertical-align: middle;
 }
 
-#dckjoccecd .gt_from_md > :first-child {
+#ilhsrayzyo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dckjoccecd .gt_from_md > :last-child {
+#ilhsrayzyo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dckjoccecd .gt_row {
+#ilhsrayzyo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -653,7 +652,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   overflow-x: hidden;
 }
 
-#dckjoccecd .gt_stub {
+#ilhsrayzyo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -666,7 +665,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   padding-right: 5px;
 }
 
-#dckjoccecd .gt_stub_row_group {
+#ilhsrayzyo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -680,15 +679,15 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   vertical-align: top;
 }
 
-#dckjoccecd .gt_row_group_first td {
+#ilhsrayzyo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#dckjoccecd .gt_row_group_first th {
+#ilhsrayzyo .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#dckjoccecd .gt_summary_row {
+#ilhsrayzyo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -698,16 +697,16 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   padding-right: 5px;
 }
 
-#dckjoccecd .gt_first_summary_row {
+#ilhsrayzyo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#dckjoccecd .gt_first_summary_row.thick {
+#ilhsrayzyo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#dckjoccecd .gt_last_summary_row {
+#ilhsrayzyo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -717,7 +716,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   border-bottom-color: #D3D3D3;
 }
 
-#dckjoccecd .gt_grand_summary_row {
+#ilhsrayzyo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -727,7 +726,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   padding-right: 5px;
 }
 
-#dckjoccecd .gt_first_grand_summary_row {
+#ilhsrayzyo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -737,7 +736,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   border-top-color: #D3D3D3;
 }
 
-#dckjoccecd .gt_last_grand_summary_row_top {
+#ilhsrayzyo .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -747,11 +746,11 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   border-bottom-color: #D3D3D3;
 }
 
-#dckjoccecd .gt_striped {
+#ilhsrayzyo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dckjoccecd .gt_table_body {
+#ilhsrayzyo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -760,7 +759,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   border-bottom-color: #D3D3D3;
 }
 
-#dckjoccecd .gt_footnotes {
+#ilhsrayzyo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -774,7 +773,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   border-right-color: #D3D3D3;
 }
 
-#dckjoccecd .gt_footnote {
+#ilhsrayzyo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -783,7 +782,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   padding-right: 5px;
 }
 
-#dckjoccecd .gt_sourcenotes {
+#ilhsrayzyo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -797,7 +796,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   border-right-color: #D3D3D3;
 }
 
-#dckjoccecd .gt_sourcenote {
+#ilhsrayzyo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -805,72 +804,72 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
   padding-right: 5px;
 }
 
-#dckjoccecd .gt_left {
+#ilhsrayzyo .gt_left {
   text-align: left;
 }
 
-#dckjoccecd .gt_center {
+#ilhsrayzyo .gt_center {
   text-align: center;
 }
 
-#dckjoccecd .gt_right {
+#ilhsrayzyo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dckjoccecd .gt_font_normal {
+#ilhsrayzyo .gt_font_normal {
   font-weight: normal;
 }
 
-#dckjoccecd .gt_font_bold {
+#ilhsrayzyo .gt_font_bold {
   font-weight: bold;
 }
 
-#dckjoccecd .gt_font_italic {
+#ilhsrayzyo .gt_font_italic {
   font-style: italic;
 }
 
-#dckjoccecd .gt_super {
+#ilhsrayzyo .gt_super {
   font-size: 65%;
 }
 
-#dckjoccecd .gt_footnote_marks {
+#ilhsrayzyo .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#dckjoccecd .gt_asterisk {
+#ilhsrayzyo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#dckjoccecd .gt_indent_1 {
+#ilhsrayzyo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#dckjoccecd .gt_indent_2 {
+#ilhsrayzyo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#dckjoccecd .gt_indent_3 {
+#ilhsrayzyo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#dckjoccecd .gt_indent_4 {
+#ilhsrayzyo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#dckjoccecd .gt_indent_5 {
+#ilhsrayzyo .gt_indent_5 {
   text-indent: 25px;
 }
 
-#dckjoccecd .katex-display {
+#ilhsrayzyo .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#dckjoccecd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ilhsrayzyo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -884,7 +883,7 @@ Ben Matthews (University of Stirling) and Josiah King (University of Edinburgh)
 </colgroup>
 <thead>
 <tr class="header gt_heading">
-<th colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border">Amalgamation paradox in reconviction rates</th>
+<th colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border">Reconviction rates in Scotland, 1995/6 and 2003/04</th>
 </tr>
 <tr class="odd gt_col_headings gt_spanner_row">
 <th rowspan="2" id="sex" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Sex</th>
@@ -943,7 +942,7 @@ Arrows Left Right
 </tr>
 </tbody><tfoot class="gt_sourcenotes">
 <tr class="even">
-<td colspan="4" class="gt_sourcenote">Source: Kirkwood (2008)</td>
+<td colspan="4" class="gt_sourcenote">Source: [@kirkwood2008]</td>
 </tr>
 </tfoot>
 
@@ -953,27 +952,27 @@ Arrows Left Right
 </div>
 </div>
 </section>
-<section id="kirkwood-1" class="slide level2">
-<h2>Kirkwood</h2>
+<section id="the-amalgamation-paradox-in-reconviction-rates-1" class="slide level2">
+<h2>The amalgamation paradox in reconviction rates</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="gbfahnwiuz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gbfahnwiuz table {
+<div id="tqnqumrdhh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tqnqumrdhh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gbfahnwiuz thead, #gbfahnwiuz tbody, #gbfahnwiuz tfoot, #gbfahnwiuz tr, #gbfahnwiuz td, #gbfahnwiuz th {
+#tqnqumrdhh thead, #tqnqumrdhh tbody, #tqnqumrdhh tfoot, #tqnqumrdhh tr, #tqnqumrdhh td, #tqnqumrdhh th {
   border-style: none;
 }
 
-#gbfahnwiuz p {
+#tqnqumrdhh p {
   margin: 0;
   padding: 0;
 }
 
-#gbfahnwiuz .gt_table {
+#tqnqumrdhh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -999,12 +998,12 @@ Arrows Left Right
   border-left-color: #D3D3D3;
 }
 
-#gbfahnwiuz .gt_caption {
+#tqnqumrdhh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gbfahnwiuz .gt_title {
+#tqnqumrdhh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1016,7 +1015,7 @@ Arrows Left Right
   border-bottom-width: 0;
 }
 
-#gbfahnwiuz .gt_subtitle {
+#tqnqumrdhh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1028,7 +1027,7 @@ Arrows Left Right
   border-top-width: 0;
 }
 
-#gbfahnwiuz .gt_heading {
+#tqnqumrdhh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1040,13 +1039,13 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#gbfahnwiuz .gt_bottom_border {
+#tqnqumrdhh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gbfahnwiuz .gt_col_headings {
+#tqnqumrdhh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1061,7 +1060,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#gbfahnwiuz .gt_col_heading {
+#tqnqumrdhh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1081,7 +1080,7 @@ Arrows Left Right
   overflow-x: hidden;
 }
 
-#gbfahnwiuz .gt_column_spanner_outer {
+#tqnqumrdhh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1093,15 +1092,15 @@ Arrows Left Right
   padding-right: 4px;
 }
 
-#gbfahnwiuz .gt_column_spanner_outer:first-child {
+#tqnqumrdhh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gbfahnwiuz .gt_column_spanner_outer:last-child {
+#tqnqumrdhh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gbfahnwiuz .gt_column_spanner {
+#tqnqumrdhh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1113,11 +1112,11 @@ Arrows Left Right
   width: 100%;
 }
 
-#gbfahnwiuz .gt_spanner_row {
+#tqnqumrdhh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gbfahnwiuz .gt_group_heading {
+#tqnqumrdhh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1143,7 +1142,7 @@ Arrows Left Right
   text-align: left;
 }
 
-#gbfahnwiuz .gt_empty_group_heading {
+#tqnqumrdhh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1158,15 +1157,15 @@ Arrows Left Right
   vertical-align: middle;
 }
 
-#gbfahnwiuz .gt_from_md > :first-child {
+#tqnqumrdhh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gbfahnwiuz .gt_from_md > :last-child {
+#tqnqumrdhh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gbfahnwiuz .gt_row {
+#tqnqumrdhh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1185,7 +1184,7 @@ Arrows Left Right
   overflow-x: hidden;
 }
 
-#gbfahnwiuz .gt_stub {
+#tqnqumrdhh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1198,7 +1197,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#gbfahnwiuz .gt_stub_row_group {
+#tqnqumrdhh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1212,15 +1211,15 @@ Arrows Left Right
   vertical-align: top;
 }
 
-#gbfahnwiuz .gt_row_group_first td {
+#tqnqumrdhh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gbfahnwiuz .gt_row_group_first th {
+#tqnqumrdhh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gbfahnwiuz .gt_summary_row {
+#tqnqumrdhh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1230,16 +1229,16 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#gbfahnwiuz .gt_first_summary_row {
+#tqnqumrdhh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gbfahnwiuz .gt_first_summary_row.thick {
+#tqnqumrdhh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gbfahnwiuz .gt_last_summary_row {
+#tqnqumrdhh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1249,7 +1248,7 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#gbfahnwiuz .gt_grand_summary_row {
+#tqnqumrdhh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1259,7 +1258,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#gbfahnwiuz .gt_first_grand_summary_row {
+#tqnqumrdhh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1269,7 +1268,7 @@ Arrows Left Right
   border-top-color: #D3D3D3;
 }
 
-#gbfahnwiuz .gt_last_grand_summary_row_top {
+#tqnqumrdhh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1279,11 +1278,11 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#gbfahnwiuz .gt_striped {
+#tqnqumrdhh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gbfahnwiuz .gt_table_body {
+#tqnqumrdhh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1292,7 +1291,7 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#gbfahnwiuz .gt_footnotes {
+#tqnqumrdhh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1306,7 +1305,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#gbfahnwiuz .gt_footnote {
+#tqnqumrdhh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1315,7 +1314,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#gbfahnwiuz .gt_sourcenotes {
+#tqnqumrdhh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1329,7 +1328,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#gbfahnwiuz .gt_sourcenote {
+#tqnqumrdhh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1337,72 +1336,72 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#gbfahnwiuz .gt_left {
+#tqnqumrdhh .gt_left {
   text-align: left;
 }
 
-#gbfahnwiuz .gt_center {
+#tqnqumrdhh .gt_center {
   text-align: center;
 }
 
-#gbfahnwiuz .gt_right {
+#tqnqumrdhh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gbfahnwiuz .gt_font_normal {
+#tqnqumrdhh .gt_font_normal {
   font-weight: normal;
 }
 
-#gbfahnwiuz .gt_font_bold {
+#tqnqumrdhh .gt_font_bold {
   font-weight: bold;
 }
 
-#gbfahnwiuz .gt_font_italic {
+#tqnqumrdhh .gt_font_italic {
   font-style: italic;
 }
 
-#gbfahnwiuz .gt_super {
+#tqnqumrdhh .gt_super {
   font-size: 65%;
 }
 
-#gbfahnwiuz .gt_footnote_marks {
+#tqnqumrdhh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gbfahnwiuz .gt_asterisk {
+#tqnqumrdhh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gbfahnwiuz .gt_indent_1 {
+#tqnqumrdhh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gbfahnwiuz .gt_indent_2 {
+#tqnqumrdhh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gbfahnwiuz .gt_indent_3 {
+#tqnqumrdhh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gbfahnwiuz .gt_indent_4 {
+#tqnqumrdhh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gbfahnwiuz .gt_indent_5 {
+#tqnqumrdhh .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gbfahnwiuz .katex-display {
+#tqnqumrdhh .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gbfahnwiuz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#tqnqumrdhh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1418,7 +1417,7 @@ Arrows Left Right
 </colgroup>
 <thead>
 <tr class="header gt_heading">
-<th colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border">Amalgamation paradox in reconviction rates</th>
+<th colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border">Reconviction rates in Scotland, 1995/6 and 2003/04</th>
 </tr>
 <tr class="odd gt_col_headings gt_spanner_row">
 <th rowspan="2" id="sex" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Sex</th>
@@ -1488,7 +1487,7 @@ Arrows Left Right
 </tr>
 </tbody><tfoot class="gt_sourcenotes">
 <tr class="even">
-<td colspan="6" class="gt_sourcenote">Source: Kirkwood (2008)</td>
+<td colspan="6" class="gt_sourcenote">Source: [@kirkwood2008]</td>
 </tr>
 </tfoot>
 
@@ -1498,33 +1497,39 @@ Arrows Left Right
 </div>
 </div>
 </section>
-<section id="rates-and-weights-1" class="slide level2">
+<section id="rates-and-weights" class="slide level2">
 <h2>Rates and weights</h2>
 <blockquote>
-<p>“a headline reduction in reconvictions in line with targets might be due to a change in the gender balance of the incarcerated population, rather than the success of any policy or intervention. If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration.” <span class="citation" data-cites="kirkwood2008">(<a href="#/references" role="doc-biblioref" onclick="">Kirkwood 2008</a>)</span></p>
+<p>“If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration.” <span class="citation" data-cites="kirkwood2008">(<a href="#/references" role="doc-biblioref" onclick="">Kirkwood 2008</a>)</span></p>
 </blockquote>
 </section>
-<section id="measuring-performance" class="slide level2">
-<h2>Measuring performance</h2>
+<section id="standardized-reconviction-rates-as-performance-indicators" class="slide level2">
+<h2>Standardized reconviction rates as performance indicators</h2>
 <ul>
-<li><p>This is well known, and typically what people do is come up with some counterfactual ‘standardized’ reconviction rate to facilitate comparisons across years when measuring performance <span class="citation" data-cites="francis2005 cunliffe2007 drank2010">(<a href="#/references" role="doc-biblioref" onclick=""><strong>francis2005?</strong></a>; <a href="#/references" role="doc-biblioref" onclick=""><strong>cunliffe2007?</strong></a>; <a href="#/references" role="doc-biblioref" onclick=""><strong>drank2010?</strong></a>)</span> to correct for the problem of changing ‘offender mix’</p></li>
-<li><p>However, this is usually conducted with a focus on producing some overall assessment of justice system performance, and not in exploring the relative importance of demographic changes and change in underlying reconviction rates in driving change in the aggregate rate</p></li>
-<li><p>No studies have assessed the extent to which these long-term demographic changes as reflected in the crime drop can influence aggregate performance measures</p></li>
-<li><p>(There are also conceptual reasons why we might not want to use reconvictions as a performance measure (e.g. <span class="citation" data-cites="klingeleMeasuringChange2019">Klingele (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> advocates for measuring ‘markers of desistance’ instead of a binary reconviction measure; see <span class="citation" data-cites="weaverUnderstandingDesistanceCritical2019">Weaver (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> and <span class="citation" data-cites="marunaRedeemingDesistanceIndividual2025">Maruna (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span> for more conceptual critiques) - but this isn’t so relevant for our concerns here)</p></li>
+<li><p>This compositional problem is well known, and typically what people do is come up with some counterfactual ‘standardized’ reconviction rate to facilitate comparisons across years when measuring performance <span class="citation" data-cites="francis2005 cunliffe2007 drake2010">(<a href="#/references" role="doc-biblioref" onclick="">Francis, Harman, and Humphreys 2005</a>; <a href="#/references" role="doc-biblioref" onclick=""><strong>cunliffe2007?</strong></a>; <a href="#/references" role="doc-biblioref" onclick="">Drake, Aos, and Barnoski 2010</a>)</span> to correct for the problem of changing ‘offender mix’</p></li>
+<li><p>These methods typically focus on whether the observed reconviction rate is higher or lower than the ‘standardized’ (read - made up with maths) rate</p></li>
+<li><p>They do not assess the drivers of any change in the observed rate - specifically the relative importance of demographic changes and change in ‘sub-group’ reconviction rates in producing change in the aggregate rate</p></li>
+<li><p>To date, no studies have assessed the extent to which these long-term demographic changes as reflected in the crime drop can influence aggregate performance measures</p></li>
+</ul>
+</section>
+<section id="a-word-on-desistance" class="slide level2">
+<h2>A word on desistance</h2>
+<ul>
+<li>There are also conceptual reasons why we might not want to use reconvictions as a performance measure (e.g. <span class="citation" data-cites="klingeleMeasuringChange2019">Klingele (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> advocates for measuring ‘markers of desistance’ instead of a binary reconviction measure; see <span class="citation" data-cites="weaverUnderstandingDesistanceCritical2019">Weaver (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> and <span class="citation" data-cites="marunaRedeemingDesistanceIndividual2025">Maruna (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span> for more conceptual critiques) - but this isn’t so relevant for our concerns here</li>
 </ul>
 </section></section>
 <section>
-<section id="part-three-a-solution" class="title-slide slide level1 center" data-background-color="#006938">
-<h1>Part Three: A solution?</h1>
+<section id="part-three-an-alternative-approach" class="title-slide slide level1 center" data-background-color="#006938">
+<h1>Part Three: An alternative approach</h1>
 
 </section>
-<section id="the-solution" class="slide level2">
-<h2>The solution?</h2>
+<section id="standardization-and-decomposition" class="slide level2">
+<h2>Standardization and decomposition</h2>
 <ul>
 <li>The methods of standardization and decomposition (standard in demography) can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups</li>
-<li>Standardization and decomposition can also separate out the relative importance of different factors in driving aggregate change</li>
-<li>Previous regression-based approaches (e.g. <span class="citation" data-cites="francis2005 cunliffe2007">(<a href="#/references" role="doc-biblioref" onclick=""><strong>francis2005?</strong></a>; <a href="#/references" role="doc-biblioref" onclick=""><strong>cunliffe2007?</strong></a>)</span>; <span class="citation" data-cites="drank2010">(<a href="#/references" role="doc-biblioref" onclick=""><strong>drank2010?</strong></a>)</span>) to correct for the problem of changing ‘offender mix’ can perform this standardization part, but don’t focus on the decomposition part</li>
-<li>We illustrate this using the methods described by <span class="citation" data-cites="dasguptaStandardizationDecompositionRates1993">(<a href="#/references" role="doc-biblioref" onclick="">Das Gupta 1993</a>)</span> and implemented in the <code>{dasguptr}</code> R package <span class="citation" data-cites="king2025">(<a href="#/references" role="doc-biblioref" onclick=""><strong>king2025?</strong></a>)</span> to Scottish reconvictions data from 2004-2022</li>
+<li>Standardization and decomposition can also separate out the relative importance of different factors in driving aggregate change (e.g.&nbsp;age and sex)</li>
+<li>Previous regression-based approaches (e.g. <span class="citation" data-cites="francis2005">(<a href="#/references" role="doc-biblioref" onclick="">Francis, Harman, and Humphreys 2005</a>)</span>; <span class="citation" data-cites="cunliffe2007">(<a href="#/references" role="doc-biblioref" onclick=""><strong>cunliffe2007?</strong></a>)</span>; <span class="citation" data-cites="drake2010">(<a href="#/references" role="doc-biblioref" onclick="">Drake, Aos, and Barnoski 2010</a>)</span>) to correct for the problem of changing ‘offender mix’ can perform this standardization part, but don’t focus on the decomposition part</li>
+<li>We illustrate this approach using the standardization and decomposition methods described by <span class="citation" data-cites="dasguptaStandardizationDecompositionRates1993">(<a href="#/references" role="doc-biblioref" onclick="">Das Gupta 1993</a>)</span> and implemented in the <code>{dasguptr}</code> R package <span class="citation" data-cites="king2025">(<a href="#/references" role="doc-biblioref" onclick="">King and Matthews 2025</a>)</span> to Scottish reconvictions data from 2004-2022</li>
 </ul>
 </section></section>
 <section>
@@ -1540,36 +1545,45 @@ Arrows Left Right
 </section>
 <section id="data" class="slide level2">
 <h2>Data</h2>
-<p>We explore change in reconviction rates in Scotland between 2004-2020. These are made available by SG as part of their Reconvictions Bulletin. We decompose the overall reconviction rate by age and sex. These are key demographic characteristics in relation to the crime drop in Scotland <span class="citation" data-cites="matthewsRethinkingOneCriminologys2018">(<a href="#/references" role="doc-biblioref" onclick="">Matthews and Minton 2018</a>)</span>. There is nothing particularly special about these time points, and the same approach would work for other time periods and other characteristics.</p>
 <ul>
-<li>Some evidence that Scotland might be an extreme case here with larger demographic changes than in other countries <span class="citation" data-cites="matthews23">(<a href="#/references" role="doc-biblioref" onclick=""><strong>matthews23?</strong></a>)</span></li>
+<li><p>We analyse data from ‘reconviciton cohorts’ in Scotland between 2004-2020. These are made available by Scottish Government as part of their Reconvictions Bulletin <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024a</a>)</span>. We decompose the overall reconviction rate by age and sex.</p></li>
+<li><p>A reconviction cohort is “all offenders who either received a non-custodial conviction or were released from a custodial sentence in a given financial year, from the 1st April to the 31st March the following year” <span class="citation" data-cites="scottishgovernment2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024b</a>)</span> p40</p></li>
+<li><p>There is nothing particularly special about these time points, and the same approach would work for other time periods and other characteristics.</p></li>
+<li><p>Some evidence that Scotland might be an extreme case here with larger demographic changes than in other countries <span class="citation" data-cites="matthews2023">(<a href="#/references" role="doc-biblioref" onclick=""><strong>matthews2023?</strong></a>)</span></p></li>
 </ul>
 </section>
 <section id="measures" class="slide level2">
 <h2>Measures</h2>
-<p>“The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year,” <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024</a>)</span></p>
+<p>“The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year,” <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024a</a>)</span></p>
 <p>There are alternatives (e.g.&nbsp;the average number of convictions per person reconvicted). The same principles apply regardless of the measure used.</p>
 <ul>
-<li><p>Age groups included: under 21, 21 to 25, 26 to 30, 31 to 40, over 40</p></li>
-<li><p>Genders included: male, female</p></li>
+<li><p>Age groups: Under 21, 21 to 25, 26 to 30, 31 to 40, over 40</p></li>
+<li><p>Sex: Male, female (sex is “generally based on how a person presents and is recorded when a person’s details are entered into the [Criminal Histories System]. It is recorded for operational purposes, such as requirements for searching”) <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024a, p44</a>)</span></p></li>
 </ul>
 </section>
 <section id="method" class="slide level2">
 <h2>Method</h2>
 <ul>
-<li><p>The Kitagawa/Das Gupta approach to decomposition calculates what the reconviction rate ‘would have been’ in each year if each year had the average demographic composition</p></li>
+<li><p>The <span class="citation" data-cites="dasguptaStandardizationDecompositionRates1993">Das Gupta (<a href="#/references" role="doc-biblioref" onclick="">1993</a>)</span> (see also <span class="citation" data-cites="kitagawa1951">(<a href="#/references" role="doc-biblioref" onclick=""><strong>kitagawa1951?</strong></a>)</span> approach to standardization and decomposition calculates what the reconviction rate ‘would have been’ in each comparison year if each year had the average demographic composition</p></li>
 <li><p>The differences between these ‘standardized’ rates to the observed rates are then used to calculate how much of the change in the observed rate is due to changes in the underlying reconviction rates for each age group, and how much is due to the change in the mix of the age groups</p></li>
 </ul>
-</section>
-<section id="results" class="slide level2">
-<h2>Results</h2>
+</section></section>
+<section>
+<section id="results" class="title-slide slide level1 center" data-background-color="#006938">
+<h1>Results</h1>
+<ul>
+<li>Change in reconviciton rate by age group</li>
+<li>Change in the relative sizes of age groups</li>
+<li>Time series standardized rates</li>
+<li>Decomposition of reconviction rates in 2004/05 and 2020/21</li>
+</ul>
 </section>
 <section id="change-in-reconviciton-rate-by-age-group" class="slide level2">
 <h2>Change in reconviciton rate by age group</h2>
 
 <img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
-<section id="change-in-the-relative-size-of-age-group" class="slide level2">
-<h2>Change in the relative size of age group</h2>
+<section id="change-in-the-relative-sizes-of-age-group" class="slide level2">
+<h2>Change in the relative sizes of age group</h2>
 
 <img data-src="reconviction-standardization-decomposition_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
 <section id="table-as-kirkwood" class="slide level2">
@@ -1595,23 +1609,23 @@ Arrows Left Right
 <h2>How much change in the reconviction rate is due to demographic mix?</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fgxhqoafui" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fgxhqoafui table {
+<div id="mzdrvlkgvr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mzdrvlkgvr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fgxhqoafui thead, #fgxhqoafui tbody, #fgxhqoafui tfoot, #fgxhqoafui tr, #fgxhqoafui td, #fgxhqoafui th {
+#mzdrvlkgvr thead, #mzdrvlkgvr tbody, #mzdrvlkgvr tfoot, #mzdrvlkgvr tr, #mzdrvlkgvr td, #mzdrvlkgvr th {
   border-style: none;
 }
 
-#fgxhqoafui p {
+#mzdrvlkgvr p {
   margin: 0;
   padding: 0;
 }
 
-#fgxhqoafui .gt_table {
+#mzdrvlkgvr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1637,12 +1651,12 @@ Arrows Left Right
   border-left-color: #D3D3D3;
 }
 
-#fgxhqoafui .gt_caption {
+#mzdrvlkgvr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fgxhqoafui .gt_title {
+#mzdrvlkgvr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1654,7 +1668,7 @@ Arrows Left Right
   border-bottom-width: 0;
 }
 
-#fgxhqoafui .gt_subtitle {
+#mzdrvlkgvr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1666,7 +1680,7 @@ Arrows Left Right
   border-top-width: 0;
 }
 
-#fgxhqoafui .gt_heading {
+#mzdrvlkgvr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1678,13 +1692,13 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#fgxhqoafui .gt_bottom_border {
+#mzdrvlkgvr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fgxhqoafui .gt_col_headings {
+#mzdrvlkgvr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1699,7 +1713,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#fgxhqoafui .gt_col_heading {
+#mzdrvlkgvr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1719,7 +1733,7 @@ Arrows Left Right
   overflow-x: hidden;
 }
 
-#fgxhqoafui .gt_column_spanner_outer {
+#mzdrvlkgvr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1731,15 +1745,15 @@ Arrows Left Right
   padding-right: 4px;
 }
 
-#fgxhqoafui .gt_column_spanner_outer:first-child {
+#mzdrvlkgvr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fgxhqoafui .gt_column_spanner_outer:last-child {
+#mzdrvlkgvr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fgxhqoafui .gt_column_spanner {
+#mzdrvlkgvr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1751,11 +1765,11 @@ Arrows Left Right
   width: 100%;
 }
 
-#fgxhqoafui .gt_spanner_row {
+#mzdrvlkgvr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fgxhqoafui .gt_group_heading {
+#mzdrvlkgvr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1781,7 +1795,7 @@ Arrows Left Right
   text-align: left;
 }
 
-#fgxhqoafui .gt_empty_group_heading {
+#mzdrvlkgvr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1796,15 +1810,15 @@ Arrows Left Right
   vertical-align: middle;
 }
 
-#fgxhqoafui .gt_from_md > :first-child {
+#mzdrvlkgvr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fgxhqoafui .gt_from_md > :last-child {
+#mzdrvlkgvr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fgxhqoafui .gt_row {
+#mzdrvlkgvr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1823,7 +1837,7 @@ Arrows Left Right
   overflow-x: hidden;
 }
 
-#fgxhqoafui .gt_stub {
+#mzdrvlkgvr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1836,7 +1850,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#fgxhqoafui .gt_stub_row_group {
+#mzdrvlkgvr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1850,15 +1864,15 @@ Arrows Left Right
   vertical-align: top;
 }
 
-#fgxhqoafui .gt_row_group_first td {
+#mzdrvlkgvr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fgxhqoafui .gt_row_group_first th {
+#mzdrvlkgvr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fgxhqoafui .gt_summary_row {
+#mzdrvlkgvr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1868,16 +1882,16 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#fgxhqoafui .gt_first_summary_row {
+#mzdrvlkgvr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fgxhqoafui .gt_first_summary_row.thick {
+#mzdrvlkgvr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fgxhqoafui .gt_last_summary_row {
+#mzdrvlkgvr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1887,7 +1901,7 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#fgxhqoafui .gt_grand_summary_row {
+#mzdrvlkgvr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1897,7 +1911,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#fgxhqoafui .gt_first_grand_summary_row {
+#mzdrvlkgvr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1907,7 +1921,7 @@ Arrows Left Right
   border-top-color: #D3D3D3;
 }
 
-#fgxhqoafui .gt_last_grand_summary_row_top {
+#mzdrvlkgvr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1917,11 +1931,11 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#fgxhqoafui .gt_striped {
+#mzdrvlkgvr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fgxhqoafui .gt_table_body {
+#mzdrvlkgvr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1930,7 +1944,7 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#fgxhqoafui .gt_footnotes {
+#mzdrvlkgvr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1944,7 +1958,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#fgxhqoafui .gt_footnote {
+#mzdrvlkgvr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1953,7 +1967,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#fgxhqoafui .gt_sourcenotes {
+#mzdrvlkgvr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1967,7 +1981,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#fgxhqoafui .gt_sourcenote {
+#mzdrvlkgvr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1975,72 +1989,72 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#fgxhqoafui .gt_left {
+#mzdrvlkgvr .gt_left {
   text-align: left;
 }
 
-#fgxhqoafui .gt_center {
+#mzdrvlkgvr .gt_center {
   text-align: center;
 }
 
-#fgxhqoafui .gt_right {
+#mzdrvlkgvr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fgxhqoafui .gt_font_normal {
+#mzdrvlkgvr .gt_font_normal {
   font-weight: normal;
 }
 
-#fgxhqoafui .gt_font_bold {
+#mzdrvlkgvr .gt_font_bold {
   font-weight: bold;
 }
 
-#fgxhqoafui .gt_font_italic {
+#mzdrvlkgvr .gt_font_italic {
   font-style: italic;
 }
 
-#fgxhqoafui .gt_super {
+#mzdrvlkgvr .gt_super {
   font-size: 65%;
 }
 
-#fgxhqoafui .gt_footnote_marks {
+#mzdrvlkgvr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fgxhqoafui .gt_asterisk {
+#mzdrvlkgvr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fgxhqoafui .gt_indent_1 {
+#mzdrvlkgvr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fgxhqoafui .gt_indent_2 {
+#mzdrvlkgvr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fgxhqoafui .gt_indent_3 {
+#mzdrvlkgvr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fgxhqoafui .gt_indent_4 {
+#mzdrvlkgvr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fgxhqoafui .gt_indent_5 {
+#mzdrvlkgvr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fgxhqoafui .katex-display {
+#mzdrvlkgvr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fgxhqoafui div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mzdrvlkgvr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2111,20 +2125,21 @@ Year
 </div>
 </div>
 </section>
-<section id="huh" class="slide level2">
-<h2>Huh?</h2>
+<section id="about-half" class="slide level2">
+<h2>… about half</h2>
 <ul>
 <li>We can attribute about 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 to demographic change in the population of people convicted, rather than falls in the reconviction rate <em>per se</em>.</li>
 <li>If you want to use the reconviction rate as a measure of sentencing effectiveness or similar, you would think the justice system is doing about twice as a good a job as it is</li>
-<li>The change in the mix of people being reconvicted could still be due to criminal justice practices (e.g.&nbsp;more diversion from prosecution for young people), but is not attributable to the ‘effectiveness’ of sentencing - it is purely due to changes in the demographic mix of people being convicted in the first place</li>
+<li>In an optimistic reading the change in the mix of people being reconvicted could still be due to criminal justice practices (e.g.&nbsp;more diversion from prosecution for young people), but <em>is not attributable to the ‘effectiveness’ of the criminal justice system in rehabilitating offenders</em> - it is purely due to changes in the demographic mix of people being convicted in the first place</li>
+<li>An alternative perspective: the criminal justice system is benefiting from the impacts of wider societal change where young people are less likely to be involved in offending, as well as lots of other ‘risky’ behaviours <span class="citation" data-cites="ball2023">(<a href="#/references" role="doc-biblioref" onclick="">Ball et al. 2023</a>)</span></li>
 </ul>
 </section>
-<section id="discussion" class="slide level2">
-<h2>Discussion</h2>
+<section id="in-summary" class="slide level2">
+<h2>In summary</h2>
 <ul>
 <li>The crime drop in Scotland has led to a profound shift in the demographics of the people coming through the criminal justice system</li>
 <li>This shift is so pronounced that it affects our capacity to understand the ‘effectiveness’ of punishment through aggregate measures such as the overall reconviction rate</li>
-<li>A perspective which focuses on the criminal justice <em>system</em> rather than the <em>people involved with the system</em> will be mislead by aggregate measures of system ‘performance’</li>
+<li>A perspective which focuses on aggregate measures of the criminal justice <em>system</em> rather than the <em>people involved with the system</em> will be mislead by measures of system ‘performance’</li>
 <li>There are lots of other possible ways that demographic changes in crime may impact the functioning of the criminal justice system and public perceptions of crime</li>
 </ul>
 </section></section>
@@ -2136,24 +2151,25 @@ Year
 <section id="what-do-to-about-this" class="slide level2">
 <h2>What do to about this?</h2>
 <ul>
-<li>If we wanted to make a ‘so here’s what the Sentencing Council should do now’ recommendation there are two possible recommendations we can make</li>
-<li>Option one: Recommend that Sentencing Council/Scottish Government/whoever use the methods outlined here as an ‘improved’ performance measure</li>
-<li>Option two: Recommend that [see above] look at reconviction rates for each demographic sub-group as well as overall reconviction rates</li>
+<li>If we wanted to make a ‘so here’s what the Sentencing Council/Scottish Government should do now’ recommendation there are two possible paths:</li>
+<li>Option one: The Sentencing Council/Scottish Government/whoever should use some standardization and decomposition method to construct an ‘improved’ performance measure</li>
+<li>Option two: [see above] should abandon a single overall measure and instead should use reconviction rates (or an alternative measure of your choice) for each demographic sub-group as well as overall reconviction rates</li>
+<li>I don’t think either of these are good recommendations</li>
 </ul>
 </section>
 <section id="reconviction-rates-for-each-group" class="slide level2">
 <h2>Reconviction rates for each group</h2>
 <ul>
-<li>Suggesting that policy-makers/whoever analyse trends for all groups runs counter to the logic of quantification - the whole point is to reduce the amount of information required to understand the thing you care about (Maybe Porter?)</li>
+<li>Suggesting that policy-makers/whoever analyse trends for all groups runs counter to the logic of quantification - the whole point is to reduce the amount of information required to understand the thing you care about and have an ‘objective’ and apolitical measure <span class="citation" data-cites="porter1996">(<a href="#/references" role="doc-biblioref" onclick="">Porter 1996</a>)</span></li>
 <li>It also raises the question of which groups would make the cut, and how they would be defined</li>
-<li>This is famously the paradoxical bit of Simpson’s paradox - the hard part is identifying the subgroups you need to stratify by <span class="citation" data-cites="pearl2014">(<a href="#/references" role="doc-biblioref" onclick="">Pearl 2014</a>)</span></li>
+<li>This is famously the paradoxical bit of Simpson’s paradox - the hard part is identifying the subgroups you need to stratify by <span class="citation" data-cites="pearl2014">(<a href="#/references" role="doc-biblioref" onclick="">Pearl 2014</a>)</span>; it is paradoxical because of the story you tell about the data, not because of anything inherently statistical</li>
 </ul>
 </section>
 <section id="following-consultation-with-key-users" class="slide level2">
 <h2>“Following consultation with key users”</h2>
 <ul>
-<li>The technical ‘fix’ in terms of standardization and decomposition may be limited in its application as it ignores the politics of reconviction statistics</li>
-<li>In practice there might be limited appetite for an esoteric and tricky to understand measure amongst ‘key users’</li>
+<li>For the same reason a technical ‘fix’ in terms of constructing a standardized reconviction rate would be adding ‘politics’ (in terms of deciding what to standardize by and how) into measuring reconvictions</li>
+<li>Also, in practice there might be limited appetite for an esoteric and tricky to understand measure amongst ‘key users’</li>
 </ul>
 <blockquote>
 <p>In bulletins prior to 2017/18, reoffending figures were provided alongside adjusted reoffending rates for adults and the overall cohort, to help provide an estimate of change in reoffending. Following consultation with key users, the decision was taken to exclude this from future publications to avoid confusion in he interpretation of findings.</p>
@@ -2172,23 +2188,23 @@ Year
 <h2>Percentage change by group</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="wetvoibnsk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wetvoibnsk table {
+<div id="isveqirwpn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#isveqirwpn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wetvoibnsk thead, #wetvoibnsk tbody, #wetvoibnsk tfoot, #wetvoibnsk tr, #wetvoibnsk td, #wetvoibnsk th {
+#isveqirwpn thead, #isveqirwpn tbody, #isveqirwpn tfoot, #isveqirwpn tr, #isveqirwpn td, #isveqirwpn th {
   border-style: none;
 }
 
-#wetvoibnsk p {
+#isveqirwpn p {
   margin: 0;
   padding: 0;
 }
 
-#wetvoibnsk .gt_table {
+#isveqirwpn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2214,12 +2230,12 @@ Year
   border-left-color: #D3D3D3;
 }
 
-#wetvoibnsk .gt_caption {
+#isveqirwpn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wetvoibnsk .gt_title {
+#isveqirwpn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2231,7 +2247,7 @@ Year
   border-bottom-width: 0;
 }
 
-#wetvoibnsk .gt_subtitle {
+#isveqirwpn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2243,7 +2259,7 @@ Year
   border-top-width: 0;
 }
 
-#wetvoibnsk .gt_heading {
+#isveqirwpn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2255,13 +2271,13 @@ Year
   border-right-color: #D3D3D3;
 }
 
-#wetvoibnsk .gt_bottom_border {
+#isveqirwpn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wetvoibnsk .gt_col_headings {
+#isveqirwpn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2276,7 +2292,7 @@ Year
   border-right-color: #D3D3D3;
 }
 
-#wetvoibnsk .gt_col_heading {
+#isveqirwpn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2296,7 +2312,7 @@ Year
   overflow-x: hidden;
 }
 
-#wetvoibnsk .gt_column_spanner_outer {
+#isveqirwpn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2308,15 +2324,15 @@ Year
   padding-right: 4px;
 }
 
-#wetvoibnsk .gt_column_spanner_outer:first-child {
+#isveqirwpn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wetvoibnsk .gt_column_spanner_outer:last-child {
+#isveqirwpn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wetvoibnsk .gt_column_spanner {
+#isveqirwpn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2328,11 +2344,11 @@ Year
   width: 100%;
 }
 
-#wetvoibnsk .gt_spanner_row {
+#isveqirwpn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wetvoibnsk .gt_group_heading {
+#isveqirwpn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2358,7 +2374,7 @@ Year
   text-align: left;
 }
 
-#wetvoibnsk .gt_empty_group_heading {
+#isveqirwpn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2373,15 +2389,15 @@ Year
   vertical-align: middle;
 }
 
-#wetvoibnsk .gt_from_md > :first-child {
+#isveqirwpn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wetvoibnsk .gt_from_md > :last-child {
+#isveqirwpn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wetvoibnsk .gt_row {
+#isveqirwpn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2400,7 +2416,7 @@ Year
   overflow-x: hidden;
 }
 
-#wetvoibnsk .gt_stub {
+#isveqirwpn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2413,7 +2429,7 @@ Year
   padding-right: 5px;
 }
 
-#wetvoibnsk .gt_stub_row_group {
+#isveqirwpn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2427,15 +2443,15 @@ Year
   vertical-align: top;
 }
 
-#wetvoibnsk .gt_row_group_first td {
+#isveqirwpn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wetvoibnsk .gt_row_group_first th {
+#isveqirwpn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wetvoibnsk .gt_summary_row {
+#isveqirwpn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2445,16 +2461,16 @@ Year
   padding-right: 5px;
 }
 
-#wetvoibnsk .gt_first_summary_row {
+#isveqirwpn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wetvoibnsk .gt_first_summary_row.thick {
+#isveqirwpn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wetvoibnsk .gt_last_summary_row {
+#isveqirwpn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2464,7 +2480,7 @@ Year
   border-bottom-color: #D3D3D3;
 }
 
-#wetvoibnsk .gt_grand_summary_row {
+#isveqirwpn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2474,7 +2490,7 @@ Year
   padding-right: 5px;
 }
 
-#wetvoibnsk .gt_first_grand_summary_row {
+#isveqirwpn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2484,7 +2500,7 @@ Year
   border-top-color: #D3D3D3;
 }
 
-#wetvoibnsk .gt_last_grand_summary_row_top {
+#isveqirwpn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2494,11 +2510,11 @@ Year
   border-bottom-color: #D3D3D3;
 }
 
-#wetvoibnsk .gt_striped {
+#isveqirwpn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wetvoibnsk .gt_table_body {
+#isveqirwpn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2507,7 +2523,7 @@ Year
   border-bottom-color: #D3D3D3;
 }
 
-#wetvoibnsk .gt_footnotes {
+#isveqirwpn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2521,7 +2537,7 @@ Year
   border-right-color: #D3D3D3;
 }
 
-#wetvoibnsk .gt_footnote {
+#isveqirwpn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2530,7 +2546,7 @@ Year
   padding-right: 5px;
 }
 
-#wetvoibnsk .gt_sourcenotes {
+#isveqirwpn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2544,7 +2560,7 @@ Year
   border-right-color: #D3D3D3;
 }
 
-#wetvoibnsk .gt_sourcenote {
+#isveqirwpn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2552,72 +2568,72 @@ Year
   padding-right: 5px;
 }
 
-#wetvoibnsk .gt_left {
+#isveqirwpn .gt_left {
   text-align: left;
 }
 
-#wetvoibnsk .gt_center {
+#isveqirwpn .gt_center {
   text-align: center;
 }
 
-#wetvoibnsk .gt_right {
+#isveqirwpn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wetvoibnsk .gt_font_normal {
+#isveqirwpn .gt_font_normal {
   font-weight: normal;
 }
 
-#wetvoibnsk .gt_font_bold {
+#isveqirwpn .gt_font_bold {
   font-weight: bold;
 }
 
-#wetvoibnsk .gt_font_italic {
+#isveqirwpn .gt_font_italic {
   font-style: italic;
 }
 
-#wetvoibnsk .gt_super {
+#isveqirwpn .gt_super {
   font-size: 65%;
 }
 
-#wetvoibnsk .gt_footnote_marks {
+#isveqirwpn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wetvoibnsk .gt_asterisk {
+#isveqirwpn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wetvoibnsk .gt_indent_1 {
+#isveqirwpn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wetvoibnsk .gt_indent_2 {
+#isveqirwpn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wetvoibnsk .gt_indent_3 {
+#isveqirwpn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wetvoibnsk .gt_indent_4 {
+#isveqirwpn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wetvoibnsk .gt_indent_5 {
+#isveqirwpn .gt_indent_5 {
   text-indent: 25px;
 }
 
-#wetvoibnsk .katex-display {
+#isveqirwpn .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#wetvoibnsk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#isveqirwpn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2696,17 +2712,29 @@ Year
 </div>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ball2023" class="csl-entry" role="listitem">
+Ball, Jude, Richard Grucza, Michael Livingston, Tom ter Bogt, Candace Currie, and Margaretha de Looze. 2023. <span>“The Great Decline in Adolescent Risk Behaviours: Unitary Trend, Separate Trends, or Cascade?”</span> <em>Social Science &amp; Medicine</em> 317 (January): 115616. <a href="https://doi.org/10.1016/j.socscimed.2022.115616">https://doi.org/10.1016/j.socscimed.2022.115616</a>.
+</div>
 <div id="ref-browneAdultYouthReoffending2024" class="csl-entry" role="listitem">
 Browne, S. 2024. <span>“Adult and <span>Youth Reoffending</span> in <span>Northern Ireland</span> (2021/22 <span>Cohort</span>).”</span> <span>Northern Ireland Statistics and Research Agency</span>.
 </div>
 <div id="ref-dasguptaStandardizationDecompositionRates1993" class="csl-entry" role="listitem">
 Das Gupta, Prithwis. 1993. <em>Standardization and Decomposition of Rates: A User’s Manual</em>. 186. <span>US Department of Commerce, Economics and Statistics Administration, Bureau of the Census</span>.
 </div>
+<div id="ref-drake2010" class="csl-entry" role="listitem">
+Drake, E. K., S. Aos, and R. Barnoski. 2010. <span>“Washington’s <span>Offender Accountability Act</span>: <span>Final Report</span> on <span>Recidivism Outcomes</span>.”</span> Olympia: Washington State Institute for Public Policy.
+</div>
 <div id="ref-farrellDebutsLegaciesCrime2015" class="csl-entry" role="listitem">
 Farrell, Graham, Gloria Laycock, and Nick Tilley. 2015. <span>“Debuts and Legacies: The Crime Drop and the Role of Adolescence-Limited and Persistent Offending.”</span> <em>Crime Science</em> 4 (1). <a href="https://doi.org/10.1186/s40163-015-0028-3">https://doi.org/10.1186/s40163-015-0028-3</a>.
 </div>
+<div id="ref-francis2005" class="csl-entry" role="listitem">
+Francis, Brian, Juliet Harman, and Leslie Humphreys. 2005. <span>“Predicting Reconviction Rates in Northern Ireland.”</span> <a href="https://eprints.lancs.ac.uk/id/eprint/49993/1/francis_predicting_reconviction_rates_in_northern_ireland_7_2005.pdf">https://eprints.lancs.ac.uk/id/eprint/49993/1/francis_predicting_reconviction_rates_in_northern_ireland_7_2005.pdf</a>.
+</div>
 <div id="ref-good1987" class="csl-entry" role="listitem">
 Good, I. J., and Y. Mittal. 1987. <span>“The <span>Amalgamation</span> and <span>Geometry</span> of <span class="nocase">Two-by-Two Contingency Tables</span>.”</span> <em>The Annals of Statistics</em> 15 (2): 694–711. <a href="https://www.jstor.org/stable/2241334">https://www.jstor.org/stable/2241334</a>.
+</div>
+<div id="ref-king2025" class="csl-entry" role="listitem">
+King, Josiah, and Ben Matthews. 2025. <span>“DasGuptR: Das Gupta Standardisation and Decomposition.”</span> <a href="https://doi.org/10.32614/CRAN.package.DasGuptR">https://doi.org/10.32614/CRAN.package.DasGuptR</a>.
 </div>
 <div id="ref-kirkwood2008" class="csl-entry" role="listitem">
 Kirkwood, Steve. 2008. <span>“Evidencing the <span>Impact</span> of <span>Criminal Justice Services</span> on <span class="nocase">Re-offending</span>.”</span> CJScotland.
@@ -2723,11 +2751,17 @@ Matthews, Ben, and Jon Minton. 2018. <span>“Rethinking One of Criminology’s 
 <div id="ref-pearl2014" class="csl-entry" role="listitem">
 Pearl, Judea. 2014. <span>“Comment: <span>Understanding Simpson</span>’s <span>Paradox</span>.”</span> <em>The American Statistician</em> 68 (1): 8–13. <a href="https://www.jstor.org/stable/24591584">https://www.jstor.org/stable/24591584</a>.
 </div>
+<div id="ref-porter1996" class="csl-entry" role="listitem">
+Porter, Theodore. 1996. <em>Trust in Numbers</em>.
+</div>
 <div id="ref-scottishgovernment2017" class="csl-entry" role="listitem">
 Scottish Government. 2017. <span>“Scotland <span>Performs Update</span>.”</span>
 </div>
 <div id="ref-scottishgovernmentReconvictionRatesScotland2024" class="csl-entry" role="listitem">
-———. 2024. <span>“Reconviction <span>Rates</span> in <span>Scotland</span>: 2020-21 <span>Offender Cohort</span>.”</span> Scottish Government.
+———. 2024a. <span>“Reconviction <span>Rates</span> in <span>Scotland</span>: 2020-21 <span>Offender Cohort</span>.”</span> Scottish Government.
+</div>
+<div id="ref-scottishgovernment2024" class="csl-entry" role="listitem">
+Scottish Government. 2024b. <span>“Reconviction Rates in Scotland: 2020-21 Offender Cohort.”</span> <a href="https://www.gov.scot/publications/reconviction-rates-scotland-2020-21-offender-cohort/pages/4/">https://www.gov.scot/publications/reconviction-rates-scotland-2020-21-offender-cohort/pages/4/</a>.
 </div>
 <div id="ref-simpson1951" class="csl-entry" role="listitem">
 Simpson, E. H. 1951. <span>“The <span>Interpretation</span> of <span>Interaction</span> in <span>Contingency Tables</span>.”</span> <em>Journal of the Royal Statistical Society: Series B (Methodological)</em> 13 (2): 238–41. <a href="https://doi.org/10.1111/j.2517-6161.1951.tb00088.x">https://doi.org/10.1111/j.2517-6161.1951.tb00088.x</a>.
