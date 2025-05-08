@@ -406,8 +406,8 @@ Ben Matthews and Josiah King
 <h2>Reconviction rates as a performance metric</h2>
 <ul>
 <li><p>The Sentencing Council (for England and Wales) says the reconviction rate is a “key metric for evaluating the effectiveness of sentencing” <span class="citation" data-cites="gormley2022">(<a href="#/references" role="doc-biblioref" onclick="">Gormley, Hamilton, and Belton 2022</a>)</span></p></li>
-<li><p>“Measuring recidivism is important, as it is one indicator of the effectiveness of the criminal justice system in the rehabilitation of offenders. Reconviction rates are a proxy measure for recidivism” <span class="citation" data-cites="scottishgovernment2024:p8">(<a href="#/references" role="doc-biblioref" onclick=""><strong>scottishgovernment2024:p8?</strong></a>)</span></p></li>
-<li><p>“The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government” <span class="citation" data-cites="browne2024">(<a href="#/references" role="doc-biblioref" onclick="">Browne 2024a</a>)</span></p></li>
+<li><p>“Measuring recidivism is important, as it is one indicator of the effectiveness of the criminal justice system in the rehabilitation of offenders. Reconviction rates are a proxy measure for recidivism” <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024:p8">(<a href="#/references" role="doc-biblioref" onclick=""><strong>scottishgovernmentReconvictionRatesScotland2024:p8?</strong></a>)</span></p></li>
+<li><p>“The ability to compare and discuss trends in reoffending is important to its usefulness as a performance target within government” <span class="citation" data-cites="browne2024">(<a href="#/references" role="doc-biblioref" onclick="">Browne 2024</a>)</span></p></li>
 <li><p>The common logic is that if the reconviction rate goes down then the criminal justice system is doing a better job at rehabilitating offenders</p></li>
 <li><p>Previously “Reduce reconviction rates” was a National Performance Framework indicator until (at least) 2017 <span class="citation" data-cites="scottishgovernment2017">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2017</a>)</span></p></li>
 </ul>
@@ -415,7 +415,7 @@ Ben Matthews and Josiah King
 <section id="but-its-not-so-simple" class="slide level2">
 <h2>But it’s not so simple</h2>
 <ul>
-<li><p>However, “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.” <span class="citation" data-cites="browne2024">(<a href="#/references" role="doc-biblioref" onclick="">Browne 2024a</a>)</span></p></li>
+<li><p>However, “differences in the offending related characteristics of those included in each cohort make comparing reoffending rates problematic, across both time and jurisdictions.” <span class="citation" data-cites="browne2024">(<a href="#/references" role="doc-biblioref" onclick="">Browne 2024</a>)</span></p></li>
 <li><p>We can think of the overall reconviction rate as a <em>weighted</em> mean of the reconviction rates in different demographic groups, weighted by the group size. You can have changes in the rate due to changes in the means or changes in the rates.</p></li>
 <li><p>This is known as the amalgamation paradox <span class="citation" data-cites="good1987">(<a href="#/references" role="doc-biblioref" onclick="">Good and Mittal 1987</a>)</span> or Simpson’s <span class="citation" data-cites="simpson1951">Simpson (<a href="#/references" role="doc-biblioref" onclick="">1951</a>)</span> paradox</p></li>
 <li><p>Because of changes in the distribution of characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.</p></li>
@@ -436,7 +436,7 @@ Ben Matthews and Josiah King
 <section id="the-anatomy-of-a-rate-2" class="slide level2">
 <h2>The anatomy of a rate</h2>
 <p><span class="math display">\[
-\color{grey}{\text{Overall Reconviction Rate}} = \color{grey}{\sum_{i} (\text{Subgroup Rate}_i \times} \text{Subgroup Size}_i\color{grey}{)}
+\color{grey}{\text{Overall Reconviction Rate}} = \color{grey}{\sum_{i} (\text{Subgroup Rate}_i  \times } \text{Subgroup Size}_i\color{grey}{)}
 \]</span></p>
 </section>
 <section id="the-anatomy-of-a-rate-3" class="slide level2">
@@ -448,26 +448,29 @@ Ben Matthews and Josiah King
 </section>
 <section id="the-amalgamation-paradox-in-reconviction-rates" class="slide level2">
 <h2>The amalgamation paradox in reconviction rates</h2>
+<div class="columns">
+<div class="column" style="width:34%;">
 <p>The following example comes from <span class="citation" data-cites="kirkwood2008">Kirkwood (<a href="#/references" role="doc-biblioref" onclick="">2008</a>)</span>, who described a situation where reconviction rates in Scotland increased for men and women, but the overall reconviction rate stayed the same</p>
+</div><div class="column" style="width:66%;">
 <div class="cell">
 <div class="cell-output-display">
-<div id="zetipiscdc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zetipiscdc table {
+<div id="dtkzncsvqs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dtkzncsvqs table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zetipiscdc thead, #zetipiscdc tbody, #zetipiscdc tfoot, #zetipiscdc tr, #zetipiscdc td, #zetipiscdc th {
+#dtkzncsvqs thead, #dtkzncsvqs tbody, #dtkzncsvqs tfoot, #dtkzncsvqs tr, #dtkzncsvqs td, #dtkzncsvqs th {
   border-style: none;
 }
 
-#zetipiscdc p {
+#dtkzncsvqs p {
   margin: 0;
   padding: 0;
 }
 
-#zetipiscdc .gt_table {
+#dtkzncsvqs .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -493,12 +496,12 @@ Ben Matthews and Josiah King
   border-left-color: #D3D3D3;
 }
 
-#zetipiscdc .gt_caption {
+#dtkzncsvqs .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zetipiscdc .gt_title {
+#dtkzncsvqs .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -510,7 +513,7 @@ Ben Matthews and Josiah King
   border-bottom-width: 0;
 }
 
-#zetipiscdc .gt_subtitle {
+#dtkzncsvqs .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -522,7 +525,7 @@ Ben Matthews and Josiah King
   border-top-width: 0;
 }
 
-#zetipiscdc .gt_heading {
+#dtkzncsvqs .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -534,13 +537,13 @@ Ben Matthews and Josiah King
   border-right-color: #D3D3D3;
 }
 
-#zetipiscdc .gt_bottom_border {
+#dtkzncsvqs .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zetipiscdc .gt_col_headings {
+#dtkzncsvqs .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -555,7 +558,7 @@ Ben Matthews and Josiah King
   border-right-color: #D3D3D3;
 }
 
-#zetipiscdc .gt_col_heading {
+#dtkzncsvqs .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -575,7 +578,7 @@ Ben Matthews and Josiah King
   overflow-x: hidden;
 }
 
-#zetipiscdc .gt_column_spanner_outer {
+#dtkzncsvqs .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -587,15 +590,15 @@ Ben Matthews and Josiah King
   padding-right: 4px;
 }
 
-#zetipiscdc .gt_column_spanner_outer:first-child {
+#dtkzncsvqs .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zetipiscdc .gt_column_spanner_outer:last-child {
+#dtkzncsvqs .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zetipiscdc .gt_column_spanner {
+#dtkzncsvqs .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -607,11 +610,11 @@ Ben Matthews and Josiah King
   width: 100%;
 }
 
-#zetipiscdc .gt_spanner_row {
+#dtkzncsvqs .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zetipiscdc .gt_group_heading {
+#dtkzncsvqs .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -637,7 +640,7 @@ Ben Matthews and Josiah King
   text-align: left;
 }
 
-#zetipiscdc .gt_empty_group_heading {
+#dtkzncsvqs .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -652,15 +655,15 @@ Ben Matthews and Josiah King
   vertical-align: middle;
 }
 
-#zetipiscdc .gt_from_md > :first-child {
+#dtkzncsvqs .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zetipiscdc .gt_from_md > :last-child {
+#dtkzncsvqs .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zetipiscdc .gt_row {
+#dtkzncsvqs .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -679,7 +682,7 @@ Ben Matthews and Josiah King
   overflow-x: hidden;
 }
 
-#zetipiscdc .gt_stub {
+#dtkzncsvqs .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -692,7 +695,7 @@ Ben Matthews and Josiah King
   padding-right: 5px;
 }
 
-#zetipiscdc .gt_stub_row_group {
+#dtkzncsvqs .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -706,15 +709,15 @@ Ben Matthews and Josiah King
   vertical-align: top;
 }
 
-#zetipiscdc .gt_row_group_first td {
+#dtkzncsvqs .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zetipiscdc .gt_row_group_first th {
+#dtkzncsvqs .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zetipiscdc .gt_summary_row {
+#dtkzncsvqs .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -724,16 +727,16 @@ Ben Matthews and Josiah King
   padding-right: 5px;
 }
 
-#zetipiscdc .gt_first_summary_row {
+#dtkzncsvqs .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zetipiscdc .gt_first_summary_row.thick {
+#dtkzncsvqs .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zetipiscdc .gt_last_summary_row {
+#dtkzncsvqs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -743,7 +746,7 @@ Ben Matthews and Josiah King
   border-bottom-color: #D3D3D3;
 }
 
-#zetipiscdc .gt_grand_summary_row {
+#dtkzncsvqs .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -753,7 +756,7 @@ Ben Matthews and Josiah King
   padding-right: 5px;
 }
 
-#zetipiscdc .gt_first_grand_summary_row {
+#dtkzncsvqs .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -763,7 +766,7 @@ Ben Matthews and Josiah King
   border-top-color: #D3D3D3;
 }
 
-#zetipiscdc .gt_last_grand_summary_row_top {
+#dtkzncsvqs .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -773,11 +776,11 @@ Ben Matthews and Josiah King
   border-bottom-color: #D3D3D3;
 }
 
-#zetipiscdc .gt_striped {
+#dtkzncsvqs .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zetipiscdc .gt_table_body {
+#dtkzncsvqs .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -786,7 +789,7 @@ Ben Matthews and Josiah King
   border-bottom-color: #D3D3D3;
 }
 
-#zetipiscdc .gt_footnotes {
+#dtkzncsvqs .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -800,7 +803,7 @@ Ben Matthews and Josiah King
   border-right-color: #D3D3D3;
 }
 
-#zetipiscdc .gt_footnote {
+#dtkzncsvqs .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -809,7 +812,7 @@ Ben Matthews and Josiah King
   padding-right: 5px;
 }
 
-#zetipiscdc .gt_sourcenotes {
+#dtkzncsvqs .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -823,7 +826,7 @@ Ben Matthews and Josiah King
   border-right-color: #D3D3D3;
 }
 
-#zetipiscdc .gt_sourcenote {
+#dtkzncsvqs .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -831,72 +834,72 @@ Ben Matthews and Josiah King
   padding-right: 5px;
 }
 
-#zetipiscdc .gt_left {
+#dtkzncsvqs .gt_left {
   text-align: left;
 }
 
-#zetipiscdc .gt_center {
+#dtkzncsvqs .gt_center {
   text-align: center;
 }
 
-#zetipiscdc .gt_right {
+#dtkzncsvqs .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zetipiscdc .gt_font_normal {
+#dtkzncsvqs .gt_font_normal {
   font-weight: normal;
 }
 
-#zetipiscdc .gt_font_bold {
+#dtkzncsvqs .gt_font_bold {
   font-weight: bold;
 }
 
-#zetipiscdc .gt_font_italic {
+#dtkzncsvqs .gt_font_italic {
   font-style: italic;
 }
 
-#zetipiscdc .gt_super {
+#dtkzncsvqs .gt_super {
   font-size: 65%;
 }
 
-#zetipiscdc .gt_footnote_marks {
+#dtkzncsvqs .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zetipiscdc .gt_asterisk {
+#dtkzncsvqs .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zetipiscdc .gt_indent_1 {
+#dtkzncsvqs .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zetipiscdc .gt_indent_2 {
+#dtkzncsvqs .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zetipiscdc .gt_indent_3 {
+#dtkzncsvqs .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zetipiscdc .gt_indent_4 {
+#dtkzncsvqs .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zetipiscdc .gt_indent_5 {
+#dtkzncsvqs .gt_indent_5 {
   text-indent: 25px;
 }
 
-#zetipiscdc .katex-display {
+#dtkzncsvqs .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#zetipiscdc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dtkzncsvqs div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -978,28 +981,29 @@ Arrows Left Right
 </div>
 </div>
 </div>
+</div></div>
 </section>
 <section id="the-amalgamation-paradox-in-reconviction-rates-1" class="slide level2">
 <h2>The amalgamation paradox in reconviction rates</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="gbahkxfvne" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gbahkxfvne table {
+<div id="ctyinizvxq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ctyinizvxq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gbahkxfvne thead, #gbahkxfvne tbody, #gbahkxfvne tfoot, #gbahkxfvne tr, #gbahkxfvne td, #gbahkxfvne th {
+#ctyinizvxq thead, #ctyinizvxq tbody, #ctyinizvxq tfoot, #ctyinizvxq tr, #ctyinizvxq td, #ctyinizvxq th {
   border-style: none;
 }
 
-#gbahkxfvne p {
+#ctyinizvxq p {
   margin: 0;
   padding: 0;
 }
 
-#gbahkxfvne .gt_table {
+#ctyinizvxq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1025,12 +1029,12 @@ Arrows Left Right
   border-left-color: #D3D3D3;
 }
 
-#gbahkxfvne .gt_caption {
+#ctyinizvxq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gbahkxfvne .gt_title {
+#ctyinizvxq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1042,7 +1046,7 @@ Arrows Left Right
   border-bottom-width: 0;
 }
 
-#gbahkxfvne .gt_subtitle {
+#ctyinizvxq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1054,7 +1058,7 @@ Arrows Left Right
   border-top-width: 0;
 }
 
-#gbahkxfvne .gt_heading {
+#ctyinizvxq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1066,13 +1070,13 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#gbahkxfvne .gt_bottom_border {
+#ctyinizvxq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gbahkxfvne .gt_col_headings {
+#ctyinizvxq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1087,7 +1091,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#gbahkxfvne .gt_col_heading {
+#ctyinizvxq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1107,7 +1111,7 @@ Arrows Left Right
   overflow-x: hidden;
 }
 
-#gbahkxfvne .gt_column_spanner_outer {
+#ctyinizvxq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1119,15 +1123,15 @@ Arrows Left Right
   padding-right: 4px;
 }
 
-#gbahkxfvne .gt_column_spanner_outer:first-child {
+#ctyinizvxq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gbahkxfvne .gt_column_spanner_outer:last-child {
+#ctyinizvxq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gbahkxfvne .gt_column_spanner {
+#ctyinizvxq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1139,11 +1143,11 @@ Arrows Left Right
   width: 100%;
 }
 
-#gbahkxfvne .gt_spanner_row {
+#ctyinizvxq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gbahkxfvne .gt_group_heading {
+#ctyinizvxq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1169,7 +1173,7 @@ Arrows Left Right
   text-align: left;
 }
 
-#gbahkxfvne .gt_empty_group_heading {
+#ctyinizvxq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1184,15 +1188,15 @@ Arrows Left Right
   vertical-align: middle;
 }
 
-#gbahkxfvne .gt_from_md > :first-child {
+#ctyinizvxq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gbahkxfvne .gt_from_md > :last-child {
+#ctyinizvxq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gbahkxfvne .gt_row {
+#ctyinizvxq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1211,7 +1215,7 @@ Arrows Left Right
   overflow-x: hidden;
 }
 
-#gbahkxfvne .gt_stub {
+#ctyinizvxq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1224,7 +1228,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#gbahkxfvne .gt_stub_row_group {
+#ctyinizvxq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1238,15 +1242,15 @@ Arrows Left Right
   vertical-align: top;
 }
 
-#gbahkxfvne .gt_row_group_first td {
+#ctyinizvxq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gbahkxfvne .gt_row_group_first th {
+#ctyinizvxq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gbahkxfvne .gt_summary_row {
+#ctyinizvxq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1256,16 +1260,16 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#gbahkxfvne .gt_first_summary_row {
+#ctyinizvxq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gbahkxfvne .gt_first_summary_row.thick {
+#ctyinizvxq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gbahkxfvne .gt_last_summary_row {
+#ctyinizvxq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1275,7 +1279,7 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#gbahkxfvne .gt_grand_summary_row {
+#ctyinizvxq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1285,7 +1289,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#gbahkxfvne .gt_first_grand_summary_row {
+#ctyinizvxq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1295,7 +1299,7 @@ Arrows Left Right
   border-top-color: #D3D3D3;
 }
 
-#gbahkxfvne .gt_last_grand_summary_row_top {
+#ctyinizvxq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1305,11 +1309,11 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#gbahkxfvne .gt_striped {
+#ctyinizvxq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gbahkxfvne .gt_table_body {
+#ctyinizvxq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1318,7 +1322,7 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#gbahkxfvne .gt_footnotes {
+#ctyinizvxq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1332,7 +1336,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#gbahkxfvne .gt_footnote {
+#ctyinizvxq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1341,7 +1345,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#gbahkxfvne .gt_sourcenotes {
+#ctyinizvxq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1355,7 +1359,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#gbahkxfvne .gt_sourcenote {
+#ctyinizvxq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1363,72 +1367,72 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#gbahkxfvne .gt_left {
+#ctyinizvxq .gt_left {
   text-align: left;
 }
 
-#gbahkxfvne .gt_center {
+#ctyinizvxq .gt_center {
   text-align: center;
 }
 
-#gbahkxfvne .gt_right {
+#ctyinizvxq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gbahkxfvne .gt_font_normal {
+#ctyinizvxq .gt_font_normal {
   font-weight: normal;
 }
 
-#gbahkxfvne .gt_font_bold {
+#ctyinizvxq .gt_font_bold {
   font-weight: bold;
 }
 
-#gbahkxfvne .gt_font_italic {
+#ctyinizvxq .gt_font_italic {
   font-style: italic;
 }
 
-#gbahkxfvne .gt_super {
+#ctyinizvxq .gt_super {
   font-size: 65%;
 }
 
-#gbahkxfvne .gt_footnote_marks {
+#ctyinizvxq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gbahkxfvne .gt_asterisk {
+#ctyinizvxq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gbahkxfvne .gt_indent_1 {
+#ctyinizvxq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gbahkxfvne .gt_indent_2 {
+#ctyinizvxq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gbahkxfvne .gt_indent_3 {
+#ctyinizvxq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gbahkxfvne .gt_indent_4 {
+#ctyinizvxq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gbahkxfvne .gt_indent_5 {
+#ctyinizvxq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gbahkxfvne .katex-display {
+#ctyinizvxq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gbahkxfvne div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ctyinizvxq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1573,15 +1577,15 @@ Arrows Left Right
 <section id="data" class="slide level2">
 <h2>Data</h2>
 <ul>
-<li><p>We analyse data from ‘reconviciton cohorts’ in Scotland between 2004-2020. These are made available by Scottish Government as part of their Reconvictions Bulletin <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024a</a>)</span>. We decompose the overall reconviction rate by age and sex.</p></li>
-<li><p>A reconviction cohort is “all offenders who either received a non-custodial conviction or were released from a custodial sentence in a given financial year, from the 1st April to the 31st March the following year” <span class="citation" data-cites="scottishgovernment2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024b</a>)</span> p40</p></li>
+<li><p>We analyse data from ‘reconviciton cohorts’ in Scotland between 2004-2020. These are made available by Scottish Government as part of their Reconvictions Bulletin <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024</a>)</span>. We decompose the overall reconviction rate by age and sex.</p></li>
+<li><p>A reconviction cohort is “all offenders who either received a non-custodial conviction or were released from a custodial sentence in a given financial year, from the 1st April to the 31st March the following year” <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024</a>)</span> p40</p></li>
 <li><p>There is nothing particularly special about these time points, and the same approach would work for other time periods and other characteristics.</p></li>
 <li><p>Some evidence that Scotland might be an extreme case here with larger demographic changes than in other countries <span class="citation" data-cites="matthews2023">(<a href="#/references" role="doc-biblioref" onclick=""><strong>matthews2023?</strong></a>)</span></p></li>
 </ul>
 </section>
 <section id="measures" class="slide level2">
 <h2>Measures</h2>
-<p>“The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year,” <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024a</a>)</span></p>
+<p>“The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year,” <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024</a>)</span></p>
 <p>There are alternatives (e.g.&nbsp;the average number of convictions per person reconvicted). The same principles apply regardless of the measure used.</p>
 <ul>
 <li><p>Age groups: Under 21, 21 to 25, 26 to 30, 31 to 40, over 40</p></li>
@@ -1589,12 +1593,12 @@ Arrows Left Right
 </ul>
 
 <aside><div>
-<p>Sex is “generally based on how a person presents and is recorded when a person’s details are entered into the [Criminal Histories System]. It is recorded for operational purposes, such as requirements for searching” <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024a, p44</a>)</span></p>
+<p>Sex is “generally based on how a person presents and is recorded when a person’s details are entered into the [Criminal Histories System]. It is recorded for operational purposes, such as requirements for searching” <span class="citation" data-cites="scottishgovernmentReconvictionRatesScotland2024">(<a href="#/references" role="doc-biblioref" onclick="">Scottish Government 2024, p44</a>)</span></p>
 </div></aside></section>
 <section id="method" class="slide level2">
 <h2>Method</h2>
 <ul>
-<li><p>The <span class="citation" data-cites="dasguptaStandardizationDecompositionRates1993">Das Gupta (<a href="#/references" role="doc-biblioref" onclick="">1993</a>)</span> (see also <span class="citation" data-cites="kitagawa1951">(<a href="#/references" role="doc-biblioref" onclick=""><strong>kitagawa1951?</strong></a>)</span> approach to standardization and decomposition calculates what the reconviction rate ‘would have been’ in each comparison year if each year had the average demographic composition</p></li>
+<li><p>The <span class="citation" data-cites="dasguptaStandardizationDecompositionRates1993">Das Gupta (<a href="#/references" role="doc-biblioref" onclick="">1993</a>)</span> (see also <span class="citation" data-cites="kitagawa1964">(<a href="#/references" role="doc-biblioref" onclick=""><strong>kitagawa1964?</strong></a>)</span> approach to standardization and decomposition calculates what the reconviction rate ‘would have been’ in each comparison year if each year had the average demographic composition</p></li>
 <li><p>The differences between these ‘standardized’ rates to the observed rates are then used to calculate how much of the change in the observed rate is due to changes in the underlying reconviction rates for each age group, and how much is due to the change in the mix of the age groups</p></li>
 </ul>
 </section></section>
@@ -1628,23 +1632,23 @@ Arrows Left Right
 <h2>How much change in the reconviction rate is due to demographic mix?</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ekyzhaxznu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ekyzhaxznu table {
+<div id="gnwoeivjdz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gnwoeivjdz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ekyzhaxznu thead, #ekyzhaxznu tbody, #ekyzhaxznu tfoot, #ekyzhaxznu tr, #ekyzhaxznu td, #ekyzhaxznu th {
+#gnwoeivjdz thead, #gnwoeivjdz tbody, #gnwoeivjdz tfoot, #gnwoeivjdz tr, #gnwoeivjdz td, #gnwoeivjdz th {
   border-style: none;
 }
 
-#ekyzhaxznu p {
+#gnwoeivjdz p {
   margin: 0;
   padding: 0;
 }
 
-#ekyzhaxznu .gt_table {
+#gnwoeivjdz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1670,12 +1674,12 @@ Arrows Left Right
   border-left-color: #D3D3D3;
 }
 
-#ekyzhaxznu .gt_caption {
+#gnwoeivjdz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ekyzhaxznu .gt_title {
+#gnwoeivjdz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1687,7 +1691,7 @@ Arrows Left Right
   border-bottom-width: 0;
 }
 
-#ekyzhaxznu .gt_subtitle {
+#gnwoeivjdz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1699,7 +1703,7 @@ Arrows Left Right
   border-top-width: 0;
 }
 
-#ekyzhaxznu .gt_heading {
+#gnwoeivjdz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1711,13 +1715,13 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#ekyzhaxznu .gt_bottom_border {
+#gnwoeivjdz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ekyzhaxznu .gt_col_headings {
+#gnwoeivjdz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1732,7 +1736,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#ekyzhaxznu .gt_col_heading {
+#gnwoeivjdz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1752,7 +1756,7 @@ Arrows Left Right
   overflow-x: hidden;
 }
 
-#ekyzhaxznu .gt_column_spanner_outer {
+#gnwoeivjdz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1764,15 +1768,15 @@ Arrows Left Right
   padding-right: 4px;
 }
 
-#ekyzhaxznu .gt_column_spanner_outer:first-child {
+#gnwoeivjdz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ekyzhaxznu .gt_column_spanner_outer:last-child {
+#gnwoeivjdz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ekyzhaxznu .gt_column_spanner {
+#gnwoeivjdz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1784,11 +1788,11 @@ Arrows Left Right
   width: 100%;
 }
 
-#ekyzhaxznu .gt_spanner_row {
+#gnwoeivjdz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ekyzhaxznu .gt_group_heading {
+#gnwoeivjdz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1814,7 +1818,7 @@ Arrows Left Right
   text-align: left;
 }
 
-#ekyzhaxznu .gt_empty_group_heading {
+#gnwoeivjdz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1829,15 +1833,15 @@ Arrows Left Right
   vertical-align: middle;
 }
 
-#ekyzhaxznu .gt_from_md > :first-child {
+#gnwoeivjdz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ekyzhaxznu .gt_from_md > :last-child {
+#gnwoeivjdz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ekyzhaxznu .gt_row {
+#gnwoeivjdz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1856,7 +1860,7 @@ Arrows Left Right
   overflow-x: hidden;
 }
 
-#ekyzhaxznu .gt_stub {
+#gnwoeivjdz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1869,7 +1873,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#ekyzhaxznu .gt_stub_row_group {
+#gnwoeivjdz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1883,15 +1887,15 @@ Arrows Left Right
   vertical-align: top;
 }
 
-#ekyzhaxznu .gt_row_group_first td {
+#gnwoeivjdz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ekyzhaxznu .gt_row_group_first th {
+#gnwoeivjdz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ekyzhaxznu .gt_summary_row {
+#gnwoeivjdz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1901,16 +1905,16 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#ekyzhaxznu .gt_first_summary_row {
+#gnwoeivjdz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ekyzhaxznu .gt_first_summary_row.thick {
+#gnwoeivjdz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ekyzhaxznu .gt_last_summary_row {
+#gnwoeivjdz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1920,7 +1924,7 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#ekyzhaxznu .gt_grand_summary_row {
+#gnwoeivjdz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1930,7 +1934,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#ekyzhaxznu .gt_first_grand_summary_row {
+#gnwoeivjdz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1940,7 +1944,7 @@ Arrows Left Right
   border-top-color: #D3D3D3;
 }
 
-#ekyzhaxznu .gt_last_grand_summary_row_top {
+#gnwoeivjdz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1950,11 +1954,11 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#ekyzhaxznu .gt_striped {
+#gnwoeivjdz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ekyzhaxznu .gt_table_body {
+#gnwoeivjdz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1963,7 +1967,7 @@ Arrows Left Right
   border-bottom-color: #D3D3D3;
 }
 
-#ekyzhaxznu .gt_footnotes {
+#gnwoeivjdz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1977,7 +1981,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#ekyzhaxznu .gt_footnote {
+#gnwoeivjdz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1986,7 +1990,7 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#ekyzhaxznu .gt_sourcenotes {
+#gnwoeivjdz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2000,7 +2004,7 @@ Arrows Left Right
   border-right-color: #D3D3D3;
 }
 
-#ekyzhaxznu .gt_sourcenote {
+#gnwoeivjdz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2008,72 +2012,72 @@ Arrows Left Right
   padding-right: 5px;
 }
 
-#ekyzhaxznu .gt_left {
+#gnwoeivjdz .gt_left {
   text-align: left;
 }
 
-#ekyzhaxznu .gt_center {
+#gnwoeivjdz .gt_center {
   text-align: center;
 }
 
-#ekyzhaxznu .gt_right {
+#gnwoeivjdz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ekyzhaxznu .gt_font_normal {
+#gnwoeivjdz .gt_font_normal {
   font-weight: normal;
 }
 
-#ekyzhaxznu .gt_font_bold {
+#gnwoeivjdz .gt_font_bold {
   font-weight: bold;
 }
 
-#ekyzhaxznu .gt_font_italic {
+#gnwoeivjdz .gt_font_italic {
   font-style: italic;
 }
 
-#ekyzhaxznu .gt_super {
+#gnwoeivjdz .gt_super {
   font-size: 65%;
 }
 
-#ekyzhaxznu .gt_footnote_marks {
+#gnwoeivjdz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ekyzhaxznu .gt_asterisk {
+#gnwoeivjdz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ekyzhaxznu .gt_indent_1 {
+#gnwoeivjdz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ekyzhaxznu .gt_indent_2 {
+#gnwoeivjdz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ekyzhaxznu .gt_indent_3 {
+#gnwoeivjdz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ekyzhaxznu .gt_indent_4 {
+#gnwoeivjdz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ekyzhaxznu .gt_indent_5 {
+#gnwoeivjdz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ekyzhaxznu .katex-display {
+#gnwoeivjdz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ekyzhaxznu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#gnwoeivjdz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2091,7 +2095,7 @@ Arrows Left Right
 <th colspan="5" class="gt_heading gt_title gt_font_normal gt_bottom_border">Standardization and Decomposition of reconviction rates in Scotland</th>
 </tr>
 <tr class="odd gt_col_headings gt_spanner_row">
-<th rowspan="2" id="a::stub" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Measure</th>
+<th rowspan="2" id="a::stub" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Impact of...</th>
 <th colspan="2" id="Year" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
 Year
 </div></th>
@@ -2105,28 +2109,28 @@ Year
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td id="stub_1_1" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">age_struct</td>
+<td id="stub_1_1" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Age</td>
 <td class="gt_row gt_right" headers="stub_1_1 2004-05" style="background-color: #006938; color: #FFFFFF">0.31</td>
 <td class="gt_row gt_right" headers="stub_1_1 2020-21" style="background-color: #006938; color: #FFFFFF">0.28</td>
 <td class="gt_row gt_right" headers="stub_1_1 diff" style="background-color: #006938; color: #FFFFFF">-0.03</td>
 <td class="gt_row gt_right" headers="stub_1_1 decomp" style="background-color: #006938; color: #FFFFFF">49.06</td>
 </tr>
 <tr class="even">
-<td id="stub_1_2" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">gender_struct</td>
+<td id="stub_1_2" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Sex</td>
 <td class="gt_row gt_right" headers="stub_1_2 2004-05">0.29</td>
 <td class="gt_row gt_right" headers="stub_1_2 2020-21">0.29</td>
 <td class="gt_row gt_right" headers="stub_1_2 diff">0.00</td>
 <td class="gt_row gt_right" headers="stub_1_2 decomp">-0.22</td>
 </tr>
 <tr class="odd">
-<td id="stub_1_3" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">prevalence</td>
+<td id="stub_1_3" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Reconviction</td>
 <td class="gt_row gt_right" headers="stub_1_3 2004-05">0.31</td>
 <td class="gt_row gt_right" headers="stub_1_3 2020-21">0.28</td>
 <td class="gt_row gt_right" headers="stub_1_3 diff">-0.03</td>
 <td class="gt_row gt_right" headers="stub_1_3 decomp">51.16</td>
 </tr>
 <tr class="even">
-<td id="stub_1_4" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">crude</td>
+<td id="stub_1_4" class="gt_row gt_left gt_stub" data-quarto-table-cell-role="th" scope="row">Crude rate</td>
 <td class="gt_row gt_right" headers="stub_1_4 2004-05">0.32</td>
 <td class="gt_row gt_right" headers="stub_1_4 2020-21">0.27</td>
 <td class="gt_row gt_right" headers="stub_1_4 diff">-0.06</td>
@@ -2134,7 +2138,7 @@ Year
 </tr>
 </tbody><tfoot class="gt_sourcenotes">
 <tr class="odd">
-<td colspan="5" class="gt_sourcenote">Data from Scottish Government (2023). Calculations authors' own.</td>
+<td colspan="5" class="gt_sourcenote">Data from Scottish Government (2024). Calculations authors' own.</td>
 </tr>
 </tfoot>
 
@@ -2202,7 +2206,7 @@ Year
 <blockquote>
 <p>In bulletins prior to 2017/18, reoffending figures were provided alongside adjusted reoffending rates for adults and the overall cohort, to help provide an estimate of change in reoffending. Following consultation with key users, the decision was taken to exclude this from future publications to avoid confusion in he interpretation of findings.</p>
 </blockquote>
-<p><span class="citation" data-cites="browneAdultYouthReoffending2024">(<a href="#/references" role="doc-biblioref" onclick="">Browne 2024b</a>)</span></p>
+<p><span class="citation" data-cites="browne2024">(<a href="#/references" role="doc-biblioref" onclick="">Browne 2024</a>)</span></p>
 </section>
 <section id="so-what-to-do" class="slide level2">
 <h2>So what to do?</h2>
@@ -2223,23 +2227,23 @@ Year
 <h2>Percentage change by group</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ltikoxuhdo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ltikoxuhdo table {
+<div id="pfwoyckxme" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pfwoyckxme table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ltikoxuhdo thead, #ltikoxuhdo tbody, #ltikoxuhdo tfoot, #ltikoxuhdo tr, #ltikoxuhdo td, #ltikoxuhdo th {
+#pfwoyckxme thead, #pfwoyckxme tbody, #pfwoyckxme tfoot, #pfwoyckxme tr, #pfwoyckxme td, #pfwoyckxme th {
   border-style: none;
 }
 
-#ltikoxuhdo p {
+#pfwoyckxme p {
   margin: 0;
   padding: 0;
 }
 
-#ltikoxuhdo .gt_table {
+#pfwoyckxme .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2265,12 +2269,12 @@ Year
   border-left-color: #D3D3D3;
 }
 
-#ltikoxuhdo .gt_caption {
+#pfwoyckxme .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ltikoxuhdo .gt_title {
+#pfwoyckxme .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2282,7 +2286,7 @@ Year
   border-bottom-width: 0;
 }
 
-#ltikoxuhdo .gt_subtitle {
+#pfwoyckxme .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2294,7 +2298,7 @@ Year
   border-top-width: 0;
 }
 
-#ltikoxuhdo .gt_heading {
+#pfwoyckxme .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2306,13 +2310,13 @@ Year
   border-right-color: #D3D3D3;
 }
 
-#ltikoxuhdo .gt_bottom_border {
+#pfwoyckxme .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ltikoxuhdo .gt_col_headings {
+#pfwoyckxme .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2327,7 +2331,7 @@ Year
   border-right-color: #D3D3D3;
 }
 
-#ltikoxuhdo .gt_col_heading {
+#pfwoyckxme .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2347,7 +2351,7 @@ Year
   overflow-x: hidden;
 }
 
-#ltikoxuhdo .gt_column_spanner_outer {
+#pfwoyckxme .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2359,15 +2363,15 @@ Year
   padding-right: 4px;
 }
 
-#ltikoxuhdo .gt_column_spanner_outer:first-child {
+#pfwoyckxme .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ltikoxuhdo .gt_column_spanner_outer:last-child {
+#pfwoyckxme .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ltikoxuhdo .gt_column_spanner {
+#pfwoyckxme .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2379,11 +2383,11 @@ Year
   width: 100%;
 }
 
-#ltikoxuhdo .gt_spanner_row {
+#pfwoyckxme .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ltikoxuhdo .gt_group_heading {
+#pfwoyckxme .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2409,7 +2413,7 @@ Year
   text-align: left;
 }
 
-#ltikoxuhdo .gt_empty_group_heading {
+#pfwoyckxme .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2424,15 +2428,15 @@ Year
   vertical-align: middle;
 }
 
-#ltikoxuhdo .gt_from_md > :first-child {
+#pfwoyckxme .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ltikoxuhdo .gt_from_md > :last-child {
+#pfwoyckxme .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ltikoxuhdo .gt_row {
+#pfwoyckxme .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2451,7 +2455,7 @@ Year
   overflow-x: hidden;
 }
 
-#ltikoxuhdo .gt_stub {
+#pfwoyckxme .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2464,7 +2468,7 @@ Year
   padding-right: 5px;
 }
 
-#ltikoxuhdo .gt_stub_row_group {
+#pfwoyckxme .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2478,15 +2482,15 @@ Year
   vertical-align: top;
 }
 
-#ltikoxuhdo .gt_row_group_first td {
+#pfwoyckxme .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ltikoxuhdo .gt_row_group_first th {
+#pfwoyckxme .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ltikoxuhdo .gt_summary_row {
+#pfwoyckxme .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2496,16 +2500,16 @@ Year
   padding-right: 5px;
 }
 
-#ltikoxuhdo .gt_first_summary_row {
+#pfwoyckxme .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ltikoxuhdo .gt_first_summary_row.thick {
+#pfwoyckxme .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ltikoxuhdo .gt_last_summary_row {
+#pfwoyckxme .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2515,7 +2519,7 @@ Year
   border-bottom-color: #D3D3D3;
 }
 
-#ltikoxuhdo .gt_grand_summary_row {
+#pfwoyckxme .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2525,7 +2529,7 @@ Year
   padding-right: 5px;
 }
 
-#ltikoxuhdo .gt_first_grand_summary_row {
+#pfwoyckxme .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2535,7 +2539,7 @@ Year
   border-top-color: #D3D3D3;
 }
 
-#ltikoxuhdo .gt_last_grand_summary_row_top {
+#pfwoyckxme .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2545,11 +2549,11 @@ Year
   border-bottom-color: #D3D3D3;
 }
 
-#ltikoxuhdo .gt_striped {
+#pfwoyckxme .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ltikoxuhdo .gt_table_body {
+#pfwoyckxme .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2558,7 +2562,7 @@ Year
   border-bottom-color: #D3D3D3;
 }
 
-#ltikoxuhdo .gt_footnotes {
+#pfwoyckxme .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2572,7 +2576,7 @@ Year
   border-right-color: #D3D3D3;
 }
 
-#ltikoxuhdo .gt_footnote {
+#pfwoyckxme .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2581,7 +2585,7 @@ Year
   padding-right: 5px;
 }
 
-#ltikoxuhdo .gt_sourcenotes {
+#pfwoyckxme .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2595,7 +2599,7 @@ Year
   border-right-color: #D3D3D3;
 }
 
-#ltikoxuhdo .gt_sourcenote {
+#pfwoyckxme .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2603,72 +2607,72 @@ Year
   padding-right: 5px;
 }
 
-#ltikoxuhdo .gt_left {
+#pfwoyckxme .gt_left {
   text-align: left;
 }
 
-#ltikoxuhdo .gt_center {
+#pfwoyckxme .gt_center {
   text-align: center;
 }
 
-#ltikoxuhdo .gt_right {
+#pfwoyckxme .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ltikoxuhdo .gt_font_normal {
+#pfwoyckxme .gt_font_normal {
   font-weight: normal;
 }
 
-#ltikoxuhdo .gt_font_bold {
+#pfwoyckxme .gt_font_bold {
   font-weight: bold;
 }
 
-#ltikoxuhdo .gt_font_italic {
+#pfwoyckxme .gt_font_italic {
   font-style: italic;
 }
 
-#ltikoxuhdo .gt_super {
+#pfwoyckxme .gt_super {
   font-size: 65%;
 }
 
-#ltikoxuhdo .gt_footnote_marks {
+#pfwoyckxme .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ltikoxuhdo .gt_asterisk {
+#pfwoyckxme .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ltikoxuhdo .gt_indent_1 {
+#pfwoyckxme .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ltikoxuhdo .gt_indent_2 {
+#pfwoyckxme .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ltikoxuhdo .gt_indent_3 {
+#pfwoyckxme .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ltikoxuhdo .gt_indent_4 {
+#pfwoyckxme .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ltikoxuhdo .gt_indent_5 {
+#pfwoyckxme .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ltikoxuhdo .katex-display {
+#pfwoyckxme .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ltikoxuhdo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#pfwoyckxme div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2751,11 +2755,8 @@ Year
 <div id="ref-ball2023" class="csl-entry" role="listitem">
 Ball, Jude, Richard Grucza, Michael Livingston, Tom ter Bogt, Candace Currie, and Margaretha de Looze. 2023. <span>“The Great Decline in Adolescent Risk Behaviours: Unitary Trend, Separate Trends, or Cascade?”</span> <em>Social Science &amp; Medicine</em> 317 (January): 115616. <a href="https://doi.org/10.1016/j.socscimed.2022.115616">https://doi.org/10.1016/j.socscimed.2022.115616</a>.
 </div>
-<div id="ref-browneAdultYouthReoffending2024" class="csl-entry" role="listitem">
-Browne, S. 2024b. <span>“Adult and <span>Youth Reoffending</span> in <span>Northern Ireland</span> (2021/22 <span>Cohort</span>).”</span> <span>Northern Ireland Statistics and Research Agency</span>.
-</div>
 <div id="ref-browne2024" class="csl-entry" role="listitem">
-———. 2024a. <span>“Adult and Youth Reoffending in Northern Ireland (2021/22 Cohort).”</span> <a href="https://www.justice-ni.gov.uk/sites/default/files/publications/justice/Adult%20and%20Youth%20Reoffending%20in%20Northern%20Ireland%20%28202122%20Cohort%29.pdf">https://www.justice-ni.gov.uk/sites/default/files/publications/justice/Adult%20and%20Youth%20Reoffending%20in%20Northern%20Ireland%20%28202122%20Cohort%29.pdf</a>.
+Browne, S. 2024. <span>“Adult and Youth Reoffending in Northern Ireland (2021/22 Cohort).”</span> <a href="https://www.justice-ni.gov.uk/sites/default/files/publications/justice/Adult%20and%20Youth%20Reoffending%20in%20Northern%20Ireland%20%28202122%20Cohort%29.pdf">https://www.justice-ni.gov.uk/sites/default/files/publications/justice/Adult%20and%20Youth%20Reoffending%20in%20Northern%20Ireland%20%28202122%20Cohort%29.pdf</a>.
 </div>
 <div id="ref-cunliffe2007" class="csl-entry" role="listitem">
 Cunliffe, Jack, and Adrian Shepherd. 2007. <span>“Re-Offending of Adults: Results from the 2004 Cohort.”</span>
@@ -2803,10 +2804,7 @@ Porter, Theodore. 1996. <em>Trust in Numbers</em>.
 Scottish Government. 2017. <span>“Scotland <span>Performs Update</span>.”</span>
 </div>
 <div id="ref-scottishgovernmentReconvictionRatesScotland2024" class="csl-entry" role="listitem">
-———. 2024a. <span>“Reconviction <span>Rates</span> in <span>Scotland</span>: 2020-21 <span>Offender Cohort</span>.”</span> Scottish Government.
-</div>
-<div id="ref-scottishgovernment2024" class="csl-entry" role="listitem">
-Scottish Government. 2024b. <span>“Reconviction Rates in Scotland: 2020-21 Offender Cohort.”</span> <a href="https://www.gov.scot/publications/reconviction-rates-scotland-2020-21-offender-cohort/pages/4/">https://www.gov.scot/publications/reconviction-rates-scotland-2020-21-offender-cohort/pages/4/</a>.
+———. 2024. <span>“Reconviction <span>Rates</span> in <span>Scotland</span>: 2020-21 <span>Offender Cohort</span>.”</span> Scottish Government.
 </div>
 <div id="ref-simpson1951" class="csl-entry" role="listitem">
 Simpson, E. H. 1951. <span>“The <span>Interpretation</span> of <span>Interaction</span> in <span>Contingency Tables</span>.”</span> <em>Journal of the Royal Statistical Society: Series B (Methodological)</em> 13 (2): 238–41. <a href="https://doi.org/10.1111/j.2517-6161.1951.tb00088.x">https://doi.org/10.1111/j.2517-6161.1951.tb00088.x</a>.
