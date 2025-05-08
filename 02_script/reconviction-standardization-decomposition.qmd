@@ -191,11 +191,19 @@ The Sentencing Council (for England and Wales) says the reconviction rate is a "
 -   Because of changes in the distribution of characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.
 
 
-## The anatomy of a rate
+## The anatomy of a rate {.smaller=false}
 
+$$
 \[
 \text{Overall Rate} = \sum_{i} (\text{Subgroup Rate}_i \times \text{Subgroup Size}_i)
 \]
+$$
+
+
+## The anatomy of a rate
+
+- To use reconviction rates as measures of criminal justice system 'performance' you only want to measure change in the subgroup rates
+- But change in the overall rate can come from either changes in the subgroup rates _or changes in the subgroup sizes_
 
 
 
@@ -355,7 +363,7 @@ tribble(
 -   Previous regression-based approaches (e.g. [@francis2005]; [@cunliffe2007]; [@drake2010]) to correct for the problem of changing 'offender mix' can perform this standardization part, but don't focus on the decomposition part
 -   We illustrate this approach using the standardization and decomposition methods described by [@dasguptaStandardizationDecompositionRates1993] and implemented in the `{dasguptr}` R package [@king2025] to Scottish reconvictions data from 2004-2022
 
-# Research design
+# Research design {background-color="#006938"}
 
 ## Research Question
 
@@ -652,6 +660,12 @@ overall_res |>
 > In bulletins prior to 2017/18, reoffending figures were provided alongside adjusted reoffending rates for adults and the overall cohort, to help provide an estimate of change in reoffending. Following consultation with key users, the decision was taken to exclude this from future publications to avoid confusion in he interpretation of findings.
 
 [@browneAdultYouthReoffending2024]
+
+## So what to do?
+
+- If you really want to use reconviction rates as a performance indicator, I would say that measuring reconviction rates for each group that you care about is probably preferable than coming up with a standardized measure
+- It is useful information to know if there are groups who are not seeing the same overall decline in reconvictions and whether this is masked by the overall rate
+
 
 # Thank you! {background-color="#006938"}
 

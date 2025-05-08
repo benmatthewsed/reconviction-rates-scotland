@@ -466,6 +466,34 @@
     "href": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The anatomy of a rate",
-    "text": "The anatomy of a rate\n[ = _{i} (_i _i) ]"
+    "text": "The anatomy of a rate\n\nTo use reconviction rates as measures of criminal justice system ‘performance’ you only want to measure change in the subgroup rates\nBut change in the overall rate can come from either changes in the subgroup rates or changes in the subgroup sizes"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-1",
+    "href": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-1",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "The anatomy of a rate",
+    "text": "The anatomy of a rate\n\nTo use reconviction rates as measures of criminal justice system ‘performance’ you only want to measure change in the subgroup rates\nBut change in the overall rate can come from either changes in the subgroup rates or changes in the subgroup sizes"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-2",
+    "href": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-2",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "The anatomy of a rate",
+    "text": "The anatomy of a rate\n\nTo use reconviction rates as measures of criminal justice system ‘performance’ you only want to measure change in the subgroup rates\nBut change in the overall rate can come from either changes in the subgroup rates or changes in the subgroup sizes"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-.smallerfalse",
+    "href": "02_script/reconviction-standardization-decomposition.html#the-anatomy-of-a-rate-.smallerfalse",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "The anatomy of a rate {.smaller=false}",
+    "text": "The anatomy of a rate {.smaller=false}\n\\[\n\\[\n\\text{Overall Rate} = \\sum_{i} (\\text{Subgroup Rate}_i \\times \\text{Subgroup Size}_i)\n\\]\n\\]"
+  },
+  {
+    "objectID": "02_script/reconviction-standardization-decomposition.html#so-what-to-do",
+    "href": "02_script/reconviction-standardization-decomposition.html#so-what-to-do",
+    "title": "Why is Scotland’s reconviction rate falling?",
+    "section": "So what to do?",
+    "text": "So what to do?\n\nIf you really want to use reconviction rates as a performance indicator, I would say that measuring reconviction rates for each group that you care about is probably preferable than coming up with a standardized measure\nIt is useful information to know if there are groups who are not seeing the same overall decline in reconvictions and whether this is masked by the overall rate"
   }
 ]
