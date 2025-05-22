@@ -6,11 +6,11 @@ author: "Ben Matthews and Josiah King"
 institute: "University of Stirling | University of Edinburgh"
 date: "13 May 2025"
 date-format: long
-slide-number: true
 format: 
   revealjs:
     smaller: true
     scrollable: true
+    slide-number: true
     theme: [default, styles.scss]
     math: mathjax
 output-dir: docs

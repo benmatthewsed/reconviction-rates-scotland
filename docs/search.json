@@ -998,7 +998,7 @@
     "href": "index.html#reconviction-rates-for-each-group",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Reconviction rates for each group",
-    "text": "Reconviction rates for each group\n\nSuggesting that policy-makers/whoever analyse trends for all groups runs counter to the logic of quantification - the whole point is to reduce the amount of information required to understand the thing you care about and have an ‘objective’ and apolitical measure (Porter 1996)\nIt also raises the question of which groups would make the cut, and how they would be defined\nThis is famously the paradoxical bit of Simpson’s paradox - the hard part is identifying the subgroups you need to stratify by (Pearl 2014); it is paradoxical because of the story you tell about the data, not because of anything inherently statistical"
+    "text": "Reconviction rates for each group\n\nSuggesting that policy-makers/whoever analyse trends for all groups runs counter to the logic of quantification - the whole point is to reduce the amount of information required to understand the thing you care about and have an ‘objective’ and apolitical measure (Porter 1996)\nRequiring reconviction rates for pre-defined population groups raises the question of which groups would make the cut, and how they would be defined\nThis is famously the paradoxical bit of Simpson’s paradox - the hard part is identifying the subgroups you need to stratify by (Pearl 2014); it is paradoxical because you need to choose what story to tell about the data, not because of anything inherently statistical"
   },
   {
     "objectID": "index.html#following-consultation-with-key-users",
