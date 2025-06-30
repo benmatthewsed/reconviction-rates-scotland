@@ -4,7 +4,9 @@ author: "Ben Matthews and Josiah King"
 institute: "University of Stirling | University of Edinburgh"
 date: "22 May 2025"
 date-format: long
-format: pdf
+format: 
+  html:
+    toc: true
 execute: 
   echo: false
   warning: false

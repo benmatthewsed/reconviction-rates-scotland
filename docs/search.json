@@ -1027,5 +1027,138 @@
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "References",
     "text": "References\n\n\n\n\n\nBall, Jude, Richard Grucza, Michael Livingston, Tom ter Bogt, Candace Currie, and Margaretha de Looze. 2023. “The Great Decline in Adolescent Risk Behaviours: Unitary Trend, Separate Trends, or Cascade?” Social Science & Medicine 317 (January): 115616. https://doi.org/10.1016/j.socscimed.2022.115616.\n\n\nBrowne, S. 2024. “Adult and Youth Reoffending in Northern Ireland (2021/22 Cohort).” https://www.justice-ni.gov.uk/sites/default/files/publications/justice/Adult%20and%20Youth%20Reoffending%20in%20Northern%20Ireland%20%28202122%20Cohort%29.pdf.\n\n\nCunliffe, Jack, and Adrian Shepherd. 2007. “Re-Offending of Adults: Results from the 2004 Cohort.”\n\n\nDas Gupta, Prithwis. 1993. Standardization and Decomposition of Rates: A User’s Manual. 186. US Department of Commerce, Economics and Statistics Administration, Bureau of the Census.\n\n\nDrake, E. K., S. Aos, and R. Barnoski. 2010. “Washington’s Offender Accountability Act: Final Report on Recidivism Outcomes.” Olympia: Washington State Institute for Public Policy.\n\n\nFarrell, Graham, Gloria Laycock, and Nick Tilley. 2015. “Debuts and Legacies: The Crime Drop and the Role of Adolescence-Limited and Persistent Offending.” Crime Science 4 (1). https://doi.org/10.1186/s40163-015-0028-3.\n\n\nFarrell, Graham, Nick Tilley, and Andromachi Tseloni. 2014. “Why the Crime Drop?” Crime and Justice 43 (1): 421490. http://www.journals.uchicago.edu/doi/abs/10.1086/678081.\n\n\nFrancis, Brian, Juliet Harman, and Leslie Humphreys. 2005. “Predicting Reconviction Rates in Northern Ireland.” https://eprints.lancs.ac.uk/id/eprint/49993/1/francis_predicting_reconviction_rates_in_northern_ireland_7_2005.pdf.\n\n\nGood, I. J., and Y. Mittal. 1987. “The Amalgamation and Geometry of Two-by-Two Contingency Tables.” The Annals of Statistics 15 (2): 694–711. https://www.jstor.org/stable/2241334.\n\n\nGormley, Jay, Melissa Hamilton, and Ian Belton. 2022. “The Effectiveness of Sentencing Options on Reoffending.” https://www.sentencingcouncil.org.uk/wp-content/uploads/Effectiveness-of-Sentencing-Options-Review-FINAL.pdf.\n\n\nKing, Josiah, and Ben Matthews. 2025. “DasGuptR: Das Gupta Standardisation and Decomposition.” https://doi.org/10.32614/CRAN.package.DasGuptR.\n\n\nKirkwood, Steve. 2008. “Evidencing the Impact of Criminal Justice Services on Re-offending.” CJScotland.\n\n\nKlingele, Cecelia. 2019. “Measuring Change.” The Journal of Criminal Law and Criminology (1973-) 109 (4): 769–817.\n\n\nMaruna, Shadd. 2025. “Redeeming Desistance: From Individual Journeys to a Social Movement.” Criminology n/a (n/a). https://doi.org/10.1111/1745-9125.12393.\n\n\nMatthews, Ben. 2023. “The Age-Crime Curve and the Crime Drop in (Some of) Northern Europe,” June. https://benmatthewsed.github.io/age_crime_curve_europe/age_crime_curve_europe.html#/title-slide.\n\n\nMatthews, Ben, and Jon Minton. 2018. “Rethinking One of Criminology’s ‘Brute Facts’: The Age–Crime Curve and the Crime Drop in Scotland.” European Journal of Criminology 15 (3): 296–320. https://doi.org/10.1177/1477370817731706.\n\n\nPearl, Judea. 2014. “Comment: Understanding Simpson’s Paradox.” The American Statistician 68 (1): 8–13. https://www.jstor.org/stable/24591584.\n\n\nPorter, Theodore. 1996. Trust in Numbers.\n\n\nScottish Government. 2017. “Scotland Performs Update.”\n\n\n———. 2024. “Reconviction Rates in Scotland: 2020-21 Offender Cohort.” Scottish Government.\n\n\nSimpson, E. H. 1951. “The Interpretation of Interaction in Contingency Tables.” Journal of the Royal Statistical Society: Series B (Methodological) 13 (2): 238–41. https://doi.org/10.1111/j.2517-6161.1951.tb00088.x.\n\n\nTonry, Michael. 2014. “Why Crime Rates Are Falling Throughout the Western World.” Crime and Justice 43 (1): 163. http://www.journals.uchicago.edu/doi/abs/10.1086/678181.\n\n\nTuttle, James. 2024. “The End of the Age-Crime Curve? A Historical Comparison of Male Arrest Rates in the United States, 1985–2019.” The British Journal of Criminology 64 (3): 638–55. https://doi.org/10.1093/bjc/azad049.\n\n\nWeaver, Beth. 2019. “Understanding Desistance: A Critical Review of Theories of Desistance.” Psychology, Crime & Law 25 (6): 641–58. https://doi.org/10.1080/1068316X.2018.1560444."
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html",
+    "href": "reconviciton-rates-evidence-summary.html",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "",
+    "text": "This document contains initial results of ongoing work analysing the drivers of change in Scotland’s reconviction rate. A write-up of the full results is in preparation for submission to an academic journal. The results should be treated as preliminary and may be subject to change."
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#overview",
+    "href": "reconviciton-rates-evidence-summary.html#overview",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Overview",
+    "text": "Overview\n\nChanging demographics of people convicted complicates comparisons in the aggregate reconviction rate over time\nThe overall change in the reconvictions rate is partly due to fewer reconvictions and partly due to changing demographics\nThis creates statistical bias in the aggregate reconviction rate if it’s used as a measure of ‘effectiveness’ of the justice system"
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#summary-of-results",
+    "href": "reconviciton-rates-evidence-summary.html#summary-of-results",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Summary of results",
+    "text": "Summary of results\n\nYoung people used to have the highest reconviction rate of all age groups, but this is has fallen\nThose over 40 have consistently lower reconviction rates, but these have not fallen\nYoung people also used to make up more of the reconviction cohorts\nIn terms of the overall reconviction rate, a group of people with high levels of reconviction have been replaced by people with lower levels of reconviction"
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#research-question",
+    "href": "reconviciton-rates-evidence-summary.html#research-question",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Research Question",
+    "text": "Research Question\n\nHow much of the change in the overall reconviction rate in Scotland between 2004 and 2022 is attributable to changing demographics?"
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#data",
+    "href": "reconviciton-rates-evidence-summary.html#data",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Data",
+    "text": "Data\n\nWe analyse data from ‘reconviciton cohorts’ in Scotland between 2004-2020. These are made available by Scottish Government as part of their Reconvictions Bulletin (Scottish Government 2024)\nA reconviction cohort is “all offenders who either received a non-custodial conviction or were released from a custodial sentence in a given financial year, from the 1st April to the 31st March the following year” (Scottish Government 2024, p40)\nThere is nothing particularly special about these time points, and the same approach would work for other time periods and other characteristics\nSome evidence that Scotland might be an extreme case here with larger demographic changes than in other countries (Matthews 2023)"
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#measures",
+    "href": "reconviciton-rates-evidence-summary.html#measures",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Measures",
+    "text": "Measures\n\n“The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year,” (Scottish Government 2024, p10)\nWe decompose the overall reconviction rate by age and sex\nAge groups\n\nUnder 21, 21 to 25, 26 to 30, 31 to 40, over 40\n\nSex1\n\nMale, female"
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#method",
+    "href": "reconviciton-rates-evidence-summary.html#method",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Method",
+    "text": "Method\n\nThe Das Gupta (1993) approach to standardization and decomposition calculates what the reconviction rate ‘would have been’ in each comparison year if each year had the average demographic composition\nThe differences between these ‘standardized’ rates to the observed rates are then used to calculate how much of the change in the observed rate is due to changes in the underlying reconviction rates for each age group, and how much is due to the change in the mix of the age groups\nAnalysis was conducted using the DasGuptR R package (King and Matthews 2025). Details of implementation will be provided in the full results."
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#change-in-reconviciton-rate-by-age-group",
+    "href": "reconviciton-rates-evidence-summary.html#change-in-reconviciton-rate-by-age-group",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Change in reconviciton rate by age group",
+    "text": "Change in reconviciton rate by age group"
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#change-in-the-relative-sizes-of-age-group",
+    "href": "reconviciton-rates-evidence-summary.html#change-in-the-relative-sizes-of-age-group",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Change in the relative sizes of age group",
+    "text": "Change in the relative sizes of age group"
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#what-would-the-reconviction-rate-have-been-if-there-was-only-change-in",
+    "href": "reconviciton-rates-evidence-summary.html#what-would-the-reconviction-rate-have-been-if-there-was-only-change-in",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "What would the reconviction rate have been if there was only change in…",
+    "text": "What would the reconviction rate have been if there was only change in…"
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#how-much-change-in-the-reconviction-rate-is-due-to-demographic-mix",
+    "href": "reconviciton-rates-evidence-summary.html#how-much-change-in-the-reconviction-rate-is-due-to-demographic-mix",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "How much change in the reconviction rate is due to demographic mix?",
+    "text": "How much change in the reconviction rate is due to demographic mix?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStandardization and Decomposition of reconviction rates in Scotland\n\n\nImpact of...\n\nYear\n\nDifference in rates\n% of crude difference\n\n\n2004-05\n2020-21\n\n\n\n\nAge\n0.31\n0.28\n-0.03\n49.06\n\n\nSex\n0.29\n0.29\n0.00\n-0.22\n\n\nReconviction\n0.31\n0.28\n-0.03\n51.16\n\n\nCrude rate\n0.32\n0.27\n-0.06\n100.00\n\n\n\nData from Scottish Government (2024). Calculations authors' own."
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#analysis",
+    "href": "reconviciton-rates-evidence-summary.html#analysis",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Analysis",
+    "text": "Analysis\n\nWe can attribute about 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 to demographic change in the population of people convicted, rather than falls in the reconviction rate per se.\nIf you want to use the reconviction rate as a measure of sentencing effectiveness or similar, you would think the justice system is doing about twice as a good a job as it is\nIn an optimistic reading the change in the mix of people being reconvicted could still be due to criminal justice practices (e.g. more diversion from prosecution for young people), but is not attributable to the ‘effectiveness’ of the criminal justice system in rehabilitating offenders - it is purely due to changes in the demographic mix of people being convicted in the first place"
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#discussion",
+    "href": "reconviciton-rates-evidence-summary.html#discussion",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Discussion",
+    "text": "Discussion\n\nThe crime drop in Scotland has led to a profound shift in the demographics of the people coming through the criminal justice system\nThis shift is so pronounced that it affects our capacity to understand the ‘effectiveness’ of punishment through aggregate measures such as the overall reconviction rate\nA perspective which focuses on aggregate measures of the criminal justice system rather than the people involved with the system will be mislead by measures of system ‘performance’\nThere are lots of other possible ways that demographic changes in crime may impact the functioning of the criminal justice system and public perceptions of crime"
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#limitations",
+    "href": "reconviciton-rates-evidence-summary.html#limitations",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Limitations",
+    "text": "Limitations\n\nCoarse age categories could underplay the impact of changing age mix as a form of ‘measurement error’\nThere might be other demographic or offence characteristics we are interested in jot included in this analysis (ethnicity; type of offence; type of sentence etc etc)\nThe time periods selected are arbitrary and due to data availability\nThese would be resolvable with access to the underlying Scottish Offenders Index data"
+  },
+  {
+    "objectID": "reconviciton-rates-evidence-summary.html#footnotes",
+    "href": "reconviciton-rates-evidence-summary.html#footnotes",
+    "title": "The changing demographics of reconvictions in Scotland: Initial results",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSex is “generally based on how a person presents and is recorded when a person’s details are entered into the [Criminal Histories System]. It is recorded for operational purposes, such as requirements for searching” (Scottish Government 2024, p44)↩︎"
+  },
+  {
+    "objectID": "02_script/01-initial_analysis.html",
+    "href": "02_script/01-initial_analysis.html",
+    "title": "Exploratory analysis of reconvictions data",
+    "section": "",
+    "text": "Load up packages.\n\nlibrary(readxl)\nlibrary(here)\n\nWarning: package 'here' was built under R version 4.4.2\n\n\nhere() starts at C:/Users/bm47/OneDrive - University of Stirling/research/reconviction-rates-scotland\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nRead in the data. There are lots of sheets - this has age and gender data for each ‘LA’ from 2004-21.\n\ntmp &lt;- read_xlsx(here(\"01_data\",\n               \"reconvictions-2020-21-offender-cohort-additional-datasets.xlsx\"),\n          sheet = \"AGdata\",\n          skip = 4)\n\nNew names:\n• `` -&gt; `...1`\n• `` -&gt; `...2`\n• `` -&gt; `...3`\n• `` -&gt; `...11`\n• `` -&gt; `...12`\n• `` -&gt; `...13`\n• `` -&gt; `...14`\n\ntmp &lt;- \ntmp |&gt; \n  select(-...11:-...14) |&gt; \n  select(-...1) |&gt; \n  rename(la = ...2,\n         year = ...3) |&gt; \n  janitor::clean_names() |&gt; \n  filter(la != \"LA\")"
+  },
+  {
+    "objectID": "02_script/01-initial_analysis.html#setting-up",
+    "href": "02_script/01-initial_analysis.html#setting-up",
+    "title": "Exploratory analysis of reconvictions data",
+    "section": "",
+    "text": "Load up packages.\n\nlibrary(readxl)\nlibrary(here)\n\nWarning: package 'here' was built under R version 4.4.2\n\n\nhere() starts at C:/Users/bm47/OneDrive - University of Stirling/research/reconviction-rates-scotland\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nRead in the data. There are lots of sheets - this has age and gender data for each ‘LA’ from 2004-21.\n\ntmp &lt;- read_xlsx(here(\"01_data\",\n               \"reconvictions-2020-21-offender-cohort-additional-datasets.xlsx\"),\n          sheet = \"AGdata\",\n          skip = 4)\n\nNew names:\n• `` -&gt; `...1`\n• `` -&gt; `...2`\n• `` -&gt; `...3`\n• `` -&gt; `...11`\n• `` -&gt; `...12`\n• `` -&gt; `...13`\n• `` -&gt; `...14`\n\ntmp &lt;- \ntmp |&gt; \n  select(-...11:-...14) |&gt; \n  select(-...1) |&gt; \n  rename(la = ...2,\n         year = ...3) |&gt; \n  janitor::clean_names() |&gt; \n  filter(la != \"LA\")"
+  },
+  {
+    "objectID": "02_script/01-initial_analysis.html#initial-analysis",
+    "href": "02_script/01-initial_analysis.html#initial-analysis",
+    "title": "Exploratory analysis of reconvictions data",
+    "section": "Initial analysis",
+    "text": "Initial analysis\nFilter out the aggregated rows and then just plot the raw numbers of people convicted across LAs in each year by age and gender\n\nreconv &lt;- \ntmp |&gt; \n  filter(age != \"All\",\n         gender != \"All\",\n         la != \"Not known\")\n\nreconv |&gt; \n  ggplot(aes(x = year, y = number_of_offenders, colour = age, group = interaction(age, gender))) +\n  geom_line() +\n  facet_wrap(la ~ gender, scales = \"free_y\")\n\n\n\n\n\n\n\n\nSo it looks like the trend is generally downwards for young people but less clear for older people, regardless of gender. We can test whether the linear trend for each age is downwards pretty simply. I’m not sure if we need the quasi poisson bit here but feels like it should help with the confidence intervals and stuff.\n\nreconv &lt;- \nreconv |&gt; \n  mutate(year = as.numeric(str_sub(year, 1, 4)))\n\nreconv &lt;- \nreconv |&gt; \n  mutate(age = factor(age,\n                      levels = c(\"under 21\",\n                                 \"21 to 25\",\n                                 \"26 to 30\",\n                                 \"31 to 40\",\n                                 \"over 40\")))\n\nreconv |&gt; \n  group_by(la, gender, age) |&gt; \n  nest() |&gt; \n  mutate(model = map(data, ~ glm(number_of_offenders ~ year, family = \"quasipoisson\", data = .x)),\n         results = map(model, broom::tidy)) |&gt; \n  unnest(results) |&gt; \n  filter(term!= \"(Intercept)\") |&gt; \n  mutate(conf_low = estimate - 1.96 * std.error,\n         conf_upp = estimate + 1.96 * std.error) |&gt; \n  ggplot(aes(x = estimate, y = la, colour = age)) +\n  geom_vline(xintercept = 0) +\n  geom_point(position = position_dodge(width = -0.5)) +\n  geom_errorbar(aes(xmin = conf_low, xmax = conf_upp),\n                position = position_dodge(width = -0.5)) +\n  facet_wrap(~ gender)\n\nWarning: `position_dodge()` requires non-overlapping x intervals.\n`position_dodge()` requires non-overlapping x intervals.\n\n\n\n\n\n\n\n\n\nFor every LA (and high court) the linear slope is negative for young people, and for most of the 21-25 group too. For most of the LAs there is no linear trend for older people.\nSo the demographics of people convicted in Scotland are changing quite a lot. Implications: all else equal, more people being convicted will be parents (as they are more likely to be of parenting age)? Could check the overall parity statistics by age to assess this."
+  },
+  {
+    "objectID": "02_script/01-initial_analysis.html#something-simpler",
+    "href": "02_script/01-initial_analysis.html#something-simpler",
+    "title": "Exploratory analysis of reconvictions data",
+    "section": "Something simpler",
+    "text": "Something simpler\nMaybe the easiest way to do this is just look at the proportion of people overall convicted by age.\n\nagg_dat &lt;- \ntmp |&gt; \n  filter(gender != \"All\",\n         age != \"All\") |&gt; \n  group_by(year, gender, age) |&gt; \n  summarise(n = sum(number_of_offenders)) |&gt; \n  group_by(gender, year) |&gt; \n  mutate(prop = n / sum(n)) |&gt; \n  ungroup() |&gt; \n   mutate(age = factor(age,\n                      levels = c(\"under 21\",\n                                 \"21 to 25\",\n                                 \"26 to 30\",\n                                 \"31 to 40\",\n                                 \"over 40\")))\n\n`summarise()` has grouped output by 'year', 'gender'. You can override using\nthe `.groups` argument.\n\nagg_dat |&gt; \n  ggplot(aes(x = year, y = prop, fill = fct_rev(age), colour = fct_rev(age))) +\n  geom_bar(stat = \"identity\") +\n  facet_grid(~ gender)"
   }
 ]
