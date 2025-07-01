@@ -20,6 +20,7 @@ execute:
 -   This creates statistical bias in the aggregate reconviction rate if it's used as a measure of 'effectiveness' of the justice system
 - We demonstrate this problem with a worked example using Scottish reconvictions data
 
+"It must be recognized at the outset, however, that no single summary statistic can be a substitute for a detailed comparison of the specific rates in two or more schedules of rates." https://www.jstor.org/stable/43288498?seq=4 
 
 # Part One: The crime drop in Scotland {background-color="#006938"}
 
