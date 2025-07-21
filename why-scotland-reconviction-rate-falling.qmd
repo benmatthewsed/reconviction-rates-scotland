@@ -17,7 +17,9 @@ execute:
 -   Changing demographics of people convicted complicates comparisons in the aggregate reconviction rate over time
 -   The overall change in the reconvictions rate is partly due to less reconvictions and partly due to changing demographics
 -   This creates statistical bias in the aggregate reconviction rate if it's used as a measure of 'effectiveness' of the justice system
--   We demonstrate this problem with a worked example using Scottish reconvictions data
+- We demonstrate this problem with a worked example using Scottish reconvictions data
+
+
 
 # Part One: The crime drop in Scotland {background-color="#006938"}
 
@@ -654,9 +656,11 @@ overall_res |>
 -   For the same reason a technical 'fix' in terms of constructing a standardized reconviction rate would be adding 'politics' (in terms of deciding what to standardize by and how) into measuring reconvictions
 -   Also, in practice there might be limited appetite for an esoteric and tricky to understand measure amongst 'key users'
 
-> In bulletins prior to 2017/18, reoffending figures were provided alongside adjusted reoffending rates for adults and the overall cohort, to help provide an estimate of change in reoffending. Following consultation with key users, the decision was taken to exclude this from future publications to avoid confusion in he interpretation of findings.
+> In bulletins prior to 2017/18, reoffending figures were provided alongside adjusted reoffending rates for adults and the overall cohort, to help provide an estimate of change in reoffending. Following consultation with key users, the decision was taken to exclude this from future publications to avoid confusion in the interpretation of findings.
 
 [@browne2024, p19]
+
+- Moreover, as Kitagawa said sixty years ago that no single summary measure - whether it is a standardized rate as we have calculated here, or the overall reconviction rates as currently used - can be a substitute for examining how rates vary across different groups in the population [@kitagawa1964]
 
 ## So what to do?
 
