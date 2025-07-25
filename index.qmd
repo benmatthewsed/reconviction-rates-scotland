@@ -21,8 +21,8 @@ bibliography: references.bib
 
 -   The crime drop has changed the demographics of people being convicted
 -   Changing demographics of people convicted complicates comparisons in the aggregate reconviction rate over time
-- The overall change in the reconvictions rate is partly due to less reconvictions and partly due to changing demographics
--   This creates statistical bias in the aggregate reconviction rate if it's used as a measure of 'effectiveness' of the justice system
+- The overall change in the reconvictions rate in Scotland is partly due to less reconvictions and partly due to changing demographics
+-   This creates statistical bias in the aggregate reconviction rate if it's used as a measure of 'effectiveness' of the justice system, an example of a statistical phenomenon known as the 'amalgamation paradox'
 - We demonstrate this problem with a worked example using Scottish reconvictions data
 
 

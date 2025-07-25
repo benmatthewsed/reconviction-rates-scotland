@@ -16,6 +16,26 @@ download.file(criminal_proceedings_1314_url,
 
 criminal_proceedings_2324_url <- "https://www.gov.scot/binaries/content/documents/govscot/publications/statistics/2024/12/criminal-proceedings-scotland-2022-23/documents/criminal-proceedings-scotland-2022-23-main-tables/criminal-proceedings-scotland-2022-23-main-tables/govscot%3Adocument/criminal-proceedings-scotland-2022-23-main-tables.xlsx"
 
-download.file(criminal_proceedings_2324_url,
-              destfile = here::here("01_data", "criminal_proceedings-2324-tables.xlsx"),
+download.file(criminal_proceedings_2223_url,
+              destfile = here::here("01_data", "criminal_proceedings-2223-tables.xlsx"),
               method = "wget")
+
+
+# recorded crime
+
+download.file(
+  url = "https://www.gov.scot/binaries/content/documents/govscot/publications/statistics/2025/06/recorded-crime-scotland-2024-25/documents/recorded-crime-in-scotland-2024-25-tables/recorded-crime-in-scotland-2024-25-tables/govscot%3Adocument/Recorded%2BCrime%2B-%2B2024-25%2B-%2BBulletin%2Btables.xlsx",
+  destfile = here::here("01_data", "recorded-crime-2024-25-bulletin-tables.xlsx"),
+  mode = "wb"
+)
+
+
+# SCJS
+
+download.file(
+  url = "https://www.gov.scot/binaries/content/documents/govscot/publications/statistics/2025/06/scottish-crime-and-justice-survey-2023-24-associated-data-tables/documents/main-report-annex-tables/main-report-annex-tables/govscot%3Adocument/scjs-2023-24-main-report-annex-tables.xlsx",
+  destfile = here::here("01_data", "scjs-2023-24-main-report-annex-tables.xlsx"),
+  mode = "wb"
+)
+
+
