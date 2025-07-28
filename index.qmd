@@ -17,6 +17,8 @@ output-dir: docs
 bibliography: references.bib
 ---
 
+{{ word}}
+
 ## Overview
 
 -   The crime drop has changed the demographics of people being convicted

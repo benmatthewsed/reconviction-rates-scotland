@@ -1,7 +1,7 @@
 ---
 title: "Why is Scotland's reconviction rate falling?"
 subtitle: "{{< words-sum body-note-ref >}} words"
-format: hikmah-pdf
+format: wordcount-pdf
 editor: source
 author: "Ben Matthews and Josiah King"
 institute: "University of Stirling | University of Edinburgh"
@@ -44,13 +44,13 @@ combined_plot
 
 ## The overall reconviction rate is falling
 
-## The demographics of convictions are changing
-
 ## A gap in the crime drop
 
--   There has been *a lot* written about the causes of the crime drop [@farrell2014; @tonry2014; @ball2023]. Crime drop research has seen many (how many) papers published describing change over time in empirical patterns of crime across the globe, from neighbourhood-level analysis [@bannister2018] to global [@vandijk2022] analysis, with national [@dziwornu2021, @atak2020] and regional analysis [@aebi2010] in between. There is a structure common to many of these analysis (including my own previous work on the topic [@matthews2018]): empirical evidence about how patterns of crime have changed is presented, and then are weighed against rival explanations for *why* crime has fallen.
--   Whilst many studies of the crime drop focus on describing change in recorded crime, victimization or conviction rates, an group of studies have focused on describing changes in the demographics of crime and use these descriptions to build explanations for why there is less crime now than in the past [@matthewsRethinkingOneCriminologys2018; @tuttleEndAgeCrimeCurve2024; @farrellDebutsLegaciesCrime2015]. In Scotland, the key finding of past examinations of the changing demographics of crime is that "the crime drop is a *youth* crime drop" [@matthewsRethinkingOneCriminologys2018, p. 300] - the fall in overall convictions overall between 1989 and 2011 primarily reflected lower conviction rates for young people and in fact hid *increases* in conviction rates for those aged 30 to 40. People aged 16-24 have also shown larger falls in victimization in Scotland compared to any other age group [@matthews]. Preliminary evidence suggests that Scotland may be distinctive in the scale of this youth crime drop compared to other jurisdictions in Northern Europe [@matthews2023], with Scandinavian countries showing falls in youth crime but to a lesser degree, and other studies focusing on the USA have also shown greater falls in arrests for young people compared to older people over the couse of the crime drop [@farrellDebutsLegaciesCrime2015; @tuttleEndAgeCrimeCurve2024]. Recent studies of the age-crime curve outside the Global North [@kang2022; @steffensmeier2025] suggest that the 'typical' age-crime curve with a peak in adolescence may itself by typical only within the Global North.
--   However, with so much focus on the effort to understand - or debunk [see @kotzé2019] - the crime drop, there has not to our knowledge been any focus on systematically understanding the downstream implications of the crime drop for how we empirically measure the functioning of the justice system. There haven't - at least as far as I'm aware - been any studies which go on to explore the *consequences* of these changing demographics for the justice system more broadly. One particular area these changing demographics can matter are when measuring CJS 'performance'. In this paper we will demonstrate that the changing demographics of conviction, and particularly the falling proportion of younger people as part of the population receiving criminal convictions, has further pushed down reconviction rates in a way that has nothing to do with the functioning of the justice system in 'rehabilitating' people who have been convicted. This matters because reconviction rates are used as performance measures of the criminal justice system.
+There has been *a lot* written about the causes of the crime drop [@farrell2014; @tonry2014; @ball2023]. Crime drop research has seen many (how many) papers published describing change over time in empirical patterns of crime across the globe, from neighbourhood-level analysis [@bannister2018] to global [@vandijk2022] analysis, with national [@dziwornu2021, @atak2020] and regional analysis [@aebi2010] in between. There is a structure common to many of these analysis (including my own previous work on the topic [@matthews2018]): empirical evidence about how patterns of crime have changed is presented, and then are weighed against rival explanations for *why* crime has fallen.
+
+Whilst many studies of the crime drop focus on describing change in recorded crime, victimization or conviction rates, an group of studies have focused on describing changes in the demographics of crime and use these descriptions to build explanations for why there is less crime now than in the past [@matthewsRethinkingOneCriminologys2018; @tuttleEndAgeCrimeCurve2024; @farrellDebutsLegaciesCrime2015]. In Scotland, the key finding of past examinations of the changing demographics of crime is that "the crime drop is a *youth* crime drop" [@matthewsRethinkingOneCriminologys2018, p. 300] - the fall in overall convictions overall between 1989 and 2011 primarily reflected lower conviction rates for young people and in fact hid *increases* in conviction rates for those aged 30 to 40. People aged 16-24 have also shown larger falls in victimization in Scotland compared to any other age group [@matthews]. Preliminary evidence suggests that Scotland may be distinctive in the scale of this youth crime drop compared to other jurisdictions in Northern Europe [@matthews2023], with Scandinavian countries showing falls in youth crime but to a lesser degree, and other studies focusing on the USA have also shown greater falls in arrests for young people compared to older people over the couse of the crime drop [@farrellDebutsLegaciesCrime2015; @tuttleEndAgeCrimeCurve2024]. Recent studies of the age-crime curve outside the Global North [@kang2022; @steffensmeier2025] suggest that the 'typical' age-crime curve with a peak in adolescence may itself by typical only within the Global North.
+
+However, with so much focus on the effort to understand - or debunk [see @kotzé2019] - the crime drop, there has not to our knowledge been any focus on systematically understanding the downstream implications of the crime drop for how we empirically measure the functioning of the justice system. There haven't - at least as far as I'm aware - been any studies which go on to explore the *consequences* of these changing demographics for the justice system more broadly. One particular area these changing demographics can matter are when measuring CJS 'performance'. In this paper we will demonstrate that the changing demographics of conviction, and particularly the falling proportion of younger people as part of the population receiving criminal convictions, has further pushed down reconviction rates in a way that has nothing to do with the functioning of the justice system in 'rehabilitating' people who have been convicted. This matters because reconviction rates are used as performance measures of the criminal justice system.
 
 # Part Two: Measuring Justice System 'Performance' {background-color="#006938"}
 
@@ -237,95 +237,73 @@ Before outlining our method, it is worth pausing to discuss the conceptual limit
 
 [^2]: Assuming that any reconviction measure is an equally good (or equally bad) measure across the demographic groups of interest. // Josiah is this right??
 
-# Part Three: An alternative approach {background-color="#006938"}
+# Part Three: An alternative approach
 
 ## Standardization and decomposition
 
--   The methods of standardization and decomposition can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups
--   Standardization and decomposition can also separate out the relative importance of different factors in driving aggregate change (e.g. age and sex)
--   Previous regression-based approaches [@francis2005; @cunliffe2007; @drake2010] to correct for the problem of changing 'offender mix' can perform this standardization part, but don't focus on the decomposition part
--   We illustrate this approach using the standardization and decomposition methods described by [@dasguptaStandardizationDecompositionRates1993] and implemented in the `{dasguptr}` R package [@king2025] to Scottish reconvictions data from 2004-2022
+In contrast to the regression modelling approach used by @francis2005 and @cunliffe2007, an alternative set of methods have been used by demographers since the 1960s in order to make fair comparisons across countries in measures such as mortality rates and fertility rates [@kitagawa1964], and to identify how much differences in observed rates are due to morality or fertility per se and how much is due to changes in the underlying demographics of countries. Applied here, these methods of standardization and decomposition can separate out changes in the reconviction rate that are due to demographic change seen over the period of the crime drop from those due to change in the underlying reconviction rate for different population groups. Standardization and decomposition can also separate out the relative importance of different factors in driving aggregate change (e.g. age and sex) over time. In contrast to previous regression-based approaches [@francis2005; @cunliffe2007; @drake2010], which can correct for the issue of changing 'offender mix' can perform standardization, but cannot easily decompose differences in reconviction rates in different years into the effects of demographic change and change in sub-group reconviction rates. Doing so allows us to calculate what proportion of change in the overall reconviction rate over time is due to 'actual' changes in reconviction rates amongst different demographic groups, and how much is due to the changing mix of demographic groups over time. Taking Scotland as a case study of the crime drop drop, this gives us the research question the rest of this paper answers: how much of the change in the overall reconviction rate in Scotland between 2004 and 2022 is attributable to changing demographics?
 
-# Research design {background-color="#006938"}
-
----
-smaller: false
----
-
-## Research Question
-
--   How much of the change in the overall reconviction rate in Scotland between 2004 and 2022 is attributable to changing demographics?
+# Research design
 
 ## Data
 
--   We analyse data from 'reconviciton cohorts' in Scotland between 2004-2020. These are made available by Scottish Government as part of their Reconvictions Bulletin [@scottishgovernmentReconvictionRatesScotland2024]
+In this paper we analyse data from Scottish 'reconviciton cohorts' between 2004/25-2020/21.
 
--   A reconviction cohort is "all offenders who either received a non-custodial conviction or were released from a custodial sentence in a given financial year, from the 1st April to the 31st March the following year" [@scottishgovernmentReconvictionRatesScotland2024, p40]
+// we can actually get back to 1997/98 from earlier reports see <https://www.gov.scot/publications/reconviction-rates-scotland-2018-19-offender-cohort/documents/>
 
--   There is nothing particularly special about these time points, and the same approach would work for other time periods and other characteristics
+A reconviction cohort is "all offenders who either received a non-custodial conviction or were released from a custodial sentence in a given financial year, from the 1st April to the 31st March the following year" [@scottishgovernmentReconvictionRatesScotland2024, p40]. These data are made available by Scottish Government as part of their Reconvictions Bulletin [@scottishgovernmentReconvictionRatesScotland2024]. The reason we focus on these time points is pragmatic: these are the data that are made available with consistently-coded data on demographics (see below), and they offer enough coverage to be able to analyse change over time over a long time period. However, there is nothing particularly special about these time points, and the same approach would work for other time periods and other characteristics. These period exclude the first decade of the crime drop in Scotland through the 1990s, where falls in overall convictions in Scotland showed a different demographic profile to the falls seen from the mid-2000s to early 2010s [@matthews2018]. There is also some preliminary evidence that Scotland might be an extreme case here with larger demographic changes than in other countries [@matthews2023]. As a result, the substantive results of this study may not generalize to other jurisdictions or time periods.
 
--   Some evidence that Scotland might be an extreme case here with larger demographic changes than in other countries [@matthews2023]
+// supplementary analysis - look at 2007/08?
 
 ## Measures
 
--   "The reconviction rate is presented as the percentage of offenders in the cohort who were reconvicted one or more times by a court within a specified follow up period from the date of the index conviction. For most reconviction analyses in this bulletin, the follow-up period is one year," [@scottishgovernmentReconvictionRatesScotland2024, p10]
--   We decompose the overall reconviction rate by age and sex
--   Age groups:
-    -   Under 21, 21 to 25, 26 to 30, 31 to 40, over 40
--   Sex:
-    -   Male, female
+Our measure of reconviction is the standard measure used by SCottish government - the one-year reconviciton rate. This is defined as the proportion of people in reconviction cohort "who were reconvicted one or more times by a court within \[one year\] from the date of the index conviction" [@scottishgovernmentReconvictionRatesScotland2024, p10]. We use this method for sake of comparison with the published statistics - as above the demographic changes are unlikely to be affected by the choice of a particular outcome measure for reconviction, whether it be the one year reconviction rate, two year reconviction rate or average number of reconvictions per member of the cohort.
 
-::: aside
-Sex is "generally based on how a person presents and is recorded when a person’s details are entered into the \[Criminal Histories System\]. It is recorded for operational purposes, such as requirements for searching" [@scottishgovernmentReconvictionRatesScotland2024, p44]
-:::
+We decompose the overall reconviction rate by age and sex. Age has a long-standing relationship with criminal conviction in the Global North [@steffensmeier2025], including in Scotland [@matthews2018]. In this analysis we measure age at the time of sentencing using the following groups: Under 21, 21 to 25, 26 to 30, 31 to 40, over 40. These are the age bands that are made available in the data provided by Scottish Government, with smaller age bands for younger ages to reflect the typical age distribution of people convicted in Scotland (i.e. more younger people). Using age bands can lead to a form of measurement error in the analysis known as 'age aggregation bias' [@gelman2016] where the age distribution *within* age bands may change over time with underlying demographic changes. However this is a limitation that we cannot resolve given the data currently available.
+
+In the reconvictions data provided sex is measured as male or female, and so we also use this classification. [@kirkwood2008] demonstrated the potential impacts of changes in the mix of men and women making up reconviction cohorts on the overall reconviction rate, and [@matthews2018] showed that men and women in Scotland showed different conviction trends over the first period of the crime drop - although similar trends in the period 2007 onwards. Sex is "generally based on how a person presents and is recorded when a person’s details are entered into the \[Criminal Histories System\]. It is recorded for operational purposes, such as requirements for searching" [@scottishgovernmentReconvictionRatesScotland2024, p44].
 
 ## Method
 
--   The @dasguptaStandardizationDecompositionRates1993 approach to standardization and decomposition calculates what the reconviction rate 'would have been' in each comparison year if each year had the average demographic composition
-
--   The differences between these 'standardized' rates to the observed rates are then used to calculate how much of the change in the observed rate is due to changes in the underlying reconviction rates for each age group, and how much is due to the change in the mix of the age groups
+First we use descriptive statistics to chart change over time in the one-year reconviction rate for each age and sex group. We then show the change over time in the relative sizes of the different age and sex groups. Follow these descriptive statistics by presenting the results of a standardization and decomposition analysis which shows what the reconviction rate in Scotland would have been had their only been change in the age structure of the reconviction cohorts, sex structure of the reconviction cohorts and reconviction rates in the reconviction cohorts. Finally, we calculate what percentage of the change in the reconviction rate between 2004/05 and 2021/22 reconviction cohorts is attributable to changes in age structure, sex structure, and reconviction prevalence. For the standardization and decomposition we use the methods described by [@dasguptaStandardizationDecompositionRates1993] and implemented in the `{dasguptr}` R package [@king2025]. The @dasguptaStandardizationDecompositionRates1993 approach to standardization and decomposition calculates what the reconviction rate 'would have been' in each year if each year had the average demographic composition across all years included in the comparison. The differences between these 'standardized' rates to the observed rates are then used to calculate how much of the change in the observed rate is due to changes in the underlying reconviction rates for each age group, and how much is due to the change in the mix of the age groups. A brief introduction to the Das Gupta method and how it compares to other methods of decomposition is provided in [@king2025], with technical details available at [@dasguptaStandardizationDecompositionRates1993]. This method is a general decomposition method which can be implemented to make comparisons both between small numbers of countries and for time-series comparisons as in our case, where we wish to compare reconviction rates in each year from 2004 to 2022. Because the reconviction rate is a simple outcome measure (it is just the proportion of the reconviction cohort subsequently convicted within a given year) more specialized treatments of decomposition for complex demographic outcomes such as life tables are not required. Unlike analysis based on a statistical model, decomposition results are calculated not estimated - there is no statistical uncertainty in the results, and so no requirement for p-values or statistical significance testing. However, it is possible to assess a plausible range of uncertainty in the analysis using bootstrapping, and in this analysis we present simulation intervals for the standardization and decomposition produced via bootstrapping. All code and data used in the analysis are available online at //insert link here.
 
 # Results {background-color="#006938"}
-
-## Results
-
--   Change in reconviciton rate by age group
--   Change in the relative sizes of age groups
--   Time series standardized rates
--   Decomposition of reconviction rates in 2004/05 and 2020/21
 
 ## Change in reconviciton rate by age group
 
 ```{r}
+reconvs_all <- 
+  scot_reconv |> 
+  group_by(year, age, gender) |> 
+  summarise(number_of_offenders = sum(number_of_offenders),
+            no_reconvicted = sum(no_reconvicted),
+            number_of_reconvictions = sum(number_of_reconvictions),
+            .groups = "drop") |> 
+  mutate(
+    prevalence = no_reconvicted/number_of_offenders,
+    frequency = number_of_reconvictions/number_of_offenders,
+  )
+
+
+
 
 stir_blue <- c(
   "#122c54", "#2c498a", "#3d7dca", "#77a4da", "#b2cdef"
 )
 
 age_res <- 
-reconvs |> 
+  reconvs_all |> 
   mutate(conf_low_95 = map2_dbl(no_reconvicted,
                                 number_of_offenders,
                                 ~ binom.wilson(.x, .y)$lower[[1]]),
          conf_high_95 = map2_dbl(no_reconvicted,
                                  number_of_offenders,
-                                 ~ binom.wilson(.x, .y)$upper[[1]]),
-         conf_low_80 = map2_dbl(no_reconvicted,
-                                number_of_offenders,
-                                ~ binom.wilson(.x, .y, conf.level = 0.8)$lower[[1]]),
-         conf_high_80 = map2_dbl(no_reconvicted,
-                                 number_of_offenders,
-                                 ~ binom.wilson(.x, .y, conf.level = 0.8)$upper[[1]]),
-         conf_low_50 = map2_dbl(no_reconvicted,
-                                number_of_offenders,
-                                ~ binom.wilson(.x, .y, conf.level = 0.5)$lower[[1]]),
-         conf_high_50 = map2_dbl(no_reconvicted,
-                                 number_of_offenders,
-                                 ~ binom.wilson(.x, .y, conf.level = 0.5)$upper[[1]]),
+                                 ~ binom.wilson(.x, .y)$upper[[1]])
   )
 
+
 age_res |> 
-   mutate(age = fct_relevel(age,
+  mutate(age = fct_relevel(age,
                            "under 21",
                            "21 to 25",
                            "26 to 30",
@@ -333,33 +311,11 @@ age_res |>
                            "over 40")) |> 
   ggplot(aes(x = year, y = as.numeric(prevalence))) +
   geom_ribbon(aes(fill = age, group = age, 
-                      ymin = conf_low_95, ymax = conf_high_95),
-              alpha = 0.3) +
-  geom_ribbon(aes(fill = age, group = age, 
-                  ymin = conf_low_80, ymax = conf_high_80),
-              alpha = 0.3) +
-  geom_ribbon(aes(fill = age, group = age, 
-                  ymin = conf_low_50, ymax = conf_high_50),
+                  ymin = conf_low_95, ymax = conf_high_95),
               alpha = 0.3) +
   geom_line(aes(group = age, colour = age)) +
   geom_point(aes(group = age,
-                 colour = age),
-             fill = "black") +
-  geom_point(data = overall_reconv) +
-  geom_line(data = overall_reconv,
-            aes(group = 1)) +
-  geom_ribbon(data = overall_reconv,
-              aes(ymin = conf_low_95, ymax = conf_high_95,
-                  group = 1),
-              alpha = 0.3) +
-  geom_ribbon(data = overall_reconv,
-              aes(ymin = conf_low_80, ymax = conf_high_80,
-                  group = 1),
-              alpha = 0.3) +
-  geom_ribbon(data = overall_reconv,
-              aes(ymin = conf_low_50, ymax = conf_high_50,
-                  group = 1),
-              alpha = 0.3) +
+                 colour = age)) +
   scale_color_manual(values = stir_blue) +
   scale_fill_manual(values = stir_blue) +
   theme_minimal() +
@@ -369,20 +325,32 @@ age_res |>
        fill = "Age",
        caption = "Grey line shows overall reconviction rate") +
   theme(axis.text.x = element_text(angle = 45, hjust=1)) +
-  scale_y_continuous(limits = c(0.15, 0.45))
+  scale_y_continuous(limits = c(0.125, 0.45)) +
+  facet_wrap(~gender)
 
 ```
+
+Figure One shows the one-year reconviction rate for each age and sex group. Overall reconviction rates tend to be lowest for the oldest age group, with the over 40 group consistently having the lowest conviction rate over the period analysed. For men, at the start of the observation period those under 21 have the highest reconviction rate - but this group also shows the most marked decline in reconvictions. By the 2020/21 cohort the reconviction rate for the youngest men is very similar to the 21 to 25, 26 to 30 and 31 to 40 age groups. For women there is a less clear cut age pattern - women under 21 have lower reconviction rates than women age 21 to 25 and women age 26 to 30 in 2004/05, and have the second lowest (after women over age 40) in the 2020/21 cohort. In general, those with the highest reconviction rates in the earlier reconviction cohorts also show the largest declines in reconviction rates, meaning that the reconviction rates by age and sex are more similar for the 2020/21 reconviction cohorts than for the 2004/05 cohorts. // quantify this somehow?
 
 ## Change in the relative sizes of age group
 
 ```{r}
 
+stir_blue <- c(
+  "#122c54", "#2c498a", "#3d7dca", "#77a4da", "#b2cdef"
+)
+
+stir_orange <- c(
+  "#852903", "#d9541a", "#FF6D00", "#ff994c", "#ffc899"
+)
+
+stir_palette <- c(stir_blue, stir_orange)
 
 age_res |> 
   group_by(year) |> 
   mutate(prop = number_of_offenders / sum(number_of_offenders)) |> 
   ungroup() |> 
-  select(year, age, prop) |> 
+  select(year, age, prop, gender) |> 
   mutate(age = fct_relevel(age,
                            "under 21",
                            "21 to 25",
@@ -390,10 +358,10 @@ age_res |>
                            "31 to 40",
                            "over 40")) |> 
   arrange(year, age) |> 
-  ggplot(aes(x = year, y = prop, fill = age, colour = age)) +
+  ggplot(aes(x = year, y = prop, fill = interaction(age, gender), colour =     interaction(age, gender))) +
   geom_bar(stat = "identity") +
-  scale_color_manual(values = stir_blue) +
-  scale_fill_manual(values = stir_blue) +
+  scale_color_manual(values = stir_palette) +
+  scale_fill_manual(values = stir_palette) +
   theme_minimal() +
   labs(y = "Proportion of reconviction cohort",
        x = "Reconviction cohort",
@@ -403,6 +371,10 @@ age_res |>
 
 
 ```
+
+Figure Two shows the proportions of each age and sex combination comprising each reconviciton cohort. The proportions for men are shown in orange and those for women are shown in blue, and for both sexes ligher colours represent older people. Overall there is not much change in the mix of men and women in the reconviction cohorts. However, there is a substantial change in the age distribution of the cohorts. In the 2004/05 cohort men under 21 made up more than 20% people, down to less than 7% in the 2021/21 cohort. In contrast, men aged over 40 made up less than 13% of the 2004/05 cohort, but more than 25% of the 2020/21 cohort. The same pattern is seen for women but at a smaller scale - in the 2004/05 cohort women age under 21 made up around 3% of the cohort, down to around 1% of the 2020/21 cohort whilst women aged over 40 went from comprising around 2% of the 2004/05 cohort to 5% of the 2020/21 cohort.
+
+// put in tables here
 
 ## Changing demographic mix
 
@@ -446,6 +418,10 @@ scot_res$rates |>
 
 ```
 
+Figure Three combines shows standardized reconviction rates reflecting what reconviction rates in Scotland would have been, all else equal, if there was only change in, respectively, age structure, reconviction prevalence and sex structure[^3]. The rightmost panel shows that reconviction rates would have changed very little if it was only sex structure that had changed between reconviction cohorts. The leftmost panel shows that if only age structure had changed then conviction rates would have fallen from just over 30% to around 28% from the 2004/05 to 2020/21 cohorts. This change is reasonably steady across the reconviction cohorts, with s a slight speak in the 2019/20 cohort - likely an effect of Covid. Reflecting the falls in age and sex group reconviction rates seen in Figure One, the middle panel shows that if only the prevalence of reconviction had changed then the aggregate reconviction rate would have fallen from around 31% in 2004/05 to just under 28% in the 2020/21 cohort. This trend is more jumpy than that for age-structure, with a sharp increase for the 2018/19 cohort and then a sharp drop for the 2019/20 cohort. The latter is presumably explained as an effect of Covid, and the reduced capacity of courts during the pandemic, although the increase in the reconviction rate for the 2018/19 cohort is unlikely to be affected by the pandemic as only a week an a half of the one-year follow-up period was affected by lockdown court closures .
+
+[^3]: These are, rather confusingly, created by negation in the standardization - the results showing the reconviction rate if only age structure had changed is strictly speaking a prevalnence-and-sex-structure standardized reconviction rate.
+
 ## How much change in the reconviction rate is due to demographic mix?
 
 ```{r}
@@ -476,7 +452,7 @@ overall_res |>
   sub_values(values = c("crude"), 
              replacement = c("Crude rate")) |>
   tab_spanner(
-    label = "Year",
+    label = "Reconviction cohort",
     columns = c(`2004-05`, `2020-21`)
   ) |> 
   cols_label(
@@ -493,71 +469,27 @@ overall_res |>
   )
 ```
 
-## Analysis
-
--   Young people used to have the highest reconviction rate of all age groups, but this is has fallen
--   Those over 40 have consistently lower reconviction rates, but these have not fallen
--   Young people also used to make up more of the reconviction cohorts
--   In terms of the overall reconviction rate, a group of people with high levels of reconviction have been replaced by people with lower levels of reconviction
+Table One shows a decomposition of the effects of changes in age structure, sex structure and reconviction prevalence between the 2004/05 and 2020/21 reconviction cohorts. The first column shows the three standardized reconvictions rates and the observed/'crude' reconviction rate for the 2004/05 conviction cohort, the second column shows the same rates for the 2020/21 cohort. The third column shows the difference between the standardized rates between the two chorots, and the last column expresses this difference as a percentage. It is this last column which shows the relative impact of the different factors on the overall reconviction rate in Scotland - almost half of the fall in the aggregate reconviction rate (49%) between the 2004/05 and 2020/21 cohorts is attributable to changes in the age structure of the reconviction cohorts. This is very close to the change attributable to falls in the age-sex-group reconviction rates itself (51%). The small changes in sex structure actually had a negligible impact on the overall reconviction rate.
 
 ## Analysis
 
--   We can attribute about 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 to demographic change in the population of people convicted, rather than falls in the reconviction rate *per se*.
--   If you want to use the reconviction rate as a measure of sentencing effectiveness or similar, you would think the justice system is doing about twice as a good a job as it is
--   In an optimistic reading the change in the mix of people being reconvicted could still be due to criminal justice practices (e.g. more diversion from prosecution for young people), but *is not attributable to the 'effectiveness' of the criminal justice system in rehabilitating offenders* - it is purely due to changes in the demographic mix of people being convicted in the first place
--   An alternative perspective: the criminal justice system is benefiting from the impacts of wider societal change where young people are less likely to be involved in offending, as well as lots of other 'risky' behaviours [@ball2023]
+Together the results presented here show a profound shift in the demographics of reconviction cohorts in Scotland from the early 2000s to the early 2020s. In line with the findings of [@matthews2018], young people, and young men in particular, make up less and less of reconviction cohorts. Because young men also historically had the highest reconviction rates of all age and sex groups, this demographic shift has doubly reduced the aggregate reconviction rate, both because the prevalence of reconviction has reduced, but also because young men now make less of a contribution to the aggregate reconviction rate - they have in effect been replaced by older men, who continue to have considerably lower reconviction rates than young men. As a result, we can attribute about 49% of the fall in the reconvictions rate in Scotland between 2004/05-2020/21 to demographic change in the population of people convicted, rather than falls in the reconviction rate *per se*.
+
+These results represent the first analysis to consider the implications of the demographic change in the population of people being convicted that has occurred over the course of the crime drop on measures of criminal justice system performance. The dramatic changes in the demographics of people involved in the justice system that we have seen in Scotland distorts simple comparisons over time in measures such as the reconviction rate, because the people who make up reconviction cohorts in the early 2000s have a very different profile to those who make up reconvictions cohorts in the mid 2020s. Our results show that if you wanted to use the aggregate reconviction rate as a measure of sentencing effectiveness or similar and make a comparison over the period that we examined, you would think the justice system is doing about twice as a good a job as it is. In an optimistic reading the change in the mix of people being reconvicted could still be due to criminal justice practices (e.g. more diversion from prosecution for young people), but *is not attributable to the 'effectiveness' of the criminal justice system in rehabilitating offenders* - it is purely due to changes in the demographic mix of people being convicted in the first place. An alternative perspective: the criminal justice system is benefiting from the impacts of wider societal change where young people are less likely to be involved in offending, as well as lots of other 'risky' behaviours [@ball2023].
+
+Whilst we have constructed a 'standardized' reconviction rate, separating out the impact of change in reconviction prevalence from demographic change, we are pessimistic that there are easy recommendations for those who may want to use aggregate reconviction rates in some form as performance measures. The two most obvious forms for such a recommendation would be: first, the Scottish Government (or the Sentencing Council for England and Wales, etc.) should abandon a single aggregate performance measure and instead should use reconviction rates (or an alternative measure of their choice) for each demographic sub-group as well as overall reconviction rates, or; second, the organisation should use some standardization method to construct an 'improved' performance measure. However, there are significant problems with either approach.
+
+First, suggesting that an interested party analyse trends for *all* demographic groups runs counter to the logic of quantification - the point of quantitification is to reduce the amount of information required to understand the thing you care about and have an 'objective' and apolitical measure [@porter1996]. Requiring reconviction rates for pre-defined population groups raises the question of which groups would make the cut, and how they would be defined. This is an inherently political task [@desrosières1998], and one that runs counter to Porter's description of what historically has been one of the main benefits of quantification - that it *avoids* making subjective or political judgements by allowing appeals to objectivity. The biasing effect we describe in this analysis is not a technical problem to fix; the paradoxical part of Simpson's paradox is that the analyst needs to choose what story to tell about the data, not because of anything inherently statistical [@pearl2014]. In our analysis we have focused on the characteristics of age and sex, and these are the characteristics currently reported by Scottish Government. However, by focusing on these characteristics we have *not* considered ethnicity, or deprivation, or poverty, or a host of other attributes that could plausibly be of interest. To pick a selection of characteristics as being those of interest means excluding others, and the 'curse of dimensionality' means that it is not possible to present change in reconvictions rates stratified by all subgroups simultaneously [@bell2019].
+
+The same limitations would apply to any technical 'fix' in terms of constructing a standardized reconviction rate. Constructing a standardized measure would be involve adding 'politics' into measuring reconvictions rates, both by determining which groups to standardize by as described above, but also how exactly to perform the standardization. Also, in practice there might be limited appetite for an esoteric and tricky to understand measure amongst 'key users'. As @browne2024, p19 summarises their experience in Northern Ireland: "In bulletins prior to 2017/18, reoffending figures were provided alongside adjusted reoffending rates for adults and the overall cohort, to help provide an estimate of change in reoffending. Following consultation with key users, the decision was taken to exclude this from future publications to avoid confusion in the interpretation of findings". Moreover, as Kitagawa said sixty years ago that no single summary measure - whether it is a standardized rate as we have calculated here, or the overall reconviction rates as currently used - can be a substitute for examining how rates vary across different groups in the population [@kitagawa1964]. As such, of the two options we presented the former is probably the least bad: it is useful information to know if there are groups who are not seeing the same overall decline in reconvictions and whether this is masked by the overall rate.
 
 ## Limitations
 
--   Coarse age categories could underplay the impact of changing age mix as a form of 'measurement error' (I think?)
--   There might be other demographic or offence characteristics we are interested in (ethnicity; type of offence; type of sentence etc etc)
--   The time periods selected are arbitrary and due to data availability
--   Both of these would be resolvable with access to the underlying Scottish Offenders Index data
+The empirical analysis we have presented has limitations. First, the coarse age categories we have used could lead to age aggregation bias. In addition, there might be other demographic or offence characteristics we are interested in (ethnicity; type of offence; type of sentence) that have not been included in this analysis. Because age at sentencing is correlated with the type of offence - with younger people typically sentenced for offence types with higher reconviction rates - particularly acquisitve crimes, which in Scotland are known as crimes of dishonesty - the results we have presented may reflect changes in offence mix, rather than being driven by factors specifically related to age. Because our analysis is causal this is not a problem for answering our research question - 49% of the change in the reconviction rate is attributable to changes in age structure, regardless of why this has occurred - it would have implications if these results were used to try to deduce why these patterns have occurred. Second, the time periods selected are somewhat arbitrary, driven by data availability. Both of these would be resolvable with access to the underlying individual-level Scottish Offenders Index data. It is worth repeating the caveat that our results only apply to Scotland, and it is an open question as to how representative a case of the crime drop Scotland is. We encourage similar analysis in other jurisdictions where data allows to investigate further.
 
-## In summary
+## Conclusion
 
--   The crime drop in Scotland has led to a profound shift in the demographics of the people coming through the criminal justice system
--   This shift is so pronounced that it affects our capacity to understand the 'effectiveness' of punishment through aggregate measures such as the overall reconviction rate
--   A perspective which focuses on aggregate measures of the criminal justice *system* rather than the *people involved with the system* will be mislead by measures of system 'performance'
--   There are lots of other possible ways that demographic changes in crime may impact the functioning of the criminal justice system and public perceptions of crime
-
-# Coda {background-color="#006938"}
-
-## What do to about this?
-
--   If we wanted to make a 'so here's what the Sentencing Council/Scottish Government should do now' recommendation there are two possible paths:
-
--   Option one: The Sentencing Council/Scottish Government/whoever should abandon a single overall measure and instead should use reconviction rates (or an alternative measure of your choice) for each demographic sub-group as well as overall reconviction rates
-
--   Option two: \[see above\] should use some standardization and decomposition method to construct an 'improved' performance measure
-
--   I don't think either of these are good recommendations
-
-## Reconviction rates for each group
-
--   Suggesting that policy-makers/whoever analyse trends for all groups runs counter to the logic of quantification - the whole point is to reduce the amount of information required to understand the thing you care about and have an 'objective' and apolitical measure [@porter1996]
--   Requiring reconviction rates for pre-defined population groups raises the question of which groups would make the cut, and how they would be defined
--   This is famously the paradoxical bit of Simpson's paradox - the hard part is identifying the subgroups you need to stratify by [@pearl2014]; it is paradoxical because you need to choose what story to tell about the data, not because of anything inherently statistical
-
-## "Following consultation with key users"
-
--   For the same reason a technical 'fix' in terms of constructing a standardized reconviction rate would be adding 'politics' (in terms of deciding what to standardize by and how) into measuring reconvictions
--   Also, in practice there might be limited appetite for an esoteric and tricky to understand measure amongst 'key users'
-
-> In bulletins prior to 2017/18, reoffending figures were provided alongside adjusted reoffending rates for adults and the overall cohort, to help provide an estimate of change in reoffending. Following consultation with key users, the decision was taken to exclude this from future publications to avoid confusion in the interpretation of findings.
-
-[@browne2024, p19]
-
--   Moreover, as Kitagawa said sixty years ago that no single summary measure - whether it is a standardized rate as we have calculated here, or the overall reconviction rates as currently used - can be a substitute for examining how rates vary across different groups in the population [@kitagawa1964]
-
-## So what to do?
-
--   If you really want to use reconviction rates as a performance indicator, I would say that measuring reconviction rates for each group that you care about is probably preferable than coming up with a standardized measure
--   It is useful information to know if there are groups who are not seeing the same overall decline in reconvictions and whether this is masked by the overall rate
-
-# Thank you! {background-color="#006938"}
-
-# Bonus slides {background-color="#006938"}
+The crime drop in Scotland has led to a profound shift in the demographics of the people coming through the criminal justice system. This shift is so pronounced that it affects our capacity to understand the 'effectiveness' of punishment through aggregate measures such as the overall reconviction rate. A perspective which focuses on aggregate measures of the criminal justice *system* rather than the *people involved with the system* will be mislead by measures of system 'performance'. This is, as far as we aware, the first analysis to consider the knock-on effects of that demographic changes in crime and punishment may impact how we understanding the functioning of the criminal justice system and public perceptions of crime.
 
 ## Percentage change by group
 

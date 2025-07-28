@@ -1,4 +1,4 @@
-remotes::install_github("josiahpjking/DasGuptR@develop", force = TRUE)
+# remotes::install_github("josiahpjking/DasGuptR@develop", force = TRUE)
 
 library(DasGuptR)
 library(readxl)
