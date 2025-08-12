@@ -4,6 +4,14 @@ download.file(xls_url,
               destfile = here::here("01_data", "reconvictions-2020-21-offender-cohort-additional-datasets.xlsx"),
               method = "wget")
 
+# older reconvictions
+
+reconv_1718_url <- "https://www.gov.scot/binaries/content/documents/govscot/publications/statistics/2020/10/reconviction-rates-scotland-2017-18-offender-cohort/documents/main-publication-tables/main-publication-tables/govscot%3Adocument/main-publication-tables.xlsx"
+
+download.file(reconv_1718_url,
+              destfile = here::here("01_data", "reconvictions-2017-18-offender-cohort-main-publication-tables.xlsx"),
+              mode = "wb")
+
 
 # criminal proceedings
 
