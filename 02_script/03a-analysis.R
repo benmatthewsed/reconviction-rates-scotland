@@ -26,10 +26,15 @@ scot_reconv |>
 
  scot_res <- 
  dgnpop(scot_reconv,
-          pop="year", 
-          factors=c("prevalence"),id_vars=c("gender","age"),
-          crossclassified="number_of_offenders")
+          pop = "year", 
+          factors = c("prevalence"),
+          id_vars = c("gender","age"),
+          crossclassified = "number_of_offenders")
 
+ saveRDS(scot_res,
+         here::here("04_results",
+                    "scotland_decomposition-1997.rds"))
+ 
 str(scot_res)
  
 tmp <-  readRDS(
@@ -184,4 +189,74 @@ age_res |>
   facet_wrap(~gender)
 
 
+# from the start to the peak
 
+scot_reconv |> 
+  filter(year == "1997-98" | year == "2003-04") |> 
+  dgnpop(pop="year", 
+         factors=c("prevalence"),id_vars=c("gender","age"),
+         crossclassified="number_of_offenders") |> 
+  dg_table() |> 
+  mutate(across(where(is.numeric), ~ round(.x, 2))) |>
+  rownames_to_column()
+
+
+scot_reconv |> 
+  filter(year == "2006-07" | year == "2020-21") |> 
+  dgnpop(pop="year", 
+         factors=c("prevalence"),id_vars=c("gender","age"),
+         crossclassified="number_of_offenders") |> 
+  dg_table() |> 
+  mutate(across(where(is.numeric), ~ round(.x, 2))) |>
+  rownames_to_column()
+
+
+# category effects --------------------------------------------------------
+
+
+res <- 
+ scot_reconv |> 
+  filter(year == "2004-05" | year == "2020-21") |> 
+  mutate(gender_age = paste(gender, age, sep = "-")) |> 
+  dgnpop(pop="year", 
+         factors=c("prevalence"),id_vars=c("gender_age"),
+         crossclassified="number_of_offenders",
+         agg = FALSE)
+
+res
+
+
+
+res |>
+  pivot_wider(names_from = factor, values_from = rate) |>
+  group_by(pop, gender_age) |>
+  summarise(
+    JBj = sum(gender_age_struct),
+    RTj = sum(prevalence) * (1 / 1),
+    CEj = JBj + RTj
+  ) |>
+  group_by(gender_age) |>
+  summarise(
+    comp_ce = diff(JBj),
+    rate_ce = diff(RTj),
+    tot_ce = diff(CEj)
+  ) |> 
+  mutate(
+    comp_ce = comp_ce / sum(tot_ce) * 100,
+    rate_ce = rate_ce / sum(tot_ce) * 100,
+    tot_ce = tot_ce / sum(tot_ce) * 100
+  )
+
+
+bind_rows(
+  gender_ce |> mutate(var = "gender") |> rename(category = gender),
+  age_ce |> mutate(var = "age") |> rename(category = age)
+) |>
+  mutate(
+    comp_ce = comp_ce / sum(tot_ce) * 100,
+    rate_ce = rate_ce / sum(tot_ce) * 100,
+    tot_ce = tot_ce / sum(tot_ce) * 100
+  ) |>
+  group_by(var) |>
+  mutate(across(2:4, ~ round(., 2))) |>
+  gt::gt()

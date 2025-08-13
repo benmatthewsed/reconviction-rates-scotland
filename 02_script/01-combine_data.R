@@ -120,6 +120,11 @@ combined_dat |>
     "Under 21", "21 to 25", "26 to 30", "31 to 40", "Over 40" 
   ))
 
+
+combined_dat <- 
+combined_dat |> 
+  arrange(year, gender, age)
+
 saveRDS(combined_dat,
         here::here("01_data", "combined_reconvictions.rds"))
 

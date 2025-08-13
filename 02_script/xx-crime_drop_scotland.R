@@ -50,6 +50,29 @@ proceedings_2223 <-
          year = if_else(financial_year == 1, year + 0.4, year))
 
 
+proceedings_1112 <- read_xls(here::here("01_data", "criminal_proceedings-1112-tables.xls"),
+                             sheet = "Table 4a",
+                             skip = 2)
+
+proceedings_1112 <- janitor::clean_names(proceedings_1112)
+
+
+proceedings_1112 <- 
+  proceedings_1112 |> 
+  filter(main_crime_or_offence == "All Crimes and offences") |> 
+  mutate(across(where(is.double), as.character)) |> 
+  select(main_crime_or_offence:`x2011_121`) |> 
+  pivot_longer(x2002_03:`x2011_121`,
+               names_to = "year",
+               values_to = "n") |> 
+  mutate(year = str_sub(year, 2, 8),
+         year = str_replace(year, "_", "-"),
+         n = as.double(n),
+         financial_year = if_else(str_detect(year, "-"), 1, 0),
+         year = as.numeric(str_sub(year, 1, 4)),
+         year = if_else(financial_year == 1, year + 0.4, year))
+
+
 proceedings_1314 <- read_xls(here::here("01_data", "criminal_proceedings-1314-tables.xls"),
                              sheet = "Table 4a",
                              skip = 2)
@@ -72,7 +95,9 @@ proceedings_1314 <-
          year = if_else(financial_year == 1, year + 0.4, year))
 
 
-proceedings <- bind_rows(proceedings_1314, proceedings_2223)
+proceedings <- bind_rows(proceedings_1112, proceedings_1314, proceedings_2223)
+
+proceedings <- distinct(proceedings)
 
 proceedings <- 
   proceedings |> 
@@ -120,43 +145,26 @@ dat <-
 
 count_plot <- 
 dat |> 
-  filter(year >= 2000) |> 
+  filter(year >= 1990) |> 
   group_by(measure) |> 
   mutate(std_y = y / max(y)) |> 
   ungroup() |> 
   filter(!str_detect(measure, "Recon")) |> 
-  ggplot(aes(x = year, y = y, colour = measure)) +
+  ggplot(aes(x = year, y = y)) +
   geom_line() +
   labs(y = "Count",
        x = "Year",
        colour = "") +
   theme_minimal() +
-  ggokabeito::scale_colour_okabe_ito() +
+#  ggokabeito::scale_colour_okabe_ito() +
   scale_y_continuous(
     labels = scales::label_comma()
   ) +
    theme(legend.position = "bottom",
-         legend.justification = "left")
+         legend.justification = "left") +
+  facet_wrap(~measure, scales = "free_y",
+             ncol = 1)
 
   
 
-
-std_plot <- 
-dat |> 
-  filter(year >= 2000) |> 
-  group_by(measure) |> 
-  mutate(std_y = y / max(y)) |> 
-  ungroup() |> 
-  filter(!str_detect(measure, "Recon")) |> 
-  ggplot(aes(x = year, y = std_y, colour = measure)) +
-  geom_line() +
-  labs(y = "Standardized count",
-       x = "Year",
-       colour = "") +
-  theme_minimal() +
-  ggokabeito::scale_colour_okabe_ito() +
-  guides(colour = "none")
-
-combined_plot <- count_plot + std_plot
-
-saveRDS(combined_plot, here::here("03_figures", "combined_plot.rds"))
+saveRDS(count_plot, here::here("03_figures", "count_plot.rds"))

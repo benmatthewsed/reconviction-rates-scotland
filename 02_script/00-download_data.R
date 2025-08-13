@@ -15,6 +15,12 @@ download.file(reconv_1718_url,
 
 # criminal proceedings
 
+criminal_proceedings_1112_url <- "https://www.gov.scot/binaries/content/documents/govscot/publications/statistics/2012/11/criminal-proceedings-scotland-2011-12/documents/web-excel-tables/web-excel-tables/govscot%3Adocument/00434186.xls"
+
+download.file(criminal_proceedings_1112_url,
+              destfile = here::here("01_data", "criminal_proceedings-1112-tables.xls"),
+              mode = "wb")
+
 criminal_proceedings_1314_url <- "https://www.gov.scot/binaries/content/documents/govscot/publications/statistics/2014/12/criminal-proceedings-scotland-2013-14/documents/tables-excel/tables-excel/govscot%3Adocument/00481723.xls"
 
 download.file(criminal_proceedings_1314_url,
