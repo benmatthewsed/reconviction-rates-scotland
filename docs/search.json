@@ -928,7 +928,7 @@
     "href": "index.html#results-1",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Results",
-    "text": "Results\n\nChange in reconviciton rate by age group\nChange in the relative sizes of age groups\nTime series standardized rates\nDecomposition of reconviction rates in 2004/05 and 2020/21"
+    "text": "Results\n\nChange in reconviciton rate by age group\nTime series standardized rates\nDecomposition of reconviction rates in 1997/98 and 2020/21"
   },
   {
     "objectID": "index.html#change-in-reconviciton-rate-by-age-group",
@@ -977,7 +977,7 @@
     "href": "index.html#limitations",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Limitations",
-    "text": "Limitations\n\nCoarse age categories could underplay the impact of changing age mix as a form of ‘measurement error’ (I think?)\nThere might be other demographic or offence characteristics we are interested in (ethnicity; type of offence; type of sentence etc etc)\nThe time periods selected are arbitrary and due to data availability\nBoth of these would be resolvable with access to the underlying Scottish Offenders Index data"
+    "text": "Limitations\n\nCoarse age categories could underplay the impact of changing age mix as a form of ‘measurement error’ (I think?)\nThere might be other demographic or offence characteristics we are interested in (ethnicity; type of offence; type of sentence etc etc)\nThe time periods selected are arbitrary and due to data availability\nSome of these would be resolvable with access to the underlying Scottish Offenders Index data"
   },
   {
     "objectID": "index.html#in-summary",

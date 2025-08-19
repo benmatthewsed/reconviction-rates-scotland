@@ -271,13 +271,6 @@ Sex is "generally based on how a person presents and is recorded when a personâ€
 
 # Results {background-color="#006938"}
 
-## Results
-
--   Change in reconviciton rate by age group
--   Change in the relative sizes of age groups
--   Time series standardized rates
--   Decomposition of reconviction rates in 2004/05 and 2020/21
-
 ## Change in reconviciton rate by age group
 
 ```{r}
@@ -322,10 +315,9 @@ age_res |>
   labs(y = "Reconviction rate",
        x = "Reconviction cohort",
        colour = "Age",
-       fill = "Age",
-       caption = "Grey line shows overall reconviction rate") +
+       fill = "Age") +
   theme(axis.text.x = element_text(angle = 45, hjust=1)) +
-  scale_y_continuous(limits = c(0.125, 0.45)) +
+  scale_y_continuous(limits = c(0.1, 0.475)) +
   facet_wrap(~gender)
 
 ```
@@ -429,7 +421,7 @@ first_last_decomp |>
 -   Those over 40 have consistently lower reconviction rates, but these have not fallen
 -   Young people also used to make up more of the reconviction cohorts
 -   In terms of the overall reconviction rate, a group of people with high levels of reconviction have been replaced by people with lower levels of reconviction
--   
+
 
 ## Analysis
 
@@ -445,7 +437,7 @@ first_last_decomp |>
 -   Coarse age categories could underplay the impact of changing age mix as a form of 'measurement error' (I think?)
 -   There might be other demographic or offence characteristics we are interested in (ethnicity; type of offence; type of sentence etc etc)
 -   The time periods selected are arbitrary and due to data availability
--   Both of these would be resolvable with access to the underlying Scottish Offenders Index data
+-   Some of these would be resolvable with access to the underlying Scottish Offenders Index data
 
 ## In summary
 
