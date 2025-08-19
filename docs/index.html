@@ -223,15 +223,9 @@ Ben Matthews, Josiah King and Jamie Buchan
 </section>
 <section id="the-anatomy-of-a-rate" class="slide level2">
 <h2>The anatomy of a rate</h2>
-<p><span class="math display">\[
-\text{Overall Reconviction Rate} = \sum_{i} (\text{Subgroup Rate}_i \times \frac{\text{Subgroup Size}_i}{\text{Reconviction cohort size}})
-\]</span></p>
-</section>
-<section id="the-anatomy-of-a-rate-1" class="slide level2">
-<h2>The anatomy of a rate</h2>
 <ul>
 <li>To use reconviction rates as measures of criminal justice system ‘performance’ you only want to measure change in the subgroup rates</li>
-<li>But change in the overall rate can come from either changes in the subgroup rates <em>or changes in the subgroup sizes</em></li>
+<li>But change in the overall rate can come from either changes in the subgroup rates <em>or changes in the relative subgroup sizes</em></li>
 </ul>
 <blockquote>
 <p>“If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration.” <span class="citation" data-cites="kirkwood2008">(<a href="#/references" role="doc-biblioref" onclick="">Kirkwood 2008, p9</a>)</span></p>
@@ -257,7 +251,7 @@ Ben Matthews, Josiah King and Jamie Buchan
 <li>The methods of standardization and decomposition can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups</li>
 <li>Standardization and decomposition can also separate out the relative importance of different factors in driving aggregate change (e.g.&nbsp;age and sex)</li>
 <li>Previous regression-based approaches <span class="citation" data-cites="francis2005 cunliffe2007 drake2010">(<a href="#/references" role="doc-biblioref" onclick="">Francis, Harman, and Humphreys 2005</a>; <a href="#/references" role="doc-biblioref" onclick="">Cunliffe and Shepherd 2007</a>; <a href="#/references" role="doc-biblioref" onclick="">Drake, Aos, and Barnoski 2010</a>)</span> to correct for the problem of changing ‘offender mix’ can perform this standardization part, but don’t focus on the decomposition part</li>
-<li>We illustrate this approach using the standardization and decomposition methods described by <span class="citation" data-cites="dasguptaStandardizationDecompositionRates1993">(<a href="#/references" role="doc-biblioref" onclick="">Das Gupta 1993</a>)</span> and implemented in the <code>{dasguptr}</code> R package <span class="citation" data-cites="king2025">(<a href="#/references" role="doc-biblioref" onclick="">King and Matthews 2025</a>)</span> to Scottish reconvictions data from 2004-2022</li>
+<li>We illustrate this approach using the standardization and decomposition methods described by <span class="citation" data-cites="dasguptaStandardizationDecompositionRates1993">(<a href="#/references" role="doc-biblioref" onclick="">Das Gupta 1993</a>)</span> and implemented in the <code>{dasguptr}</code> R package <span class="citation" data-cites="king2025">(<a href="#/references" role="doc-biblioref" onclick="">King and Matthews 2025</a>)</span> to Scottish reconvictions data from 1997-2022</li>
 </ul>
 </section></section>
 <section>
@@ -322,23 +316,23 @@ Ben Matthews, Josiah King and Jamie Buchan
 <h2>How much change in the reconviction rate is due to demographic mix?</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ilnyiueoon" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ilnyiueoon table {
+<div id="xqzazqbklq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xqzazqbklq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ilnyiueoon thead, #ilnyiueoon tbody, #ilnyiueoon tfoot, #ilnyiueoon tr, #ilnyiueoon td, #ilnyiueoon th {
+#xqzazqbklq thead, #xqzazqbklq tbody, #xqzazqbklq tfoot, #xqzazqbklq tr, #xqzazqbklq td, #xqzazqbklq th {
   border-style: none;
 }
 
-#ilnyiueoon p {
+#xqzazqbklq p {
   margin: 0;
   padding: 0;
 }
 
-#ilnyiueoon .gt_table {
+#xqzazqbklq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -364,12 +358,12 @@ Ben Matthews, Josiah King and Jamie Buchan
   border-left-color: #D3D3D3;
 }
 
-#ilnyiueoon .gt_caption {
+#xqzazqbklq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ilnyiueoon .gt_title {
+#xqzazqbklq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -381,7 +375,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   border-bottom-width: 0;
 }
 
-#ilnyiueoon .gt_subtitle {
+#xqzazqbklq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -393,7 +387,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   border-top-width: 0;
 }
 
-#ilnyiueoon .gt_heading {
+#xqzazqbklq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -405,13 +399,13 @@ Ben Matthews, Josiah King and Jamie Buchan
   border-right-color: #D3D3D3;
 }
 
-#ilnyiueoon .gt_bottom_border {
+#xqzazqbklq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ilnyiueoon .gt_col_headings {
+#xqzazqbklq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -426,7 +420,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   border-right-color: #D3D3D3;
 }
 
-#ilnyiueoon .gt_col_heading {
+#xqzazqbklq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -446,7 +440,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   overflow-x: hidden;
 }
 
-#ilnyiueoon .gt_column_spanner_outer {
+#xqzazqbklq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -458,15 +452,15 @@ Ben Matthews, Josiah King and Jamie Buchan
   padding-right: 4px;
 }
 
-#ilnyiueoon .gt_column_spanner_outer:first-child {
+#xqzazqbklq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ilnyiueoon .gt_column_spanner_outer:last-child {
+#xqzazqbklq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ilnyiueoon .gt_column_spanner {
+#xqzazqbklq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -478,11 +472,11 @@ Ben Matthews, Josiah King and Jamie Buchan
   width: 100%;
 }
 
-#ilnyiueoon .gt_spanner_row {
+#xqzazqbklq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ilnyiueoon .gt_group_heading {
+#xqzazqbklq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -508,7 +502,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   text-align: left;
 }
 
-#ilnyiueoon .gt_empty_group_heading {
+#xqzazqbklq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -523,15 +517,15 @@ Ben Matthews, Josiah King and Jamie Buchan
   vertical-align: middle;
 }
 
-#ilnyiueoon .gt_from_md > :first-child {
+#xqzazqbklq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ilnyiueoon .gt_from_md > :last-child {
+#xqzazqbklq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ilnyiueoon .gt_row {
+#xqzazqbklq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -550,7 +544,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   overflow-x: hidden;
 }
 
-#ilnyiueoon .gt_stub {
+#xqzazqbklq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -563,7 +557,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   padding-right: 5px;
 }
 
-#ilnyiueoon .gt_stub_row_group {
+#xqzazqbklq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -577,15 +571,15 @@ Ben Matthews, Josiah King and Jamie Buchan
   vertical-align: top;
 }
 
-#ilnyiueoon .gt_row_group_first td {
+#xqzazqbklq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ilnyiueoon .gt_row_group_first th {
+#xqzazqbklq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ilnyiueoon .gt_summary_row {
+#xqzazqbklq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -595,16 +589,16 @@ Ben Matthews, Josiah King and Jamie Buchan
   padding-right: 5px;
 }
 
-#ilnyiueoon .gt_first_summary_row {
+#xqzazqbklq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ilnyiueoon .gt_first_summary_row.thick {
+#xqzazqbklq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ilnyiueoon .gt_last_summary_row {
+#xqzazqbklq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -614,7 +608,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   border-bottom-color: #D3D3D3;
 }
 
-#ilnyiueoon .gt_grand_summary_row {
+#xqzazqbklq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -624,7 +618,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   padding-right: 5px;
 }
 
-#ilnyiueoon .gt_first_grand_summary_row {
+#xqzazqbklq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -634,7 +628,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   border-top-color: #D3D3D3;
 }
 
-#ilnyiueoon .gt_last_grand_summary_row_top {
+#xqzazqbklq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -644,11 +638,11 @@ Ben Matthews, Josiah King and Jamie Buchan
   border-bottom-color: #D3D3D3;
 }
 
-#ilnyiueoon .gt_striped {
+#xqzazqbklq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ilnyiueoon .gt_table_body {
+#xqzazqbklq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -657,7 +651,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   border-bottom-color: #D3D3D3;
 }
 
-#ilnyiueoon .gt_footnotes {
+#xqzazqbklq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -671,7 +665,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   border-right-color: #D3D3D3;
 }
 
-#ilnyiueoon .gt_footnote {
+#xqzazqbklq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -680,7 +674,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   padding-right: 5px;
 }
 
-#ilnyiueoon .gt_sourcenotes {
+#xqzazqbklq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -694,7 +688,7 @@ Ben Matthews, Josiah King and Jamie Buchan
   border-right-color: #D3D3D3;
 }
 
-#ilnyiueoon .gt_sourcenote {
+#xqzazqbklq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -702,72 +696,72 @@ Ben Matthews, Josiah King and Jamie Buchan
   padding-right: 5px;
 }
 
-#ilnyiueoon .gt_left {
+#xqzazqbklq .gt_left {
   text-align: left;
 }
 
-#ilnyiueoon .gt_center {
+#xqzazqbklq .gt_center {
   text-align: center;
 }
 
-#ilnyiueoon .gt_right {
+#xqzazqbklq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ilnyiueoon .gt_font_normal {
+#xqzazqbklq .gt_font_normal {
   font-weight: normal;
 }
 
-#ilnyiueoon .gt_font_bold {
+#xqzazqbklq .gt_font_bold {
   font-weight: bold;
 }
 
-#ilnyiueoon .gt_font_italic {
+#xqzazqbklq .gt_font_italic {
   font-style: italic;
 }
 
-#ilnyiueoon .gt_super {
+#xqzazqbklq .gt_super {
   font-size: 65%;
 }
 
-#ilnyiueoon .gt_footnote_marks {
+#xqzazqbklq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ilnyiueoon .gt_asterisk {
+#xqzazqbklq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ilnyiueoon .gt_indent_1 {
+#xqzazqbklq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ilnyiueoon .gt_indent_2 {
+#xqzazqbklq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ilnyiueoon .gt_indent_3 {
+#xqzazqbklq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ilnyiueoon .gt_indent_4 {
+#xqzazqbklq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ilnyiueoon .gt_indent_5 {
+#xqzazqbklq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ilnyiueoon .katex-display {
+#xqzazqbklq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ilnyiueoon div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xqzazqbklq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -925,17 +919,14 @@ Reconviction cohort
 <h1>Bonus slides</h1>
 
 </section>
-<section id="percentage-change-by-group" class="slide level2">
-<h2>Percentage change by group</h2>
-</section>
-<section id="a-word-on-desistance" class="slide level2">
+<section id="a-word-on-desistance" class="slide level2 scrollable">
 <h2>A word on desistance</h2>
 <ul>
 <li>There are also conceptual reasons why we might not want to use reconvictions as a performance measure</li>
 <li><span class="citation" data-cites="klingeleMeasuringChange2019">Klingele (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> advocates for measuring ‘markers of desistance’ instead of a binary reconviction measure, see <span class="citation" data-cites="weaverUnderstandingDesistanceCritical2019">Weaver (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> and <span class="citation" data-cites="marunaRedeemingDesistanceIndividual2025">Maruna (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span> for more conceptual critiques)</li>
-<li>But this isn’t so relevant for our concerns here - the same statistical distortion would occur regardless of the outcome measure used[^Making some assumptions that I’d be happy to discuss in the questions if people are interested!]</li>
+<li>But this isn’t so relevant for our concerns here - the same statistical distortion would occur regardless of the outcome measure used<sup>1</sup></li>
 </ul>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Making some assumptions that I’d be happy to discuss in the questions if people are interested!</p></li></ol></aside></section>
 <section id="effect-of-comparison-year" class="slide level2">
 <h2>Effect of comparison year</h2>
 

@@ -830,14 +830,14 @@
     "href": "index.html#the-anatomy-of-a-rate",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The anatomy of a rate",
-    "text": "The anatomy of a rate\n\\[\n\\text{Overall Reconviction Rate} = \\sum_{i} (\\text{Subgroup Rate}_i \\times \\frac{\\text{Subgroup Size}_i}{\\text{Reconviction cohort size}})\n\\]"
+    "text": "The anatomy of a rate\n\nTo use reconviction rates as measures of criminal justice system ‘performance’ you only want to measure change in the subgroup rates\nBut change in the overall rate can come from either changes in the subgroup rates or changes in the relative subgroup sizes\n\n\n“If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration.” (Kirkwood 2008, p9)"
   },
   {
     "objectID": "index.html#the-anatomy-of-a-rate-1",
     "href": "index.html#the-anatomy-of-a-rate-1",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The anatomy of a rate",
-    "text": "The anatomy of a rate\n\nTo use reconviction rates as measures of criminal justice system ‘performance’ you only want to measure change in the subgroup rates\nBut change in the overall rate can come from either changes in the subgroup rates or changes in the subgroup sizes\n\n\n“If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration.” (Kirkwood 2008, p9)"
+    "text": "The anatomy of a rate\n\nTo use reconviction rates as measures of criminal justice system ‘performance’ you only want to measure change in the subgroup rates\nBut change in the overall rate can come from either changes in the subgroup rates or changes in the relative subgroup sizes\n\n\n“If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration.” (Kirkwood 2008, p9)"
   },
   {
     "objectID": "index.html#the-anatomy-of-a-rate-2",
@@ -886,14 +886,14 @@
     "href": "index.html#a-word-on-desistance",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "A word on desistance",
-    "text": "A word on desistance\n\nThere are also conceptual reasons why we might not want to use reconvictions as a performance measure\nKlingele (2019) advocates for measuring ‘markers of desistance’ instead of a binary reconviction measure, see Weaver (2019) and Maruna (2025) for more conceptual critiques)\nBut this isn’t so relevant for our concerns here - the same statistical distortion would occur regardless of the outcome measure used[^Making some assumptions that I’d be happy to discuss in the questions if people are interested!]"
+    "text": "A word on desistance\n\nThere are also conceptual reasons why we might not want to use reconvictions as a performance measure\nKlingele (2019) advocates for measuring ‘markers of desistance’ instead of a binary reconviction measure, see Weaver (2019) and Maruna (2025) for more conceptual critiques)\nBut this isn’t so relevant for our concerns here - the same statistical distortion would occur regardless of the outcome measure used1\n\nMaking some assumptions that I’d be happy to discuss in the questions if people are interested!"
   },
   {
     "objectID": "index.html#standardization-and-decomposition",
     "href": "index.html#standardization-and-decomposition",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Standardization and decomposition",
-    "text": "Standardization and decomposition\n\nThe methods of standardization and decomposition can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups\nStandardization and decomposition can also separate out the relative importance of different factors in driving aggregate change (e.g. age and sex)\nPrevious regression-based approaches (Francis, Harman, and Humphreys 2005; Cunliffe and Shepherd 2007; Drake, Aos, and Barnoski 2010) to correct for the problem of changing ‘offender mix’ can perform this standardization part, but don’t focus on the decomposition part\nWe illustrate this approach using the standardization and decomposition methods described by (Das Gupta 1993) and implemented in the {dasguptr} R package (King and Matthews 2025) to Scottish reconvictions data from 2004-2022"
+    "text": "Standardization and decomposition\n\nThe methods of standardization and decomposition can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups\nStandardization and decomposition can also separate out the relative importance of different factors in driving aggregate change (e.g. age and sex)\nPrevious regression-based approaches (Francis, Harman, and Humphreys 2005; Cunliffe and Shepherd 2007; Drake, Aos, and Barnoski 2010) to correct for the problem of changing ‘offender mix’ can perform this standardization part, but don’t focus on the decomposition part\nWe illustrate this approach using the standardization and decomposition methods described by (Das Gupta 1993) and implemented in the {dasguptr} R package (King and Matthews 2025) to Scottish reconvictions data from 1997-2022"
   },
   {
     "objectID": "index.html#research-question",

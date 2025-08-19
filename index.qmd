@@ -190,24 +190,10 @@ n_plot + prop_plot
 
 -   Because of changes in the distribution of characteristics of the people who have been convicted change in the overall reconviction rate can be biased. The overall change we see will be both due to changes in the prevalence of reconviction amongst demographic groups, but also the mix/composition of those groups who are in each reconviction cohort.
 
----
-smaller: false
----
-
-## The anatomy of a rate
-
-$$
-\text{Overall Reconviction Rate} = \sum_{i} (\text{Subgroup Rate}_i \times \frac{\text{Subgroup Size}_i}{\text{Reconviction cohort size}})
-$$
-
----
-smaller: false
----
-
 ## The anatomy of a rate
 
 -   To use reconviction rates as measures of criminal justice system 'performance' you only want to measure change in the subgroup rates
--   But change in the overall rate can come from either changes in the subgroup rates *or changes in the subgroup sizes*
+-   But change in the overall rate can come from either changes in the subgroup rates *or changes in the relative subgroup sizes*
 
 > "If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration." [@kirkwood2008, p9]
 
@@ -228,7 +214,7 @@ smaller: false
 -   The methods of standardization and decomposition can separate out changes in the reconviction rate that are due to demographic change from those due to change in the underlying reconviction rate for different age groups
 -   Standardization and decomposition can also separate out the relative importance of different factors in driving aggregate change (e.g. age and sex)
 -   Previous regression-based approaches [@francis2005; @cunliffe2007; @drake2010] to correct for the problem of changing 'offender mix' can perform this standardization part, but don't focus on the decomposition part
--   We illustrate this approach using the standardization and decomposition methods described by [@dasguptaStandardizationDecompositionRates1993] and implemented in the `{dasguptr}` R package [@king2025] to Scottish reconvictions data from 2004-2022
+-   We illustrate this approach using the standardization and decomposition methods described by [@dasguptaStandardizationDecompositionRates1993] and implemented in the `{dasguptr}` R package [@king2025] to Scottish reconvictions data from 1997-2022
 
 # Research design {background-color="#006938"}
 
@@ -482,13 +468,13 @@ first_last_decomp |>
 
 # Bonus slides {background-color="#006938"}
 
-## Percentage change by group
-
 ## A word on desistance
 
 -   There are also conceptual reasons why we might not want to use reconvictions as a performance measure
 -   @klingeleMeasuringChange2019 advocates for measuring 'markers of desistance' instead of a binary reconviction measure, see @weaverUnderstandingDesistanceCritical2019 and @marunaRedeemingDesistanceIndividual2025 for more conceptual critiques)
--   But this isn't so relevant for our concerns here - the same statistical distortion would occur regardless of the outcome measure used\[\^Making some assumptions that I'd be happy to discuss in the questions if people are interested!\]
+-   But this isn't so relevant for our concerns here - the same statistical distortion would occur regardless of the outcome measure used[^2] 
+
+[^2]: Making some assumptions that I'd be happy to discuss in the questions if people are interested!
 
 ## Effect of comparison year
 
