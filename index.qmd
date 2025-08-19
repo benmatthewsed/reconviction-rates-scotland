@@ -206,22 +206,6 @@ smaller: false
 
 ## The anatomy of a rate
 
-$$
-\color{#D3D3D3}{\text{Overall Reconviction Rate} = \sum_{i} (}\text{Subgroup Rate}_i \color{#D3D3D3}{\times \frac{\text{Subgroup Size}_i}{\text{Reconviction cohort size}})}
-$$
-
----
-smaller: false
----
-
-## The anatomy of a rate
-
-$$
-\color{#D3D3D3}{\text{Overall Reconviction Rate}} = \color{#D3D3D3}{\sum_{i} (\text{Subgroup Rate}_i   \color{#D3D3D3}{\times} } \frac{\text{Subgroup Size}_i}{\text{Reconviction cohort size}}\color{#D3D3D3})}
-$$
-
-## The anatomy of a rate
-
 -   To use reconviction rates as measures of criminal justice system 'performance' you only want to measure change in the subgroup rates
 -   But change in the overall rate can come from either changes in the subgroup rates *or changes in the subgroup sizes*
 
@@ -506,6 +490,7 @@ first_last_decomp |>
 
 # Bonus slides {background-color="#006938"}
 
+## Percentage change by group
 
 ## A word on desistance
 

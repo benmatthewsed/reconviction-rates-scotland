@@ -837,14 +837,14 @@
     "href": "index.html#the-anatomy-of-a-rate-1",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The anatomy of a rate",
-    "text": "The anatomy of a rate\n\\[\n\\color{#D3D3D3}{\\text{Overall Reconviction Rate} = \\sum_{i} (}\\text{Subgroup Rate}_i \\color{#D3D3D3}{\\times \\frac{\\text{Subgroup Size}_i}{\\text{Reconviction cohort size}})}\n\\]"
+    "text": "The anatomy of a rate\n\nTo use reconviction rates as measures of criminal justice system ‘performance’ you only want to measure change in the subgroup rates\nBut change in the overall rate can come from either changes in the subgroup rates or changes in the subgroup sizes\n\n\n“If the target for a reduction in the overall reconviction rate is met, and this is mainly due to more people with a lower likelihood of re-offending being brought into the criminal justice system and being convicted, rather than through a reduction in rates of re-offending among those who would normally be brought into the system, this would bring little cause for celebration.” (Kirkwood 2008, p9)"
   },
   {
     "objectID": "index.html#the-anatomy-of-a-rate-2",
     "href": "index.html#the-anatomy-of-a-rate-2",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "The anatomy of a rate",
-    "text": "The anatomy of a rate\n\\[\n\\color{#D3D3D3}{\\text{Overall Reconviction Rate}} = \\color{#D3D3D3}{\\sum_{i} (\\text{Subgroup Rate}_i   \\color{#D3D3D3}{\\times} } \\frac{\\text{Subgroup Size}_i}{\\text{Reconviction cohort size}}\\color{#D3D3D3})}\n\\]"
+    "text": "The anatomy of a rate\n\\[\n\\color{#D3D3D3}{\\text{Overall Reconviction Rate}} = \\color{#D3D3D3}{\\sum_{i} (\\text{Subgroup Rate}_i   \\color{#D3D3D3}{\\times} } \\frac{\\text{Subgroup Size}_i}{\\text{Reconviction cohort size}}\\color{#D3D3D3}})}\n\\]"
   },
   {
     "objectID": "index.html#the-anatomy-of-a-rate-3",
@@ -1019,7 +1019,7 @@
     "href": "index.html#percentage-change-by-group",
     "title": "Why is Scotland’s reconviction rate falling?",
     "section": "Percentage change by group",
-    "text": "Percentage change by group\n\n\n\n\n\n\n\n\ncategory\ncomp_ce\nrate_ce\ntot_ce\n\n\n\n\ngender\n\n\nFemale\n2.14\n3.82\n5.96\n\n\nMale\n-2.36\n21.76\n19.40\n\n\nage\n\n\n21 to 25\n47.26\n9.39\n56.66\n\n\n26 to 30\n-7.21\n6.03\n-1.18\n\n\n31 to 40\n-37.16\n-0.27\n-37.43\n\n\nover 40\n-54.01\n-1.54\n-55.55\n\n\nunder 21\n100.17\n11.97\n112.15"
+    "text": "Percentage change by group"
   },
   {
     "objectID": "index.html#references",
