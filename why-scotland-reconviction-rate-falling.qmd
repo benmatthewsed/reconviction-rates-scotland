@@ -3,8 +3,8 @@ title: "Why is Scotland's reconviction rate falling?"
 subtitle: "{{< words-sum body-note-ref >}} words"
 format: wordcount-pdf
 editor: source
-author: "Ben Matthews and Josiah King"
-institute: "University of Stirling | University of Edinburgh"
+author: "Ben Matthews, Josiah King and Jamie Buchan"
+institute: "University of Stirling | University of Edinburgh | Edinburgh Napier University"
 bibliography: references.bib
 execute: 
   warning: false
@@ -549,67 +549,67 @@ The crime drop in Scotland has led to a profound shift in the demographics of th
 
 ## Percentage change by group
 
-```{r}
-
-res <- 
-overall_res |> 
-  filter(year == "2004-05" | year == "2020-21") |> 
-  dgnpop(pop="year", 
-         factors=c("prevalence"),id_vars=c("gender","age"),
-         crossclassified="number_of_offenders",
-         agg = FALSE)
-
-gender_ce <- 
-  res |>
-  pivot_wider(names_from = factor, values_from = rate) |>
-   mutate(age = fct_relevel(age,
-                           "under 21",
-                           "21 to 25",
-                           "26 to 30",
-                           "31 to 40",
-                           "over 40")) |> 
-  group_by(pop, gender) |>
-  summarise(
-    JBj = sum(gender_struct),
-    RTj = sum(prevalence) * (1 / 2),
-    CEj = JBj + RTj
-  ) |>
-  group_by(gender) |>
-  summarise(
-    comp_ce = diff(JBj),
-    rate_ce = diff(RTj),
-    tot_ce = diff(CEj)
-  )
-
-age_ce <- 
-  res |>
-  pivot_wider(names_from = factor, values_from = rate) |>
-  group_by(pop, age) |>
-  summarise(
-    JBj = sum(age_struct),
-    RTj = sum(prevalence) * (1 / 2),
-    CEj = JBj + RTj
-  ) |>
-  group_by(age) |>
-  summarise(
-    comp_ce = diff(JBj),
-    rate_ce = diff(RTj),
-    tot_ce = diff(CEj)
-  )
-
-
-bind_rows(
-  gender_ce |> mutate(var = "gender") |> rename(category = gender),
-  age_ce |> mutate(var = "age") |> rename(category = age)
-) |>
-  mutate(
-    comp_ce = comp_ce / sum(tot_ce) * 100,
-    rate_ce = rate_ce / sum(tot_ce) * 100,
-    tot_ce = tot_ce / sum(tot_ce) * 100
-  ) |>
-  group_by(var) |>
-  mutate(across(2:4, ~ round(., 2))) |>
-  gt::gt()
+# ```{r}
+# 
+# res <- 
+# overall_res |> 
+#   filter(year == "2004-05" | year == "2020-21") |> 
+#   dgnpop(pop="year", 
+#          factors=c("prevalence"),id_vars=c("gender","age"),
+#          crossclassified="number_of_offenders",
+#          agg = FALSE)
+# 
+# gender_ce <- 
+#   res |>
+#   pivot_wider(names_from = factor, values_from = rate) |>
+#    mutate(age = fct_relevel(age,
+#                            "under 21",
+#                            "21 to 25",
+#                            "26 to 30",
+#                            "31 to 40",
+#                            "over 40")) |> 
+#   group_by(pop, gender) |>
+#   summarise(
+#     JBj = sum(gender_struct),
+#     RTj = sum(prevalence) * (1 / 2),
+#     CEj = JBj + RTj
+#   ) |>
+#   group_by(gender) |>
+#   summarise(
+#     comp_ce = diff(JBj),
+#     rate_ce = diff(RTj),
+#     tot_ce = diff(CEj)
+#   )
+# 
+# age_ce <- 
+#   res |>
+#   pivot_wider(names_from = factor, values_from = rate) |>
+#   group_by(pop, age) |>
+#   summarise(
+#     JBj = sum(age_struct),
+#     RTj = sum(prevalence) * (1 / 2),
+#     CEj = JBj + RTj
+#   ) |>
+#   group_by(age) |>
+#   summarise(
+#     comp_ce = diff(JBj),
+#     rate_ce = diff(RTj),
+#     tot_ce = diff(CEj)
+#   )
+# 
+# 
+# bind_rows(
+#   gender_ce |> mutate(var = "gender") |> rename(category = gender),
+#   age_ce |> mutate(var = "age") |> rename(category = age)
+# ) |>
+#   mutate(
+#     comp_ce = comp_ce / sum(tot_ce) * 100,
+#     rate_ce = rate_ce / sum(tot_ce) * 100,
+#     tot_ce = tot_ce / sum(tot_ce) * 100
+#   ) |>
+#   group_by(var) |>
+#   mutate(across(2:4, ~ round(., 2))) |>
+#   gt::gt()
 
 ```
 
